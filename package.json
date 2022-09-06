@@ -1,0 +1,10 @@
+{
+  "name": "country-config",
+  "version": "0.0.1",
+  "description": "Country specific configuration for Prayers Connect",
+  "main": "index.js",
+  "repository": "https://github.com/prayersconnect/country-config.git",
+  "author": "team@prayersconnect.com",
+  "license": "GPL3",
+  "private": false
+}
