@@ -1,0 +1,9 @@
+.history
+node_modules
+.code
+.vscode
+*.html
+.next
+build
+coverage
+.coverage
