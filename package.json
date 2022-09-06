@@ -7,7 +7,7 @@
   "author": "team@prayersconnect.com",
   "license": "GPL3",
   "scripts": {
-    "prepublish": "tsc --build tsconfig.json"
+    "build": "tsc --build tsconfig.json"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.6",
