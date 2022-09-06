@@ -16,6 +16,7 @@
   },
   "packageManager": "yarn@3.2.3",
   "dependencies": {
+    "country-locator": "^2.1.1",
     "lodash-es": "^4.17.21"
   }
 }
