@@ -1,10 +1,9 @@
-import {merge} from 'lodash-es';
 import allConfigs, {defaultConfig} from './configs';
 import {findCountryByCoordinate} from "country-locator";
 
 export function getConfig(country: string): any {
   const countryConf = allConfigs[countrySlug(country)] as any;
-  return merge({}, defaultConfig, countryConf);
+  return Object.assign({}, defaultConfig, countryConf);
 }
 
 /**
