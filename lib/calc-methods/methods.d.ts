@@ -11,32 +11,5 @@ export interface CalculationMethod {
         midnight?: string;
     };
 }
-declare const _default: ({
-    name: string;
-    label: string;
-    values: {
-        fajr: number;
-        isha: number;
-        maghrib?: undefined;
-        midnight?: undefined;
-    };
-} | {
-    name: string;
-    label: string;
-    values: {
-        fajr: number;
-        isha: string;
-        maghrib?: undefined;
-        midnight?: undefined;
-    };
-} | {
-    name: string;
-    label: string;
-    values: {
-        fajr: number;
-        isha: number;
-        maghrib: number;
-        midnight: string;
-    };
-})[];
+declare const _default: CalculationMethod[];
 export default _default;

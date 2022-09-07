@@ -82,4 +82,4 @@ export default [
       "midnight": "Jafari"
     }
   },
-]
+] as CalculationMethod[];
