@@ -6,9 +6,7 @@ export const getCalcMethodByName = (name: string) => {
 }
 
 export const getCalcMethods = () => {
-  return methodsData.map(({name, label}) => {
-    return {name, label}
-  });
+  return methodsData;
 }
 
 export const getCalcMethodByCountry = (country: string | undefined): string | undefined => {
