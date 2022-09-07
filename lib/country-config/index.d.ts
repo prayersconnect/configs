@@ -1,4 +1,5 @@
-export declare function getConfig(country: string): any;
+import { countryConfig } from './configs';
+export declare function getConfig(country: string): countryConfig;
 /**
  * Using this wrapper function in case we need any country name normalization!
  * @param lat

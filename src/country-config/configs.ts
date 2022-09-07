@@ -24,14 +24,16 @@ interface mosqueSettings {
 }
 
 export interface countryConfig {
-  [key: string]: {
     code: number | null;
     prayer_settings: prayerSettings
     mosque?: mosqueSettings;
-  }
 }
 
-const configs : countryConfig = {
+interface allConfigs {
+  [key: string]: countryConfig
+}
+
+const configs : allConfigs = {
   "united_states": {
     "code": null,
     "prayer_settings": {

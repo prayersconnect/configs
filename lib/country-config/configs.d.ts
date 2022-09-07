@@ -18,11 +18,12 @@ interface mosqueSettings {
     language_services: string;
 }
 export interface countryConfig {
-    [key: string]: {
-        code: number | null;
-        prayer_settings: prayerSettings;
-        mosque?: mosqueSettings;
-    };
+    code: number | null;
+    prayer_settings: prayerSettings;
+    mosque?: mosqueSettings;
 }
-declare const configs: countryConfig;
+interface allConfigs {
+    [key: string]: countryConfig;
+}
+declare const configs: allConfigs;
 export default configs;

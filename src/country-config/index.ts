@@ -1,7 +1,7 @@
-import allConfigs, {defaultConfig} from './configs';
+import allConfigs, {defaultConfig, countryConfig} from './configs';
 import {findCountryByCoordinate} from "country-locator";
 
-export function getConfig(country: string): any {
+export function getConfig(country: string): countryConfig  {
   const countryConf = allConfigs[countrySlug(country)] as any;
   return Object.assign({}, defaultConfig, countryConf);
 }
