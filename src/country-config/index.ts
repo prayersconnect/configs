@@ -1,7 +1,7 @@
-import allConfigs, {defaultConfig, countryConfig} from './configs';
-import {findCountryByCoordinate} from "country-locator";
+import allConfigs, { countryConfig, defaultConfig } from './configs';
+import { findCountryByCoordinate } from 'country-locator';
 
-export function getConfig(country: string): countryConfig  {
+export function getConfig(country: string): countryConfig {
   const countryConf = allConfigs[countrySlug(country)] as any;
   return Object.assign({}, defaultConfig, countryConf);
 }
@@ -13,11 +13,11 @@ export function getConfig(country: string): countryConfig  {
  */
 export function getCountryByCoords(lat: number, long: number) {
   const country = findCountryByCoordinate(lat, long);
-  if(country?.isoA3Code === 'USA') {
+  if (country?.isoA3Code === 'USA') {
     return {
       ...country,
-      name: 'United States'
-    }
+      name: 'United States',
+    };
   } else {
     return country;
   }
