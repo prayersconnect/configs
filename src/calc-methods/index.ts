@@ -11,7 +11,7 @@ export const getCalcMethods = () => {
   });
 }
 
-export const getCalcMethodByCountry = (country: string): string | undefined => {
+export const getCalcMethodByCountry = (country: string | undefined): string | undefined => {
   if (!country) {
     return undefined;
   }

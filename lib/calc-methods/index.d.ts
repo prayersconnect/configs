@@ -30,4 +30,4 @@ export declare const getCalcMethods: () => {
     name: string;
     label: string;
 }[];
-export declare const getCalcMethodByCountry: (country: string) => string | undefined;
+export declare const getCalcMethodByCountry: (country: string | undefined) => string | undefined;
