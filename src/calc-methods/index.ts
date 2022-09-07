@@ -1,11 +1,11 @@
-import methodsData from './methods';
+import methodsData, { CalculationMethod } from './methods';
 import { getConfig } from '../country-config';
 
 export const getCalcMethodByName = (name: string) => {
   return methodsData.find((method) => method.name === name);
 };
 
-export const getCalcMethods = () => {
+export const getCalcMethods = () : CalculationMethod[] => {
   return methodsData;
 };
 
