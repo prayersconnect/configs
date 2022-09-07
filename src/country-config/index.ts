@@ -12,7 +12,15 @@ export function getConfig(country: string): countryConfig  {
  * @param long
  */
 export function getCountryByCoords(lat: number, long: number) {
-  return findCountryByCoordinate(lat, long);
+  const country = findCountryByCoordinate(lat, long);
+  if(country?.code === 'USA') {
+    return {
+      ...country,
+      name: 'United States'
+    }
+  } else {
+    return country;
+  }
 }
 
 function countrySlug(country: string): string {
