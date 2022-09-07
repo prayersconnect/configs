@@ -13,7 +13,7 @@ export function getConfig(country: string): countryConfig  {
  */
 export function getCountryByCoords(lat: number, long: number) {
   const country = findCountryByCoordinate(lat, long);
-  if(country?.code === 'USA') {
+  if(country?.isoA3Code === 'USA') {
     return {
       ...country,
       name: 'United States'
