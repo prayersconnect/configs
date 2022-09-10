@@ -1,3 +1,3 @@
-export { getConfig, getCountryByCoords } from './country-config';
+export { getConfig } from './country-config';
 export { getCalcMethodByName, getCalcMethods, getCalcMethodByCountry } from './calc-methods';
 export { CalculationMethod } from './calc-methods/methods';
