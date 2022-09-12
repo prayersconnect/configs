@@ -4,6 +4,9 @@ interface ICountries {
 [key: string]: ICountry;
 }
 
+/**
+ * @source https://github.com/sshaw/normalize_country/blob/master/lib/normalize_country/countries/en.yml
+ */
 const countries : ICountries = {
   'AD': {
     'aliases': [
