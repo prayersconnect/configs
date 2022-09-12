@@ -33,7 +33,7 @@ interface allConfigs {
   [key: string]: countryConfig;
 }
 
-const configs: allConfigs = {
+const prayersConfigs: allConfigs = {
   'united_states': {
     'code': null,
     'prayer_settings': {
@@ -89,4 +89,4 @@ const configs: allConfigs = {
   },
 };
 
-export default configs;
+export default prayersConfigs;

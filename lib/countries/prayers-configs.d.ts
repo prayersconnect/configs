@@ -25,5 +25,5 @@ export interface countryConfig {
 interface allConfigs {
     [key: string]: countryConfig;
 }
-declare const configs: allConfigs;
-export default configs;
+declare const prayersConfigs: allConfigs;
+export default prayersConfigs;
