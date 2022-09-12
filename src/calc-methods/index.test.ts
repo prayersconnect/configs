@@ -57,7 +57,7 @@ describe('calc-methods', () => {
       expect(methods).toMatchInlineSnapshot(`
         {
           "asrMethod": "Hanafi",
-          "method": null,
+          "method": "MWL",
         }
       `);
     });

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`country helpers getConfigByISOName returns country config for UK 1`] = `
+{
+  "code": 840,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName returns country config for USA 1`] = `
+{
+  "code": null,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "ISNA",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName returns default config if country not found 1`] = `
+{
+  "code": null,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getCountryByISOName returns country info if found 1`] = `
+{
+  "aliases": [
+    "America",
+    "U.S.",
+    "U.S.A.",
+  ],
+  "alpha2": "US",
+  "alpha3": "USA",
+  "emoji": "🇺🇸",
+  "fifa": "USA",
+  "ioc": "USA",
+  "iso_name": "United States",
+  "numeric": "840",
+  "official": "United States of America",
+  "short": "United States",
+  "shortcode": ":flag-us:",
+}
+`;

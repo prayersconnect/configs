@@ -15,8 +15,18 @@ export function getCountryByISOName(name: string): ICountry | null {
 }
 
 export function getConfigByISOName(name: string): countryConfig {
-  const countryConf = allConfigs[countrySlug(name)] as any;
-  return Object.assign({}, defaultConfig, countryConf);
+  const countryConf = allConfigs[countrySlug(name)] || {};
+  return {
+    code: countryConf?.code || null,
+    prayer_settings: {
+      ...defaultConfig.prayer_settings,
+      ...countryConf?.prayer_settings
+    },
+    mosque: {
+      ...defaultConfig.mosque,
+      ...countryConf.mosque
+    }
+  }
 }
 
 function countrySlug(country: string): string {
