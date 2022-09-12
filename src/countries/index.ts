@@ -14,8 +14,8 @@ export function getCountryByISOName(name: string): ICountry | null {
   return countries[key];
 }
 
-export function getConfigByISOName(country: string): countryConfig {
-  const countryConf = allConfigs[countrySlug(country)] as any;
+export function getConfigByISOName(name: string): countryConfig {
+  const countryConf = allConfigs[countrySlug(name)] as any;
   return Object.assign({}, defaultConfig, countryConf);
 }
 

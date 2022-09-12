@@ -1,21 +1,9 @@
 // for country code, visit https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes and get the corresponding numeric code for the country
 // value for calculation_method must match values defined in calculation-method.yml
 
-export const defaultConfig = {
-  'code': '',
-  'prayer_settings': {
-    'asr_method': 'Standard',
-    'calculation_method': 'MWL',
-  },
-  'mosque': {
-    'denomination': 'sunni',
-    'language_services': 'english',
-  },
-};
-
 interface prayerSettings {
   calculation_method?: string;
-  asr_method?: string;
+  asr_method?: 'Hanafi' | 'Standard';
 }
 
 interface mosqueSettings {
@@ -32,6 +20,18 @@ export interface countryConfig {
 interface allConfigs {
   [key: string]: countryConfig;
 }
+
+export const defaultConfig = {
+  'code': '',
+  'prayer_settings': {
+    'asr_method': 'Standard',
+    'calculation_method': 'MWL',
+  } as prayerSettings,
+  'mosque': {
+    'denomination': 'sunni',
+    'language_services': 'english',
+  },
+};
 
 const prayersConfigs: allConfigs = {
   'united_states': {
