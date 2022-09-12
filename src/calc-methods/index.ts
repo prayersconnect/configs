@@ -3,7 +3,7 @@ import { getConfigByISOName } from '../countries';
 
 export interface IMethodResponse {
   method: string | null;
-  asrMethod: 'Standard' | 'Hanafi' | null;
+  asrMethod: 'Standard' | 'Hanafi' ;
 }
 export const getCalcMethodByName = (name: string): CalculationMethod | undefined => {
   return methodsData.find((method) => method.name === name);
@@ -18,12 +18,12 @@ export const getCalcMethodsByCountry = (country: string | undefined): IMethodRes
     const countryConf = getConfigByISOName(country);
     return {
       method: countryConf?.prayer_settings?.calculation_method || null,
-      asrMethod: countryConf?.prayer_settings?.asr_method || null,
+      asrMethod: countryConf?.prayer_settings?.asr_method || 'Standard',
     };
   }
 
   return {
     method: null,
-    asrMethod: null,
+    asrMethod: 'Standard',
   };
 };
