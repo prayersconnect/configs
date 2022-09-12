@@ -13,6 +13,10 @@ export const getCalcMethods = (): CalculationMethod[] => {
   return methodsData;
 };
 
+/**
+ * Returns the calculation method and asr method for a given country's ISO name
+ * @param country ISO Country Name
+ */
 export const getCalcMethodsByCountry = (country: string | undefined): IMethodResponse => {
   if (country) {
     const countryConf = getConfigByISOName(country);
