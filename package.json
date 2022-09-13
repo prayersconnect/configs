@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "repository": "https://github.com/prayersconnect/configs.git",
   "author": "team@prayersconnect.com",
-  "license": "GPL3",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "build": "pretty-quick --staged && yarn test && tsc --build tsconfig.json",
     "prepare": "husky install",
