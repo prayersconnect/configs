@@ -5,6 +5,11 @@ export interface IMethodResponse {
   method: string;
   asrMethod: 'Standard' | 'Hanafi';
 }
+export interface IJuristicMethod {
+  name: string;
+  label: string;
+}
+
 
 export const getCalcMethodByName = (name: string): CalculationMethod | undefined => {
   return methodsData.find((method) => method.name === name);
@@ -28,4 +33,11 @@ export const getCalcMethodsByCountry = (country: string | undefined): IMethodRes
     method: countryConf.prayer_settings.calculation_method as string,
     asrMethod: countryConf.prayer_settings.asr_method || 'Standard',
   };
+};
+
+export const getJuristicMethods = (): IJuristicMethod[] => {
+  return [
+    { name: 'Standard', label: 'Standard (Shafii, Maliki, Jafari) and Hanbali' },
+    { name: 'Hanafi', label: 'Hanafi' },
+  ];
 };

@@ -7,9 +7,10 @@
   "author": "team@prayersconnect.com",
   "license": "GPL3",
   "scripts": {
-    "build": "tsc --build tsconfig.json",
+    "build": "yarn test && tsc --build tsconfig.json",
     "prepare": "husky install",
-    "test": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@types/jest": "^29.0.1",

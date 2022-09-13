@@ -1,7 +1,7 @@
 import {
   getCalcMethodByName,
   getCalcMethods,
-  getCalcMethodsByCountry,
+  getCalcMethodsByCountry, getJuristicMethods,
 } from './index';
 
 describe('calc-methods', () => {
@@ -84,4 +84,11 @@ describe('calc-methods', () => {
       expect(methods).toBeNull();
     });
   });
+
+  describe('getJuristicMethods', () => {
+    it('returns all asr methods', () => {
+      const methods = getJuristicMethods();
+      expect(methods).toMatchSnapshot();
+    });
+  })
 });
