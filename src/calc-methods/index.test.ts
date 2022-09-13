@@ -70,5 +70,18 @@ describe('calc-methods', () => {
         }
       `);
     });
+    it('returns default config if country not found', () => {
+      const methods = getCalcMethodsByCountry('foo');
+      expect(methods).toMatchInlineSnapshot(`
+        {
+          "asrMethod": "Standard",
+          "method": "MWL",
+        }
+      `);
+    });
+    it('returns null if country not provided', () => {
+      const methods = getCalcMethodsByCountry(null as any);
+      expect(methods).toBeNull();
+    });
   });
 });
