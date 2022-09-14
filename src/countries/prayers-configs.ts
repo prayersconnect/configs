@@ -22,69 +22,80 @@ interface allConfigs {
 }
 
 export const defaultConfig = {
-  'code': '',
-  'prayer_settings': {
-    'asr_method': 'Standard',
-    'calculation_method': 'MWL',
+  code: '',
+  prayer_settings: {
+    asr_method: 'Standard',
+    calculation_method: 'MWL',
   } as prayerSettings,
-  'mosque': {
-    'denomination': 'sunni',
-    'language_services': 'english',
+  mosque: {
+    denomination: 'sunni',
+    language_services: 'english',
   },
 };
 
 const prayersConfigs: allConfigs = {
-  'united_states': {
-    'code': null,
-    'prayer_settings': {
-      'calculation_method': 'ISNA',
+  united_states: {
+    code: null,
+    prayer_settings: {
+      calculation_method: 'ISNA',
     },
-    'mosque': {
-      'language_services': 'english',
-      'denomination': 'sunni',
-    },
-  },
-  'canada': {
-    'code': 124,
-    'prayer_settings': {
-      'calculation_method': 'ISNA',
+    mosque: {
+      language_services: 'english',
+      denomination: 'sunni',
     },
   },
-  'bangladesh': {
-    'code': 50,
-    'prayer_settings': {
-      'asr_method': 'Hanafi',
-      'calculation_method': 'Karachi',
-    },
-    'mosque': {
-      'language_services': 'bangla',
-      'denomination': 'sunni',
+  canada: {
+    code: 124,
+    prayer_settings: {
+      calculation_method: 'ISNA',
     },
   },
-  'turkey': {
-    'code': 792,
-    'prayer_settings': {
-      'calculation_method': 'turkey-presidency-of-religious-affairs',
+  bangladesh: {
+    code: 50,
+    prayer_settings: {
+      asr_method: 'Hanafi',
+      calculation_method: 'Karachi',
     },
-    'mosque': {
-      'language_services': 'Türkçe',
-      'denomination': 'sunni',
-    },
-  },
-  'united_kingdom': {
-    'code': 840,
-    'prayer_settings': {
-      'calculation_method': 'MWL',
-    },
-    'mosque': {
-      'language_services': 'english',
-      'denomination': 'sunni',
+    mosque: {
+      language_services: 'bangla',
+      denomination: 'sunni',
     },
   },
-  'australia': {
-    'code': 36,
-    'prayer_settings': {
-      'asr_method': 'Hanafi',
+  turkiye: {
+    //make sure values turkey and turkiye are the same
+    code: 792,
+    prayer_settings: {
+      calculation_method: 'turkey-presidency-of-religious-affairs',
+    },
+    mosque: {
+      language_services: 'Türkçe',
+      denomination: 'sunni',
+    },
+  },
+  turkey: {
+    code: 792,
+    prayer_settings: {
+      calculation_method: 'turkey-presidency-of-religious-affairs',
+    },
+    mosque: {
+      language_services: 'Türkçe',
+      denomination: 'sunni',
+    },
+  },
+  united_kingdom: {
+    code: 840,
+    prayer_settings: {
+      calculation_method: 'MWL',
+    },
+    mosque: {
+      language_services: 'english',
+      denomination: 'sunni',
+    },
+  },
+  australia: {
+    code: 36,
+    prayer_settings: {
+      asr_method: 'Hanafi',
     },
   },
 };
