@@ -1,24 +1,10 @@
 // for country code, visit https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes and get the corresponding numeric code for the country
 // value for calculation_method must match values defined in calculation-method.yml
 
-interface prayerSettings {
-  calculation_method?: string;
-  asr_method?: 'Hanafi' | 'Standard';
-}
-
-interface mosqueSettings {
-  denomination: string;
-  language_services: string;
-}
-
-export interface countryConfig {
-  code: number | null;
-  prayer_settings: prayerSettings;
-  mosque?: mosqueSettings;
-}
+import { ICountryConfigValues, IPrayerSettings } from './types';
 
 interface allConfigs {
-  [key: string]: countryConfig;
+  [key: string]: string | ICountryConfigValues;
 }
 
 export const defaultConfig = {
@@ -26,7 +12,7 @@ export const defaultConfig = {
   prayer_settings: {
     asr_method: 'Standard',
     calculation_method: 'MWL',
-  } as prayerSettings,
+  } as IPrayerSettings,
   mosque: {
     denomination: 'sunni',
     language_services: 'english',
@@ -72,16 +58,7 @@ const prayersConfigs: allConfigs = {
       denomination: 'sunni',
     },
   },
-  turkey: {
-    code: 792,
-    prayer_settings: {
-      calculation_method: 'turkey-presidency-of-religious-affairs',
-    },
-    mosque: {
-      language_services: 'Türkçe',
-      denomination: 'sunni',
-    },
-  },
+  turkey: 'turkiye',
   united_kingdom: {
     code: 840,
     prayer_settings: {

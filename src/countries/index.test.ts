@@ -22,7 +22,10 @@ describe('country helpers', () => {
     it('returns country config for UK', () => {
       expect(getConfigByISOName('United Kingdom')).toMatchSnapshot();
     });
-  })
-
-
+    it('returns country config for Turkey alias', () => {
+      expect(getConfigByISOName('Turkey')).toEqual(
+        getConfigByISOName('Turkiye')
+      );
+    });
+  });
 });

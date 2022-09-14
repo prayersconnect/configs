@@ -1,22 +1,10 @@
-interface prayerSettings {
-    calculation_method?: string;
-    asr_method?: 'Hanafi' | 'Standard';
-}
-interface mosqueSettings {
-    denomination: string;
-    language_services: string;
-}
-export interface countryConfig {
-    code: number | null;
-    prayer_settings: prayerSettings;
-    mosque?: mosqueSettings;
-}
+import { ICountryConfigValues, IPrayerSettings } from './types';
 interface allConfigs {
-    [key: string]: countryConfig;
+    [key: string]: string | ICountryConfigValues;
 }
 export declare const defaultConfig: {
     code: string;
-    prayer_settings: prayerSettings;
+    prayer_settings: IPrayerSettings;
     mosque: {
         denomination: string;
         language_services: string;
