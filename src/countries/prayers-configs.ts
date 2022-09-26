@@ -75,6 +75,44 @@ const prayersConfigs: allConfigs = {
       asr_method: 'Hanafi',
     },
   },
+  new_zealand: {
+    code: 554,
+    prayer_settings: {
+      asr_method: 'Hanafi',
+    },
+    mosque: {
+      language_services: 'english',
+      denomination: 'sunni',
+    },
+  },
+  india: {
+    code: 356,
+    prayer_settings: {
+      calculation_method: 'Karachi',
+      asr_method: 'Hanafi',
+    },
+    mosque: {
+      language_services: 'hindi',
+      denomination: 'sunni',
+    },
+  },
+  pakistan: {
+    code: 586,
+    prayer_settings: {
+      calculation_method: 'Karachi',
+      asr_method: 'Hanafi',
+    },
+    mosque: {
+      language_services: 'urdu',
+      denomination: 'sunni',
+    },
+  },
+  france: {
+    code: 250,
+    prayer_settings: {
+      calculation_method: 'union-des-organisations-islamiques-de-france',
+    },
+  },
 };
 
 export default prayersConfigs;

@@ -81,6 +81,30 @@ exports[`calc-methods getCalcMethods returns all methods 1`] = `
       "midnight": "Jafari",
     },
   },
+  {
+    "label": "Union des Organisations Islamiques de France",
+    "name": "union-des-organisations-islamiques-de-france",
+    "values": {
+      "fajr": 12,
+      "isha": 12,
+    },
+  },
+  {
+    "label": "France 15 degree",
+    "name": "france-15-degree",
+    "values": {
+      "fajr": 15,
+      "isha": 15,
+    },
+  },
+  {
+    "label": "France 18 degree",
+    "name": "france-18-degree",
+    "values": {
+      "fajr": 18,
+      "isha": 18,
+    },
+  },
 ]
 `;
 
