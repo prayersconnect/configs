@@ -105,3 +105,4 @@ dist
 .idea
 .yarn/*
 yarn-error.log
+./lib/

@@ -1,0 +1,7 @@
+src/
+.husky/
+.github/
+.prettierrc.yaml
+.prettierignore
+jest.config.js
+tsconfig.json
