@@ -1,9 +1,12 @@
 {
-  "name": "prayers-connect-configs",
-  "version": "0.0.1",
+  "name": "@prayersconnect/configs",
+  "version": "1.0.0",
   "description": "Country specific configuration for Prayers Connect",
   "main": "./lib/index.js",
-  "repository": "https://github.com/prayersconnect/configs.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prayersconnect/configs.git"
+  },
   "author": "team@prayersconnect.com",
   "license": "GPL-3.0-or-later",
   "scripts": {
@@ -23,5 +26,12 @@
     "typescript": "^4.8.2"
   },
   "packageManager": "yarn@3.2.3",
-  "dependencies": {}
+  "types": "./lib/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/prayersconnect/configs/issues"
+  },
+  "homepage": "https://github.com/prayersconnect/configs#readme",
+  "directories": {
+    "lib": "lib"
+  }
 }
