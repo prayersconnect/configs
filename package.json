@@ -1,9 +1,12 @@
 {
   "name": "@prayersconnect/configs",
-  "version": "1.0.0",
+  "version": "0.0.0-dev",
   "description": "Country specific configuration for Prayers Connect",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/prayersconnect/configs.git"
