@@ -119,6 +119,12 @@ const prayersConfigs: allConfigs = {
       calculation_method: 'Egypt',
     },
   },
+  saudia_arabia: {
+    code: 682,
+    prayer_settings: {
+      calculation_method: 'Makkah',
+    },
+  },
 };
 
 export default prayersConfigs;
