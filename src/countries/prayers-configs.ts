@@ -113,6 +113,12 @@ const prayersConfigs: allConfigs = {
       calculation_method: 'union-des-organisations-islamiques-de-france',
     },
   },
+  egypt: {
+    code: 818,
+    prayer_settings: {
+      calculation_method: 'Egypt',
+    },
+  },
 };
 
 export default prayersConfigs;
