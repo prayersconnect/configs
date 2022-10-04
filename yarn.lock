@@ -624,6 +624,22 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
+"@types/jest-in-case@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/@types/jest-in-case/-/jest-in-case-1.0.6.tgz#1099525666c45d91df4f344f109cc32324e8fe78"
+  integrity sha512-2VhZGKiji20QLG0gtcNftDmAaSmxoOLUvPW771ZDfi25IpNATGutn5wBnmqWz1Q7NIR6pqraDqrXXpq75wg/GA==
+  dependencies:
+    "@types/jest" "*"
+    "@types/node" "*"
+
+"@types/jest@*":
+  version "29.1.1"
+  resolved "https://registry.npmjs.org/@types/jest/-/jest-29.1.1.tgz#cf21a0835a1ba9a30ea1966019f1261c6a114c92"
+  integrity sha512-U9Ey07dGWl6fUFaIaUQUKWG5NoKi/zizeVQCGV8s4nSU0jPgqphVZvS64+8BtWYvrc3ZGw6wo943NSYPxkrp/g==
+  dependencies:
+    expect "^29.0.0"
+    pretty-format "^29.0.0"
+
 "@types/jest@^29.0.1":
   version "29.0.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.0.1.tgz#b5610ae1a1c5f6e0f6beb132941722da7c493c28"
@@ -631,18 +647,6 @@
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
-
-"@types/lodash-es@^4.17.6":
-  version "4.17.6"
-  resolved "https://registry.yarnpkg.com/@types/lodash-es/-/lodash-es-4.17.6.tgz#c2ed4c8320ffa6f11b43eb89e9eaeec65966a0a0"
-  integrity sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==
-  dependencies:
-    "@types/lodash" "*"
-
-"@types/lodash@*":
-  version "4.14.184"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.184.tgz#23f96cd2a21a28e106dc24d825d4aa966de7a9fe"
-  integrity sha512-RoZphVtHbxPZizt4IcILciSWiC6dcn+eZ8oX9IWEYfDMcocdd42f7NPI6fQj+6zI8y4E0L7gu2pcZKLGTRaV9Q==
 
 "@types/minimatch@^3.0.3":
   version "3.0.5"
@@ -1472,6 +1476,11 @@ jest-haste-map@^29.0.3:
     walker "^1.0.8"
   optionalDependencies:
     fsevents "^2.3.2"
+
+jest-in-case@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/jest-in-case/-/jest-in-case-1.0.2.tgz#56744b5af33222bd0abab70cf919f1d170ab75cc"
+  integrity sha512-2DE6Gdwnh5jkCYTePWoQinF+zne3lCADibXoYJEt8PS84JaRug0CyAOrEgzMxbzln3YcSY2PBeru7ct4tbflYA==
 
 jest-leak-detector@^29.0.3:
   version "29.0.3"
