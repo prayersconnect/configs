@@ -27,5 +27,8 @@ describe('country helpers', () => {
         getConfigByISOName('Turkiye')
       );
     });
+    it('returns country config for Egypt', () => {
+      expect(getConfigByISOName('Egypt')).toMatchSnapshot();
+    });
   });
 });

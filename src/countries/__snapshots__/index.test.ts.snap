@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`country helpers getConfigByISOName returns country config for Egypt 1`] = `
+{
+  "code": 818,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "Egypt",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName returns country config for UK 1`] = `
 {
   "code": 840,
