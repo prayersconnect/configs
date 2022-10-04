@@ -1,6 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`country helpers getConfigByISOName returns country config for Egypt 1`] = `
+exports[`country helpers getConfigByISOName country configs australia 1`] = `
+{
+  "code": 36,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Hanafi",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs bangladesh 1`] = `
+{
+  "code": 50,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "bangla",
+  },
+  "prayer_settings": {
+    "asr_method": "Hanafi",
+    "calculation_method": "Karachi",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs canada 1`] = `
+{
+  "code": 124,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "ISNA",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs egypt 1`] = `
 {
   "code": 818,
   "mosque": {
@@ -14,7 +56,105 @@ exports[`country helpers getConfigByISOName returns country config for Egypt 1`]
 }
 `;
 
-exports[`country helpers getConfigByISOName returns country config for UK 1`] = `
+exports[`country helpers getConfigByISOName country configs france 1`] = `
+{
+  "code": 250,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "union-des-organisations-islamiques-de-france",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs india 1`] = `
+{
+  "code": 356,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "hindi",
+  },
+  "prayer_settings": {
+    "asr_method": "Hanafi",
+    "calculation_method": "Karachi",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
+{
+  "code": 554,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Hanafi",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
+{
+  "code": 586,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "urdu",
+  },
+  "prayer_settings": {
+    "asr_method": "Hanafi",
+    "calculation_method": "Karachi",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs saudia_arabia 1`] = `
+{
+  "code": 682,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "Makkah",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs turkey 1`] = `
+{
+  "code": 792,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "Türkçe",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "turkey-presidency-of-religious-affairs",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs turkiye 1`] = `
+{
+  "code": 792,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "Türkçe",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "turkey-presidency-of-religious-affairs",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs united_kingdom 1`] = `
 {
   "code": 840,
   "mosque": {
@@ -28,7 +168,7 @@ exports[`country helpers getConfigByISOName returns country config for UK 1`] = 
 }
 `;
 
-exports[`country helpers getConfigByISOName returns country config for USA 1`] = `
+exports[`country helpers getConfigByISOName country configs united_states 1`] = `
 {
   "code": null,
   "mosque": {

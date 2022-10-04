@@ -1,4 +1,6 @@
 import { getConfigByISOName, getCountryByISOName } from './index';
+import prayersConfigs from './prayers-configs';
+import cases from 'jest-in-case';
 
 describe('country helpers', () => {
   describe('getCountryByISOName', () => {
@@ -16,19 +18,22 @@ describe('country helpers', () => {
       expect(getConfigByISOName('not-found')).toMatchSnapshot();
     });
 
-    it('returns country config for USA', () => {
-      expect(getConfigByISOName('United States')).toMatchSnapshot();
-    });
-    it('returns country config for UK', () => {
-      expect(getConfigByISOName('United Kingdom')).toMatchSnapshot();
-    });
     it('returns country config for Turkey alias', () => {
       expect(getConfigByISOName('Turkey')).toEqual(
         getConfigByISOName('Turkiye')
       );
     });
-    it('returns country config for Egypt', () => {
-      expect(getConfigByISOName('Egypt')).toMatchSnapshot();
-    });
+    cases(
+      `country configs`,
+      (opts: { name: string; country: string }) => {
+        expect(getConfigByISOName(opts.country)).toMatchSnapshot();
+      },
+      Object.keys(prayersConfigs).map((country) => {
+        return {
+          name: country,
+          country,
+        };
+      })
+    );
   });
 });
