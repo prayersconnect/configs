@@ -154,6 +154,20 @@ exports[`country helpers getConfigByISOName country configs turkiye 1`] = `
 }
 `;
 
+exports[`country helpers getConfigByISOName country configs united_arab_emirates 1`] = `
+{
+  "code": 784,
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayer_settings": {
+    "asr_method": "Standard",
+    "calculation_method": "Karachi",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs united_kingdom 1`] = `
 {
   "code": 826,

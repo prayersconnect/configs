@@ -125,6 +125,12 @@ const prayersConfigs: allConfigs = {
       calculation_method: 'Makkah',
     },
   },
+  united_arab_emirates: {
+    code: 784,
+    prayer_settings: {
+      calculation_method: 'Karachi',
+    },
+  },
 };
 
 export default prayersConfigs;
