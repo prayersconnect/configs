@@ -21,7 +21,7 @@ export const defaultConfig = {
 
 const prayersConfigs: allConfigs = {
   united_states: {
-    code: null,
+    code: 840,
     prayer_settings: {
       calculation_method: 'ISNA',
     },
@@ -60,7 +60,7 @@ const prayersConfigs: allConfigs = {
   },
   turkey: 'turkiye',
   united_kingdom: {
-    code: 840,
+    code: 826,
     prayer_settings: {
       calculation_method: 'MWL',
     },
