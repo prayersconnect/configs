@@ -170,7 +170,7 @@ exports[`country helpers getConfigByISOName country configs united_arab_emirates
 
 exports[`country helpers getConfigByISOName country configs united_kingdom 1`] = `
 {
-  "code": 840,
+  "code": 826,
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -184,7 +184,7 @@ exports[`country helpers getConfigByISOName country configs united_kingdom 1`] =
 
 exports[`country helpers getConfigByISOName country configs united_states 1`] = `
 {
-  "code": null,
+  "code": 840,
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
