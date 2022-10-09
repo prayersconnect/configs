@@ -1,4 +1,4 @@
-import { ICountry } from './types';
+import { ICountry, ICountryFeatures } from './types';
 import countries from './list';
 import allConfigs, { defaultConfig } from './prayers-configs';
 import { ICountryConfig } from './types';
@@ -27,6 +27,7 @@ export function getConfigByISOName(name: string): ICountryConfig {
 
   return {
     code: countryConf?.code || null,
+    alpha2Code: countryConf?.alpha2Code,
     prayer_settings: {
       ...defaultConfig.prayer_settings,
       ...countryConf?.prayer_settings,
@@ -35,7 +36,23 @@ export function getConfigByISOName(name: string): ICountryConfig {
       ...defaultConfig.mosque,
       ...countryConf.mosque,
     },
+    features: {
+      ...defaultConfig.features,
+      ...countryConf.features,
+    },
   };
+}
+
+export function hasFeature(
+  country: string,
+  feature: keyof ICountryFeatures
+): boolean {
+  const config = getConfigByISOName(country);
+  if (config) {
+    return !!config.features[feature];
+  } else {
+    return !!defaultConfig.features[feature];
+  }
 }
 
 function countrySlug(country: string): string {
