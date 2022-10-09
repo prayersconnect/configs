@@ -30,7 +30,7 @@ export const defaultConfig = {
 const prayersConfigs: allConfigs = {
   united_states: {
     code: 840,
-    alpha2_code: 'US',
+    alpha2Code: 'US',
     prayer_settings: {
       calculation_method: 'ISNA',
     },
@@ -47,7 +47,7 @@ const prayersConfigs: allConfigs = {
   },
   canada: {
     code: 124,
-    alpha2_code: 'CA',
+    alpha2Code: 'CA',
     prayer_settings: {
       calculation_method: 'ISNA',
     },
@@ -59,7 +59,7 @@ const prayersConfigs: allConfigs = {
   },
   bangladesh: {
     code: 50,
-    alpha2_code: 'BD',
+    alpha2Code: 'BD',
     prayer_settings: {
       asr_method: 'Hanafi',
       calculation_method: 'Karachi',
@@ -71,7 +71,7 @@ const prayersConfigs: allConfigs = {
   },
   turkiye: {
     code: 792,
-    alpha2_code: 'TR',
+    alpha2Code: 'TR',
     prayer_settings: {
       calculation_method: 'turkey-presidency-of-religious-affairs',
     },
@@ -83,7 +83,7 @@ const prayersConfigs: allConfigs = {
   turkey: 'turkiye',
   united_kingdom: {
     code: 826,
-    alpha2_code: 'GB',
+    alpha2Code: 'GB',
     prayer_settings: {
       calculation_method: 'MWL',
     },
@@ -98,7 +98,7 @@ const prayersConfigs: allConfigs = {
   },
   australia: {
     code: 36,
-    alpha2_code: 'AU',
+    alpha2Code: 'AU',
     prayer_settings: {
       asr_method: 'Hanafi',
     },
@@ -108,7 +108,7 @@ const prayersConfigs: allConfigs = {
   },
   new_zealand: {
     code: 554,
-    alpha2_code: 'NZ',
+    alpha2Code: 'NZ',
     prayer_settings: {
       asr_method: 'Hanafi',
     },
@@ -119,7 +119,7 @@ const prayersConfigs: allConfigs = {
   },
   india: {
     code: 356,
-    alpha2_code: 'IN',
+    alpha2Code: 'IN',
     prayer_settings: {
       calculation_method: 'Karachi',
       asr_method: 'Hanafi',
@@ -131,7 +131,7 @@ const prayersConfigs: allConfigs = {
   },
   pakistan: {
     code: 586,
-    alpha2_code: 'PK',
+    alpha2Code: 'PK',
     prayer_settings: {
       calculation_method: 'Karachi',
       asr_method: 'Hanafi',
@@ -143,21 +143,21 @@ const prayersConfigs: allConfigs = {
   },
   france: {
     code: 250,
-    alpha2_code: 'FR',
+    alpha2Code: 'FR',
     prayer_settings: {
       calculation_method: 'union-des-organisations-islamiques-de-france',
     },
   },
   egypt: {
     code: 818,
-    alpha2_code: 'EG',
+    alpha2Code: 'EG',
     prayer_settings: {
       calculation_method: 'Egypt',
     },
   },
   saudia_arabia: {
     code: 682,
-    alpha2_code: 'SA',
+    alpha2Code: 'SA',
     prayer_settings: {
       calculation_method: 'Makkah',
     },

@@ -2,6 +2,7 @@
 
 exports[`country helpers getConfigByISOName country configs australia 1`] = `
 {
+  "alpha2Code": "AU",
   "code": 36,
   "features": {
     "education": false,
@@ -23,6 +24,7 @@ exports[`country helpers getConfigByISOName country configs australia 1`] = `
 
 exports[`country helpers getConfigByISOName country configs bangladesh 1`] = `
 {
+  "alpha2Code": "BD",
   "code": 50,
   "features": {
     "education": false,
@@ -44,6 +46,7 @@ exports[`country helpers getConfigByISOName country configs bangladesh 1`] = `
 
 exports[`country helpers getConfigByISOName country configs canada 1`] = `
 {
+  "alpha2Code": "CA",
   "code": 124,
   "features": {
     "education": false,
@@ -66,6 +69,7 @@ exports[`country helpers getConfigByISOName country configs canada 1`] = `
 
 exports[`country helpers getConfigByISOName country configs egypt 1`] = `
 {
+  "alpha2Code": "EG",
   "code": 818,
   "features": {
     "education": false,
@@ -87,6 +91,7 @@ exports[`country helpers getConfigByISOName country configs egypt 1`] = `
 
 exports[`country helpers getConfigByISOName country configs france 1`] = `
 {
+  "alpha2Code": "FR",
   "code": 250,
   "features": {
     "education": false,
@@ -108,6 +113,7 @@ exports[`country helpers getConfigByISOName country configs france 1`] = `
 
 exports[`country helpers getConfigByISOName country configs india 1`] = `
 {
+  "alpha2Code": "IN",
   "code": 356,
   "features": {
     "education": false,
@@ -129,6 +135,7 @@ exports[`country helpers getConfigByISOName country configs india 1`] = `
 
 exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
 {
+  "alpha2Code": "NZ",
   "code": 554,
   "features": {
     "education": false,
@@ -150,6 +157,7 @@ exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
 
 exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
 {
+  "alpha2Code": "PK",
   "code": 586,
   "features": {
     "education": false,
@@ -171,6 +179,7 @@ exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
 
 exports[`country helpers getConfigByISOName country configs saudia_arabia 1`] = `
 {
+  "alpha2Code": "SA",
   "code": 682,
   "features": {
     "education": false,
@@ -192,6 +201,7 @@ exports[`country helpers getConfigByISOName country configs saudia_arabia 1`] = 
 
 exports[`country helpers getConfigByISOName country configs turkey 1`] = `
 {
+  "alpha2Code": "TR",
   "code": 792,
   "features": {
     "education": false,
@@ -213,6 +223,7 @@ exports[`country helpers getConfigByISOName country configs turkey 1`] = `
 
 exports[`country helpers getConfigByISOName country configs turkiye 1`] = `
 {
+  "alpha2Code": "TR",
   "code": 792,
   "features": {
     "education": false,
@@ -248,6 +259,7 @@ exports[`country helpers getConfigByISOName country configs united_arab_emirates
 
 exports[`country helpers getConfigByISOName country configs united_kingdom 1`] = `
 {
+  "alpha2Code": "GB",
   "code": 826,
   "features": {
     "education": false,
@@ -270,6 +282,7 @@ exports[`country helpers getConfigByISOName country configs united_kingdom 1`] =
 
 exports[`country helpers getConfigByISOName country configs united_states 1`] = `
 {
+  "alpha2Code": "US",
   "code": 840,
   "features": {
     "education": true,
@@ -292,6 +305,7 @@ exports[`country helpers getConfigByISOName country configs united_states 1`] = 
 
 exports[`country helpers getConfigByISOName returns default config if country not found 1`] = `
 {
+  "alpha2Code": undefined,
   "code": null,
   "features": {
     "education": false,

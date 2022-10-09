@@ -27,6 +27,7 @@ export function getConfigByISOName(name: string): ICountryConfig {
 
   return {
     code: countryConf?.code || null,
+    alpha2Code: countryConf?.alpha2Code,
     prayer_settings: {
       ...defaultConfig.prayer_settings,
       ...countryConf?.prayer_settings,
