@@ -35,6 +35,10 @@ export function getConfigByISOName(name: string): ICountryConfig {
       ...defaultConfig.mosque,
       ...countryConf.mosque,
     },
+    features: {
+      ...defaultConfig.features,
+      ...countryConf.features,
+    },
   };
 }
 

@@ -23,10 +23,19 @@ interface IMosqueSettings {
   language_services: string;
 }
 
+export interface ICountryFeatures {
+  mosques?: boolean;
+  iqamahTimes?: boolean;
+  prayerTimes?: boolean;
+  events?: boolean;
+  education?: boolean;
+}
+
 export interface ICountryConfig {
   code?: number | null;
   prayer_settings: IPrayerSettings;
   mosque: IMosqueSettings;
+  features: ICountryFeatures;
 }
 
 export interface ICountryConfigValues {
@@ -34,4 +43,5 @@ export interface ICountryConfigValues {
   prayer_settings?: IPrayerSettings;
   mosque?: IMosqueSettings;
   alias?: string;
+  features?: ICountryFeatures;
 }

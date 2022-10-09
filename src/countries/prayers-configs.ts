@@ -17,6 +17,13 @@ export const defaultConfig = {
     denomination: 'sunni',
     language_services: 'english',
   },
+  features: {
+    mosques: false,
+    iqamahTiming: false,
+    prayerTimes: true,
+    events: false,
+    education: false,
+  },
 };
 
 const prayersConfigs: allConfigs = {
@@ -29,11 +36,22 @@ const prayersConfigs: allConfigs = {
       language_services: 'english',
       denomination: 'sunni',
     },
+    features: {
+      mosques: true,
+      iqamahTimes: true,
+      events: true,
+      education: true,
+    },
   },
   canada: {
     code: 124,
     prayer_settings: {
       calculation_method: 'ISNA',
+    },
+    features: {
+      mosques: true,
+      iqamahTimes: true,
+      events: true,
     },
   },
   bangladesh: {
@@ -68,11 +86,18 @@ const prayersConfigs: allConfigs = {
       language_services: 'english',
       denomination: 'sunni',
     },
+    features: {
+      mosques: true,
+      iqamahTimes: true,
+    },
   },
   australia: {
     code: 36,
     prayer_settings: {
       asr_method: 'Hanafi',
+    },
+    features: {
+      mosques: true,
     },
   },
   new_zealand: {

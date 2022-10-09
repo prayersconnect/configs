@@ -3,6 +3,13 @@
 exports[`country helpers getConfigByISOName country configs australia 1`] = `
 {
   "code": 36,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -17,6 +24,13 @@ exports[`country helpers getConfigByISOName country configs australia 1`] = `
 exports[`country helpers getConfigByISOName country configs bangladesh 1`] = `
 {
   "code": 50,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "bangla",
@@ -31,6 +45,14 @@ exports[`country helpers getConfigByISOName country configs bangladesh 1`] = `
 exports[`country helpers getConfigByISOName country configs canada 1`] = `
 {
   "code": 124,
+  "features": {
+    "education": false,
+    "events": true,
+    "iqamahTimes": true,
+    "iqamahTiming": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -45,6 +67,13 @@ exports[`country helpers getConfigByISOName country configs canada 1`] = `
 exports[`country helpers getConfigByISOName country configs egypt 1`] = `
 {
   "code": 818,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -59,6 +88,13 @@ exports[`country helpers getConfigByISOName country configs egypt 1`] = `
 exports[`country helpers getConfigByISOName country configs france 1`] = `
 {
   "code": 250,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -73,6 +109,13 @@ exports[`country helpers getConfigByISOName country configs france 1`] = `
 exports[`country helpers getConfigByISOName country configs india 1`] = `
 {
   "code": 356,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "hindi",
@@ -87,6 +130,13 @@ exports[`country helpers getConfigByISOName country configs india 1`] = `
 exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
 {
   "code": 554,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -101,6 +151,13 @@ exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
 exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
 {
   "code": 586,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "urdu",
@@ -115,6 +172,13 @@ exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
 exports[`country helpers getConfigByISOName country configs saudia_arabia 1`] = `
 {
   "code": 682,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -129,6 +193,13 @@ exports[`country helpers getConfigByISOName country configs saudia_arabia 1`] = 
 exports[`country helpers getConfigByISOName country configs turkey 1`] = `
 {
   "code": 792,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "Türkçe",
@@ -143,6 +214,13 @@ exports[`country helpers getConfigByISOName country configs turkey 1`] = `
 exports[`country helpers getConfigByISOName country configs turkiye 1`] = `
 {
   "code": 792,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "Türkçe",
@@ -171,6 +249,14 @@ exports[`country helpers getConfigByISOName country configs united_arab_emirates
 exports[`country helpers getConfigByISOName country configs united_kingdom 1`] = `
 {
   "code": 826,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": true,
+    "iqamahTiming": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -185,6 +271,14 @@ exports[`country helpers getConfigByISOName country configs united_kingdom 1`] =
 exports[`country helpers getConfigByISOName country configs united_states 1`] = `
 {
   "code": 840,
+  "features": {
+    "education": true,
+    "events": true,
+    "iqamahTimes": true,
+    "iqamahTiming": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
@@ -199,6 +293,13 @@ exports[`country helpers getConfigByISOName country configs united_states 1`] = 
 exports[`country helpers getConfigByISOName returns default config if country not found 1`] = `
 {
   "code": null,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
