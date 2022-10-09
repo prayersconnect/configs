@@ -1,7 +1,11 @@
 // for country code, visit https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes and get the corresponding numeric code for the country
 // value for calculation_method must match values defined in calculation-method.yml
 
-import { ICountryConfigValues, IPrayerSettings } from './types';
+import {
+  ICountryConfigValues,
+  ICountryFeatures,
+  IPrayerSettings,
+} from './types';
 
 interface allConfigs {
   [key: string]: string | ICountryConfigValues;
@@ -24,7 +28,7 @@ export const defaultConfig = {
     prayerTimes: true,
     events: false,
     education: false,
-  },
+  } as ICountryFeatures,
 };
 
 const prayersConfigs: allConfigs = {
