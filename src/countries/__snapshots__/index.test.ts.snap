@@ -245,7 +245,15 @@ exports[`country helpers getConfigByISOName country configs turkiye 1`] = `
 
 exports[`country helpers getConfigByISOName country configs united_arab_emirates 1`] = `
 {
+  "alpha2Code": undefined,
   "code": 784,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTiming": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
