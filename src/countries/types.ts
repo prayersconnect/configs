@@ -23,15 +23,22 @@ interface IMosqueSettings {
   language_services: string;
 }
 
-export interface ICountryConfig {
-  code?: number | null;
-  prayer_settings: IPrayerSettings;
-  mosque: IMosqueSettings;
+export interface ICountryFeatures {
+  mosques?: boolean;
+  iqamahTimes?: boolean;
+  prayerTimes?: boolean;
+  events?: boolean;
+  education?: boolean;
 }
 
-export interface ICountryConfigValues {
-  code?: number | null;
-  prayer_settings?: IPrayerSettings;
-  mosque?: IMosqueSettings;
+export interface ICountryConfig {
+  code: number | null;
+  alpha2Code: string; //alpha-2 code from https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
+  prayer_settings: IPrayerSettings;
+  mosque: IMosqueSettings;
+  features: ICountryFeatures;
+}
+
+export interface ICountryConfigValues extends Partial<ICountryConfig> {
   alias?: string;
 }
