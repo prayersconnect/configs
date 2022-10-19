@@ -25,7 +25,7 @@ describe('daylight savings', () => {
       expect(getDSTEnd('United States', 2022)).toEqual(new Date('2022-11-07'));
       expect(getDSTEnd('Canada', 2022)).toEqual(new Date('2022-11-07'));
       expect(getDSTEnd('United Kingdom', 2022)).toEqual(new Date('2022-10-30'));
-      expect(getDSTEnd('Australia', 2022)).toEqual(new Date('2022-04-03'));
+      expect(getDSTEnd('Australia', 2022)).toEqual(new Date('2023-04-02'));
     });
   });
 });
