@@ -23,6 +23,7 @@ const dstTransitionDates: DaylightSavingsRanges = {
     2023: [new Date('2023-03-26'), new Date('2023-10-29')],
   },
   Australia: {
+    2021: [new Date('2021-10-03'), new Date('2022-04-03')],
     2022: [new Date('2022-10-02'), new Date('2023-04-02')],
     2023: [new Date('2023-10-01'), new Date('2024-04-07')],
   },
