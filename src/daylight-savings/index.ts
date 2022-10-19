@@ -17,7 +17,7 @@ function getRange(country: string, year: number) {
   return yearList;
 }
 
-export function getDSTStart(country: string, year: number) {
+export function getDSTStart(country: string, year: number): Date | null {
   const range = getRange(country, year);
   if (!range) {
     return null;
@@ -26,7 +26,7 @@ export function getDSTStart(country: string, year: number) {
   return range[0];
 }
 
-export function getDSTEnd(country: string, year: number) {
+export function getDSTEnd(country: string, year: number): Date | null {
   const range = getRange(country, year);
   if (!range) {
     return null;
