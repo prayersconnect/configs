@@ -6,4 +6,5 @@ export {
   getJuristicMethods,
 } from './calc-methods';
 export { CalculationMethod } from './calc-methods/methods';
-export { getDSTStart, getDSTEnd } from './daylight-savings';
+export { getDSTStart, getDSTEnd } from './daylight-savings/index';
+export { getRangesForYear } from './daylight-savings/range-helpers';

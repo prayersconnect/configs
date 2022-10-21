@@ -3,9 +3,8 @@ import { DateTime } from 'luxon';
 
 const formatString = 'yyyy-MM-dd';
 
-function parseDateInZone(date: Date, timezone: string): DateTime {
-  date.setHours(3, 0, 0, 0);
-  return DateTime.fromJSDate(date).setZone(timezone, { keepLocalTime: true });
+function parseDateInZone(date: string, timezone: string): DateTime {
+  return DateTime.fromISO(date, { zone: timezone }).set({ hour: 3 });
 }
 
 function getDSTRanges(dstStart: DateTime, dstEnd: DateTime, country: string) {
@@ -18,12 +17,12 @@ function getDSTRanges(dstStart: DateTime, dstEnd: DateTime, country: string) {
     ]);
   } else {
     const prevYearDstEnd = parseDateInZone(
-      getDSTEnd(country, dstStart.year - 1) as Date,
+      getDSTEnd(country, dstStart.year - 1) as string,
       dstEnd.zoneName
     ); //@todo fix when getDSTEnd returns null
 
     const prevYearDstStart = parseDateInZone(
-      getDSTStart(country, dstStart.year - 1) as Date,
+      getDSTStart(country, dstStart.year - 1) as string,
       dstStart.zoneName
     ); //@todo fix when getDSTEnd returns null
 
@@ -48,7 +47,7 @@ function getNonDSTRanges(
   dstEnd: DateTime,
   country: string
 ) {
-  const prevYearDSTEndDate = getDSTEnd(country, dstStart.year - 1) as Date;
+  const prevYearDSTEndDate = getDSTEnd(country, dstStart.year - 1) as string;
 
   const ranges = [];
   if (dstStart.year === dstEnd.year) {
@@ -89,21 +88,16 @@ export function getRangesForYear(
   country: string,
   timezone: string
 ) {
-  const today = parseDateInZone(DateTime.local().toJSDate(), timezone).set({
+  const today = parseDateInZone(DateTime.local().toISODate(), timezone).set({
     year,
   });
   const dstStart = parseDateInZone(
-    getDSTStart(country, today.year) as Date,
+    getDSTStart(country, today.year) as string,
     timezone
   );
 
-  console.log(
-    'dstStart',
-    getDSTStart(country, today.year),
-    dstStart.toISODate()
-  );
   const dstEnd = parseDateInZone(
-    getDSTEnd(country, today.year) as Date,
+    getDSTEnd(country, today.year) as string,
     timezone
   );
 

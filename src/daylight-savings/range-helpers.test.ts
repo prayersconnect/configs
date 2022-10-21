@@ -7,7 +7,8 @@ describe('quick range helpers', () => {
         getRangesForYear(2022, 'Australia', 'Australia/Sydney')
       ).toMatchSnapshot();
     });
-    fit('returns correct ranges for USA', () => {
+
+    it('returns correct ranges for USA', () => {
       expect(
         getRangesForYear(2022, 'United States', 'America/New_York')
       ).toMatchSnapshot();
