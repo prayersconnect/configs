@@ -11,7 +11,7 @@ interface DaylightSavingsRanges {
 
 const dstTransitionDates: DaylightSavingsRanges = {
   'United States': {
-    2022: [new Date('2022-03-13'), new Date('2022-11-07')],
+    2022: [new Date('2022-03-13'), new Date('2022-11-06')],
     2023: [new Date('2023-03-12'), new Date('2023-11-06')],
   },
   Canada: {
