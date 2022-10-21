@@ -1,4 +1,18 @@
 import { getDSTEnd, getDSTStart } from './index';
+import dstTransitionDates from './list';
+import cases from 'jest-in-case';
+
+const countries = Object.keys(dstTransitionDates);
+
+function getRangeTestObject(year: number) {
+  return (country: string) => {
+    return {
+      name: `${country} ${year}`,
+      year,
+      country,
+    };
+  };
+}
 
 describe('daylight savings', () => {
   describe('getDSTStart', () => {
@@ -10,18 +24,28 @@ describe('daylight savings', () => {
       expect(getDSTStart('US', 2019)).toBeNull();
     });
 
-    it('returns start date for valid country and year', () => {
-      expect(getDSTStart('United States', 2022)).toEqual('2022-03-13');
-      expect(getDSTStart('Canada', 2022)).toEqual('2022-03-13');
-      expect(getDSTStart('United Kingdom', 2022)).toEqual('2022-03-27');
-      expect(getDSTStart('Australia', 2022)).toEqual('2022-10-02');
-    });
+    cases(
+      'returns correct start date',
+      (opts: { name: string; year: number; country: string }) => {
+        expect(getDSTStart(opts.country, opts.year)).toMatchSnapshot();
+      },
+      countries
+        .map(getRangeTestObject(2021))
+        .concat(countries.map(getRangeTestObject(2022)))
+        .concat(countries.map(getRangeTestObject(2023)))
+        .concat(countries.map(getRangeTestObject(2024)))
+    );
 
-    it('returns end date for valid country and year', () => {
-      expect(getDSTEnd('United States', 2022)).toEqual('2022-11-05');
-      expect(getDSTEnd('Canada', 2022)).toEqual('2022-11-05');
-      expect(getDSTEnd('United Kingdom', 2022)).toEqual('2022-10-29');
-      expect(getDSTEnd('Australia', 2022)).toEqual('2023-04-01');
-    });
+    cases(
+      'returns correct end date',
+      (opts: { name: string; year: number; country: string }) => {
+        expect(getDSTEnd(opts.country, opts.year)).toMatchSnapshot();
+      },
+      countries
+        .map(getRangeTestObject(2021))
+        .concat(countries.map(getRangeTestObject(2022)))
+        .concat(countries.map(getRangeTestObject(2023)))
+        .concat(countries.map(getRangeTestObject(2024)))
+    );
   });
 });

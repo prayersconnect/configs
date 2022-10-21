@@ -1,17 +1,42 @@
 import { getRangesForYear } from './range-helpers';
+import cases from 'jest-in-case';
+
+function getRangeTestObject(year: number, country: string, timezone: string) {
+  return {
+    name: `${country} ${year} (${timezone})`,
+    year,
+    country,
+    timezone,
+  };
+}
 
 describe('quick range helpers', () => {
-  describe('getRangesForYear', () => {
-    it('returns correct ranges for Australia', () => {
+  cases(
+    'getRangesForYear',
+    (opts: {
+      name: string;
+      year: number;
+      country: string;
+      timezone: string;
+    }) => {
       expect(
-        getRangesForYear(2022, 'Australia', 'Australia/Sydney')
+        getRangesForYear(opts.year, opts.country, opts.timezone)
       ).toMatchSnapshot();
-    });
-
-    it('returns correct ranges for USA', () => {
-      expect(
-        getRangesForYear(2022, 'United States', 'America/New_York')
-      ).toMatchSnapshot();
-    });
-  });
+    },
+    [
+      getRangeTestObject(2022, 'Australia', 'Australia/Sydney'),
+      getRangeTestObject(2022, 'Australia', 'Australia/Brisbane'),
+      getRangeTestObject(2022, 'United States', 'America/New_York'),
+      getRangeTestObject(2022, 'United Kingdom', 'Europe/London'),
+      getRangeTestObject(2022, 'Canada', 'America/Toronto'),
+      getRangeTestObject(2023, 'Australia', 'Australia/Sydney'),
+      getRangeTestObject(2023, 'United States', 'America/New_York'),
+      getRangeTestObject(2023, 'United Kingdom', 'Europe/London'),
+      getRangeTestObject(2023, 'Canada', 'America/Toronto'),
+      getRangeTestObject(2024, 'Australia', 'Australia/Sydney'),
+      getRangeTestObject(2024, 'United States', 'America/New_York'),
+      getRangeTestObject(2024, 'United Kingdom', 'Europe/London'),
+      getRangeTestObject(2024, 'Canada', 'America/Toronto'),
+    ]
+  );
 });
