@@ -1,4 +1,8 @@
-export { getConfigByISOName, getCountryByISOName } from './countries';
+export {
+  getConfigByISOName,
+  getCountryByISOName,
+  hasFeature,
+} from './countries';
 export {
   getCalcMethodByName,
   getCalcMethods,
