@@ -7,7 +7,7 @@ exports[`country helpers getConfigByISOName country configs australia 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": true,
     "prayerTimes": true,
   },
@@ -29,7 +29,7 @@ exports[`country helpers getConfigByISOName country configs bangladesh 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -52,7 +52,6 @@ exports[`country helpers getConfigByISOName country configs canada 1`] = `
     "education": false,
     "events": true,
     "iqamahTimes": true,
-    "iqamahTiming": false,
     "mosques": true,
     "prayerTimes": true,
   },
@@ -74,7 +73,7 @@ exports[`country helpers getConfigByISOName country configs egypt 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -96,7 +95,7 @@ exports[`country helpers getConfigByISOName country configs france 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -118,7 +117,7 @@ exports[`country helpers getConfigByISOName country configs india 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -140,7 +139,7 @@ exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -162,7 +161,7 @@ exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -184,7 +183,7 @@ exports[`country helpers getConfigByISOName country configs saudi_arabia 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -206,7 +205,7 @@ exports[`country helpers getConfigByISOName country configs turkey 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -228,7 +227,7 @@ exports[`country helpers getConfigByISOName country configs turkiye 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -250,7 +249,7 @@ exports[`country helpers getConfigByISOName country configs united_arab_emirates
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
@@ -273,7 +272,6 @@ exports[`country helpers getConfigByISOName country configs united_kingdom 1`] =
     "education": false,
     "events": false,
     "iqamahTimes": true,
-    "iqamahTiming": false,
     "mosques": true,
     "prayerTimes": true,
   },
@@ -296,7 +294,6 @@ exports[`country helpers getConfigByISOName country configs united_states 1`] = 
     "education": true,
     "events": true,
     "iqamahTimes": true,
-    "iqamahTiming": false,
     "mosques": true,
     "prayerTimes": true,
   },
@@ -318,7 +315,7 @@ exports[`country helpers getConfigByISOName returns default config if country no
   "features": {
     "education": false,
     "events": false,
-    "iqamahTiming": false,
+    "iqamahTimes": false,
     "mosques": false,
     "prayerTimes": true,
   },
