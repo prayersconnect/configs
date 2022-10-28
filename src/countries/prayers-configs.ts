@@ -159,7 +159,7 @@ const prayersConfigs: allConfigs = {
       calculation_method: 'Egypt',
     },
   },
-  saudia_arabia: {
+  saudi_arabia: {
     code: 682,
     alpha2Code: 'SA',
     prayer_settings: {

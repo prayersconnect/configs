@@ -10,6 +10,7 @@ describe('country helpers', () => {
 
     it('returns country info if found', () => {
       expect(getCountryByISOName('United States')).toMatchSnapshot();
+      expect(getCountryByISOName('Saudi Arabia')).toMatchSnapshot();
     });
   });
 
