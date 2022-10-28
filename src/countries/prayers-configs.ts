@@ -24,7 +24,7 @@ export const defaultConfig = {
   },
   features: {
     mosques: false,
-    iqamahTiming: false,
+    iqamahTimes: false,
     prayerTimes: true,
     events: false,
     education: false,
