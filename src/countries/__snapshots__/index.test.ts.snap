@@ -177,7 +177,7 @@ exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
 }
 `;
 
-exports[`country helpers getConfigByISOName country configs saudia_arabia 1`] = `
+exports[`country helpers getConfigByISOName country configs saudi_arabia 1`] = `
 {
   "alpha2Code": "SA",
   "code": 682,
@@ -350,5 +350,20 @@ exports[`country helpers getCountryByISOName returns country info if found 1`] =
   "official": "United States of America",
   "short": "United States",
   "shortcode": ":flag-us:",
+}
+`;
+
+exports[`country helpers getCountryByISOName returns country info if found 2`] = `
+{
+  "alpha2": "SA",
+  "alpha3": "SAU",
+  "emoji": "🇸🇦",
+  "fifa": "KSA",
+  "ioc": "KSA",
+  "iso_name": "Saudi Arabia",
+  "numeric": "682",
+  "official": "Kingdom of Saudi Arabia",
+  "short": "Saudi Arabia",
+  "shortcode": ":flag-sa:",
 }
 `;
