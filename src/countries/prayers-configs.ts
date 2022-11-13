@@ -108,6 +108,7 @@ const prayersConfigs: allConfigs = {
     },
     features: {
       mosques: true,
+      iqamahTimes: true,
     },
   },
   new_zealand: {

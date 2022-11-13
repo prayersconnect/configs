@@ -7,7 +7,7 @@ exports[`country helpers getConfigByISOName country configs australia 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTimes": false,
+    "iqamahTimes": true,
     "mosques": true,
     "prayerTimes": true,
   },
