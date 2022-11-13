@@ -111,7 +111,7 @@ exports[`calc-methods getCalcMethods returns all methods 1`] = `
 exports[`calc-methods getJuristicMethods returns all asr methods 1`] = `
 [
   {
-    "label": "Standard (Shafii, Maliki, Jafari) and Hanbali",
+    "label": "Shafii, Maliki, Jafari & Hanbali",
     "name": "Standard",
   },
   {

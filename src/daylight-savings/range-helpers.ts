@@ -47,26 +47,31 @@ function getNonDSTRanges(
   dstEnd: DateTime,
   country: string
 ) {
-  const prevYearDSTEndDate = getDSTEnd(country, dstStart.year - 1) as string;
-
   const ranges = [];
   if (dstStart.year === dstEnd.year) {
+    const prevYearDSTEndDate = parseDateInZone(
+      getDSTEnd(country, dstStart.year - 1) as string,
+      dstEnd.zoneName
+    );
+    const nextYearDSTStartDate = parseDateInZone(
+      getDSTStart(country, dstStart.year + 1) as string,
+      dstEnd.zoneName
+    );
+
     ranges.push([
-      `Non-DST Period ${dstStart.startOf('year').monthShort}, ${
-        dstStart.year
-      } - ${dstStart.monthShort}, ${dstStart.year}`,
-      dstStart.startOf('year').toFormat(formatString),
-      dstStart.toFormat(formatString),
+      `Non-DST Period ${prevYearDSTEndDate.monthShort}, 
+      ${prevYearDSTEndDate.year} - ${dstStart.monthShort}, ${dstStart.year}`,
+      prevYearDSTEndDate.plus({ day: 1 }).toFormat(formatString),
+      dstStart.minus({ day: 1 }).toFormat(formatString),
     ]);
 
     ranges.push([
-      `Non-DST Period ${dstEnd.monthShort}, ${dstStart.year} - ${
-        dstEnd.endOf('year').monthShort
-      }, ${dstStart.year}`,
-      dstEnd.toFormat(formatString),
-      dstEnd.endOf('year').toFormat(formatString),
+      `Non-DST Period ${dstEnd.monthShort}, ${dstStart.year} - ${nextYearDSTStartDate.monthShort}, ${nextYearDSTStartDate.year}`,
+      dstEnd.plus({ day: 1 }).toFormat(formatString),
+      nextYearDSTStartDate.minus({ day: 1 }).toFormat(formatString),
     ]);
   } else {
+    const prevYearDSTEndDate = getDSTEnd(country, dstStart.year - 1) as string;
     if (prevYearDSTEndDate) {
       const prevYearDstEnd = parseDateInZone(
         prevYearDSTEndDate,
