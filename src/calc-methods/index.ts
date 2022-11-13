@@ -10,8 +10,9 @@ export interface IJuristicMethod {
   label: string;
 }
 
-
-export const getCalcMethodByName = (name: string): CalculationMethod | undefined => {
+export const getCalcMethodByName = (
+  name: string
+): CalculationMethod | undefined => {
   return methodsData.find((method) => method.name === name);
 };
 
@@ -23,7 +24,9 @@ export const getCalcMethods = (): CalculationMethod[] => {
  * Returns the calculation method and asr method for a given country's ISO name
  * @param country ISO Country Name
  */
-export const getCalcMethodsByCountry = (country: string | undefined): IMethodResponse | null => {
+export const getCalcMethodsByCountry = (
+  country: string | undefined
+): IMethodResponse | null => {
   if (!country) {
     return null;
   }
@@ -37,7 +40,7 @@ export const getCalcMethodsByCountry = (country: string | undefined): IMethodRes
 
 export const getJuristicMethods = (): IJuristicMethod[] => {
   return [
-    { name: 'Standard', label: 'Standard (Shafii, Maliki, Jafari) and Hanbali' },
+    { name: 'Standard', label: 'Shafii, Maliki, Jafari & Hanbali' },
     { name: 'Hanafi', label: 'Hanafi' },
   ];
 };
