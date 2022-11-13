@@ -78,19 +78,24 @@ exports[`quick range helpers getRangesForYear Australia 2023 (Australia/Sydney) 
 exports[`quick range helpers getRangesForYear Australia 2024 (Australia/Sydney) 1`] = `
 [
   [
-    "Year NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "Year 2024",
+    "2024-01-01",
+    "2024-12-31",
   ],
   [
-    "DST Period null, NaN - null, NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "DST Period Oct, 2023 - Apr, 2024",
+    "2023-10-01",
+    "2024-04-06",
   ],
   [
-    "DST Period null, NaN - null, NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "DST Period Oct, 2024 - Apr, 2025",
+    "2024-10-07",
+    "2025-04-05",
+  ],
+  [
+    "Non-DST Period Apr, 2024 - Oct, 2024",
+    "2024-04-06",
+    "2024-10-07",
   ],
 ]
 `;
@@ -108,14 +113,15 @@ exports[`quick range helpers getRangesForYear Canada 2022 (America/Toronto) 1`] 
     "2022-11-05",
   ],
   [
-    "Non-DST Period Jan, 2022 - Mar, 2022",
-    "2022-01-01",
-    "2022-03-13",
+    "Non-DST Period Nov, 
+      2021 - Mar, 2022",
+    "2021-11-08",
+    "2022-03-12",
   ],
   [
-    "Non-DST Period Nov, 2022 - Dec, 2022",
-    "2022-11-05",
-    "2022-12-31",
+    "Non-DST Period Nov, 2022 - Mar, 2023",
+    "2022-11-06",
+    "2023-03-11",
   ],
 ]
 `;
@@ -133,14 +139,15 @@ exports[`quick range helpers getRangesForYear Canada 2023 (America/Toronto) 1`] 
     "2023-11-04",
   ],
   [
-    "Non-DST Period Jan, 2023 - Mar, 2023",
-    "2023-01-01",
-    "2023-03-12",
+    "Non-DST Period Nov, 
+      2022 - Mar, 2023",
+    "2022-11-06",
+    "2023-03-11",
   ],
   [
-    "Non-DST Period Nov, 2023 - Dec, 2023",
-    "2023-11-04",
-    "2023-12-31",
+    "Non-DST Period Nov, 2023 - Mar, 2024",
+    "2023-11-05",
+    "2024-03-09",
   ],
 ]
 `;
@@ -148,18 +155,24 @@ exports[`quick range helpers getRangesForYear Canada 2023 (America/Toronto) 1`] 
 exports[`quick range helpers getRangesForYear Canada 2024 (America/Toronto) 1`] = `
 [
   [
-    "Year NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "Year 2024",
+    "2024-01-01",
+    "2024-12-31",
   ],
   [
-    "DST Period null, NaN - null, NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "DST Period 2024",
+    "2024-03-10",
+    "2024-11-02",
   ],
   [
-    "DST Period null, NaN - null, NaN",
-    "Invalid DateTime",
+    "Non-DST Period Nov, 
+      2023 - Mar, 2024",
+    "2023-11-05",
+    "2024-03-09",
+  ],
+  [
+    "Non-DST Period Nov, 2024 - null, NaN",
+    "2024-11-03",
     "Invalid DateTime",
   ],
 ]
@@ -178,14 +191,15 @@ exports[`quick range helpers getRangesForYear United Kingdom 2022 (Europe/London
     "2022-10-29",
   ],
   [
-    "Non-DST Period Jan, 2022 - Mar, 2022",
-    "2022-01-01",
-    "2022-03-27",
+    "Non-DST Period Oct, 
+      2021 - Mar, 2022",
+    "2021-10-31",
+    "2022-03-26",
   ],
   [
-    "Non-DST Period Oct, 2022 - Dec, 2022",
-    "2022-10-29",
-    "2022-12-31",
+    "Non-DST Period Oct, 2022 - Mar, 2023",
+    "2022-10-30",
+    "2023-03-25",
   ],
 ]
 `;
@@ -203,14 +217,15 @@ exports[`quick range helpers getRangesForYear United Kingdom 2023 (Europe/London
     "2023-10-28",
   ],
   [
-    "Non-DST Period Jan, 2023 - Mar, 2023",
-    "2023-01-01",
-    "2023-03-26",
+    "Non-DST Period Oct, 
+      2022 - Mar, 2023",
+    "2022-10-30",
+    "2023-03-25",
   ],
   [
-    "Non-DST Period Oct, 2023 - Dec, 2023",
-    "2023-10-28",
-    "2023-12-31",
+    "Non-DST Period Oct, 2023 - Mar, 2024",
+    "2023-10-29",
+    "2024-03-30",
   ],
 ]
 `;
@@ -218,18 +233,24 @@ exports[`quick range helpers getRangesForYear United Kingdom 2023 (Europe/London
 exports[`quick range helpers getRangesForYear United Kingdom 2024 (Europe/London) 1`] = `
 [
   [
-    "Year NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "Year 2024",
+    "2024-01-01",
+    "2024-12-31",
   ],
   [
-    "DST Period null, NaN - null, NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "DST Period 2024",
+    "2024-03-31",
+    "2024-10-26",
   ],
   [
-    "DST Period null, NaN - null, NaN",
-    "Invalid DateTime",
+    "Non-DST Period Oct, 
+      2023 - Mar, 2024",
+    "2023-10-29",
+    "2024-03-30",
+  ],
+  [
+    "Non-DST Period Oct, 2024 - null, NaN",
+    "2024-10-27",
     "Invalid DateTime",
   ],
 ]
@@ -248,14 +269,15 @@ exports[`quick range helpers getRangesForYear United States 2022 (America/New_Yo
     "2022-11-05",
   ],
   [
-    "Non-DST Period Jan, 2022 - Mar, 2022",
-    "2022-01-01",
-    "2022-03-13",
+    "Non-DST Period Nov, 
+      2021 - Mar, 2022",
+    "2021-11-07",
+    "2022-03-12",
   ],
   [
-    "Non-DST Period Nov, 2022 - Dec, 2022",
-    "2022-11-05",
-    "2022-12-31",
+    "Non-DST Period Nov, 2022 - Mar, 2023",
+    "2022-11-06",
+    "2023-03-11",
   ],
 ]
 `;
@@ -273,14 +295,15 @@ exports[`quick range helpers getRangesForYear United States 2023 (America/New_Yo
     "2023-11-04",
   ],
   [
-    "Non-DST Period Jan, 2023 - Mar, 2023",
-    "2023-01-01",
-    "2023-03-12",
+    "Non-DST Period Nov, 
+      2022 - Mar, 2023",
+    "2022-11-06",
+    "2023-03-11",
   ],
   [
-    "Non-DST Period Nov, 2023 - Dec, 2023",
-    "2023-11-04",
-    "2023-12-31",
+    "Non-DST Period Nov, 2023 - Mar, 2024",
+    "2023-11-05",
+    "2024-03-09",
   ],
 ]
 `;
@@ -288,18 +311,24 @@ exports[`quick range helpers getRangesForYear United States 2023 (America/New_Yo
 exports[`quick range helpers getRangesForYear United States 2024 (America/New_York) 1`] = `
 [
   [
-    "Year NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "Year 2024",
+    "2024-01-01",
+    "2024-12-31",
   ],
   [
-    "DST Period null, NaN - null, NaN",
-    "Invalid DateTime",
-    "Invalid DateTime",
+    "DST Period 2024",
+    "2024-03-10",
+    "2024-11-02",
   ],
   [
-    "DST Period null, NaN - null, NaN",
-    "Invalid DateTime",
+    "Non-DST Period Nov, 
+      2023 - Mar, 2024",
+    "2023-11-05",
+    "2024-03-09",
+  ],
+  [
+    "Non-DST Period Nov, 2024 - null, NaN",
+    "2024-11-03",
     "Invalid DateTime",
   ],
 ]

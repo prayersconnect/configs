@@ -35,7 +35,9 @@ describe('daylight savings', () => {
         .concat(countries.map(getRangeTestObject(2023)))
         .concat(countries.map(getRangeTestObject(2024)))
     );
+  });
 
+  describe('getDSTEnd', () => {
     cases(
       'returns correct end date',
       (opts: { name: string; year: number; country: string }) => {
