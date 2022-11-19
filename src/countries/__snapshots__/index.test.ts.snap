@@ -11,13 +11,13 @@ exports[`country helpers getConfigByISOName country configs australia 1`] = `
     "mosques": true,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Hanafi",
@@ -37,13 +37,13 @@ exports[`country helpers getConfigByISOName country configs bangladesh 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "bangla",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Hanafi",
@@ -63,13 +63,13 @@ exports[`country helpers getConfigByISOName country configs canada 1`] = `
     "mosques": true,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -89,13 +89,13 @@ exports[`country helpers getConfigByISOName country configs egypt 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -115,13 +115,13 @@ exports[`country helpers getConfigByISOName country configs france 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -141,13 +141,13 @@ exports[`country helpers getConfigByISOName country configs india 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "hindi",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Hanafi",
@@ -167,13 +167,13 @@ exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Hanafi",
@@ -193,13 +193,13 @@ exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "urdu",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Hanafi",
@@ -219,13 +219,13 @@ exports[`country helpers getConfigByISOName country configs saudi_arabia 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -245,13 +245,13 @@ exports[`country helpers getConfigByISOName country configs turkey 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "Türkçe",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -271,13 +271,13 @@ exports[`country helpers getConfigByISOName country configs turkiye 1`] = `
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "Türkçe",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -297,13 +297,13 @@ exports[`country helpers getConfigByISOName country configs united_arab_emirates
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -323,13 +323,13 @@ exports[`country helpers getConfigByISOName country configs united_kingdom 1`] =
     "mosques": true,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "mi",
+    "postalCodeName": "Post Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "mi",
-    "postalCodeName": "Post Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -349,13 +349,13 @@ exports[`country helpers getConfigByISOName country configs united_states 1`] = 
     "mosques": true,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "mi",
+    "postalCodeName": "ZIP Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "mi",
-    "postalCodeName": "ZIP Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",
@@ -375,13 +375,13 @@ exports[`country helpers getConfigByISOName returns default config if country no
     "mosques": false,
     "prayerTimes": true,
   },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
   "mosque": {
     "denomination": "sunni",
     "language_services": "english",
-  },
-  "params": {
-    "distanceUnit": "km",
-    "postalCodeName": "Postal Code",
   },
   "prayerSettings": {
     "asr_method": "Standard",

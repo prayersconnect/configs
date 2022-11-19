@@ -40,9 +40,9 @@ export function getConfigByISOName(name: string): ICountryConfig {
       ...defaultConfig.features,
       ...countryConf.features,
     },
-    params: {
-      ...defaultConfig.params,
-      ...countryConf.params,
+    intl: {
+      ...defaultConfig.intl,
+      ...countryConf.intl,
     },
   };
 }

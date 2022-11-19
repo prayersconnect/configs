@@ -4,7 +4,7 @@
 import {
   ICountryConfigValues,
   ICountryFeatures,
-  IParams,
+  IIntlParams,
   IPrayerSettings,
 } from './types';
 
@@ -34,10 +34,10 @@ export const defaultConfig = {
     events: false,
     education: false,
   } as ICountryFeatures,
-  params: {
+  intl: {
     distanceUnit: 'km',
     postalCodeName: 'Postal Code',
-  } as IParams,
+  } as IIntlParams,
 };
 
 const prayersConfigs: allConfigs = {
@@ -57,7 +57,7 @@ const prayersConfigs: allConfigs = {
       events: true,
       education: true,
     },
-    params: {
+    intl: {
       distanceUnit: 'mi',
       postalCodeName: 'ZIP Code',
     },
@@ -112,7 +112,7 @@ const prayersConfigs: allConfigs = {
       mosques: true,
       iqamahTimes: true,
     },
-    params: {
+    intl: {
       distanceUnit: 'mi',
       postalCodeName: 'Post Code',
     },

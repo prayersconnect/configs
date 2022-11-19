@@ -31,7 +31,7 @@ export interface ICountryFeatures {
   education: boolean;
 }
 
-export interface IParams {
+export interface IIntlParams {
   distanceUnit?: string;
   postalCodeName?: string;
 }
@@ -42,7 +42,7 @@ export interface ICountryConfig {
   prayerSettings: Required<IPrayerSettings>;
   mosque: IMosqueSettings;
   features: ICountryFeatures;
-  params: Required<IParams>;
+  intl: Required<IIntlParams>; //internationalization params
 }
 
 export interface ICountryConfigValues extends Partial<ICountryConfig> {
