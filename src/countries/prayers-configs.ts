@@ -4,17 +4,22 @@
 import {
   ICountryConfigValues,
   ICountryFeatures,
+  IIntlParams,
   IPrayerSettings,
 } from './types';
 
+type DeepPartial<T> = T extends object
+  ? { [P in keyof T]?: DeepPartial<T[P]> }
+  : T;
+
 interface allConfigs {
-  [key: string]: string | ICountryConfigValues;
+  [key: string]: string | DeepPartial<ICountryConfigValues>;
 }
 
 export const defaultConfig = {
   code: null,
   alpha2_code: '',
-  prayer_settings: {
+  prayerSettings: {
     asr_method: 'Standard',
     calculation_method: 'MWL',
   } as IPrayerSettings,
@@ -29,13 +34,17 @@ export const defaultConfig = {
     events: false,
     education: false,
   } as ICountryFeatures,
+  intl: {
+    distanceUnit: 'km',
+    postalCodeName: 'Postal Code',
+  } as IIntlParams,
 };
 
 const prayersConfigs: allConfigs = {
   united_states: {
     code: 840,
     alpha2Code: 'US',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'ISNA',
     },
     mosque: {
@@ -48,11 +57,15 @@ const prayersConfigs: allConfigs = {
       events: true,
       education: true,
     },
+    intl: {
+      distanceUnit: 'mi',
+      postalCodeName: 'ZIP Code',
+    },
   },
   canada: {
     code: 124,
     alpha2Code: 'CA',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'ISNA',
     },
     features: {
@@ -64,7 +77,7 @@ const prayersConfigs: allConfigs = {
   bangladesh: {
     code: 50,
     alpha2Code: 'BD',
-    prayer_settings: {
+    prayerSettings: {
       asr_method: 'Hanafi',
       calculation_method: 'Karachi',
     },
@@ -76,7 +89,7 @@ const prayersConfigs: allConfigs = {
   turkiye: {
     code: 792,
     alpha2Code: 'TR',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'turkey-presidency-of-religious-affairs',
     },
     mosque: {
@@ -88,7 +101,7 @@ const prayersConfigs: allConfigs = {
   united_kingdom: {
     code: 826,
     alpha2Code: 'GB',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'MWL',
     },
     mosque: {
@@ -99,11 +112,15 @@ const prayersConfigs: allConfigs = {
       mosques: true,
       iqamahTimes: true,
     },
+    intl: {
+      distanceUnit: 'mi',
+      postalCodeName: 'Post Code',
+    },
   },
   australia: {
     code: 36,
     alpha2Code: 'AU',
-    prayer_settings: {
+    prayerSettings: {
       asr_method: 'Hanafi',
     },
     features: {
@@ -114,7 +131,7 @@ const prayersConfigs: allConfigs = {
   new_zealand: {
     code: 554,
     alpha2Code: 'NZ',
-    prayer_settings: {
+    prayerSettings: {
       asr_method: 'Hanafi',
     },
     mosque: {
@@ -125,7 +142,7 @@ const prayersConfigs: allConfigs = {
   india: {
     code: 356,
     alpha2Code: 'IN',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'Karachi',
       asr_method: 'Hanafi',
     },
@@ -137,7 +154,7 @@ const prayersConfigs: allConfigs = {
   pakistan: {
     code: 586,
     alpha2Code: 'PK',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'Karachi',
       asr_method: 'Hanafi',
     },
@@ -149,27 +166,27 @@ const prayersConfigs: allConfigs = {
   france: {
     code: 250,
     alpha2Code: 'FR',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'union-des-organisations-islamiques-de-france',
     },
   },
   egypt: {
     code: 818,
     alpha2Code: 'EG',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'Egypt',
     },
   },
   saudi_arabia: {
     code: 682,
     alpha2Code: 'SA',
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'Makkah',
     },
   },
   united_arab_emirates: {
     code: 784,
-    prayer_settings: {
+    prayerSettings: {
       calculation_method: 'Karachi',
     },
   },

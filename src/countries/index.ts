@@ -28,9 +28,9 @@ export function getConfigByISOName(name: string): ICountryConfig {
   return {
     code: countryConf?.code || null,
     alpha2Code: countryConf?.alpha2Code,
-    prayer_settings: {
-      ...defaultConfig.prayer_settings,
-      ...countryConf?.prayer_settings,
+    prayerSettings: {
+      ...defaultConfig.prayerSettings,
+      ...countryConf?.prayerSettings,
     },
     mosque: {
       ...defaultConfig.mosque,
@@ -39,6 +39,10 @@ export function getConfigByISOName(name: string): ICountryConfig {
     features: {
       ...defaultConfig.features,
       ...countryConf.features,
+    },
+    intl: {
+      ...defaultConfig.intl,
+      ...countryConf.intl,
     },
   };
 }
@@ -49,9 +53,9 @@ export function hasFeature(
 ): boolean {
   const config = getConfigByISOName(country);
   if (config) {
-    return !!config.features[feature];
+    return config.features[feature];
   } else {
-    return !!defaultConfig.features[feature];
+    return defaultConfig.features[feature];
   }
 }
 

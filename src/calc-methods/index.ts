@@ -33,8 +33,8 @@ export const getCalcMethodsByCountry = (
   const countryConf = getConfigByISOName(country);
 
   return {
-    method: countryConf.prayer_settings.calculation_method as string,
-    asrMethod: countryConf.prayer_settings.asr_method || 'Standard',
+    method: countryConf.prayerSettings.calculation_method as string,
+    asrMethod: countryConf.prayerSettings.asr_method || 'Standard',
   };
 };
 
