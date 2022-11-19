@@ -24,19 +24,25 @@ interface IMosqueSettings {
 }
 
 export interface ICountryFeatures {
-  mosques?: boolean;
-  iqamahTimes?: boolean;
-  prayerTimes?: boolean;
-  events?: boolean;
-  education?: boolean;
+  mosques: boolean;
+  iqamahTimes: boolean;
+  prayerTimes: boolean;
+  events: boolean;
+  education: boolean;
+}
+
+export interface IParams {
+  distanceUnit?: string;
+  postalCodeName?: string;
 }
 
 export interface ICountryConfig {
   code: number | null;
   alpha2Code: string; //alpha-2 code from https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
-  prayer_settings: IPrayerSettings;
+  prayerSettings: Required<IPrayerSettings>;
   mosque: IMosqueSettings;
   features: ICountryFeatures;
+  params: Required<IParams>;
 }
 
 export interface ICountryConfigValues extends Partial<ICountryConfig> {

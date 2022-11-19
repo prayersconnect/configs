@@ -15,7 +15,11 @@ exports[`country helpers getConfigByISOName country configs australia 1`] = `
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Hanafi",
     "calculation_method": "MWL",
   },
@@ -37,7 +41,11 @@ exports[`country helpers getConfigByISOName country configs bangladesh 1`] = `
     "denomination": "sunni",
     "language_services": "bangla",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Hanafi",
     "calculation_method": "Karachi",
   },
@@ -59,7 +67,11 @@ exports[`country helpers getConfigByISOName country configs canada 1`] = `
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "ISNA",
   },
@@ -81,7 +93,11 @@ exports[`country helpers getConfigByISOName country configs egypt 1`] = `
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "Egypt",
   },
@@ -103,7 +119,11 @@ exports[`country helpers getConfigByISOName country configs france 1`] = `
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "union-des-organisations-islamiques-de-france",
   },
@@ -125,7 +145,11 @@ exports[`country helpers getConfigByISOName country configs india 1`] = `
     "denomination": "sunni",
     "language_services": "hindi",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Hanafi",
     "calculation_method": "Karachi",
   },
@@ -147,7 +171,11 @@ exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Hanafi",
     "calculation_method": "MWL",
   },
@@ -169,7 +197,11 @@ exports[`country helpers getConfigByISOName country configs pakistan 1`] = `
     "denomination": "sunni",
     "language_services": "urdu",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Hanafi",
     "calculation_method": "Karachi",
   },
@@ -191,7 +223,11 @@ exports[`country helpers getConfigByISOName country configs saudi_arabia 1`] = `
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "Makkah",
   },
@@ -213,7 +249,11 @@ exports[`country helpers getConfigByISOName country configs turkey 1`] = `
     "denomination": "sunni",
     "language_services": "Türkçe",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "turkey-presidency-of-religious-affairs",
   },
@@ -235,7 +275,11 @@ exports[`country helpers getConfigByISOName country configs turkiye 1`] = `
     "denomination": "sunni",
     "language_services": "Türkçe",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "turkey-presidency-of-religious-affairs",
   },
@@ -257,7 +301,11 @@ exports[`country helpers getConfigByISOName country configs united_arab_emirates
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "Karachi",
   },
@@ -279,7 +327,11 @@ exports[`country helpers getConfigByISOName country configs united_kingdom 1`] =
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "mi",
+    "postalCodeName": "Post Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "MWL",
   },
@@ -301,7 +353,11 @@ exports[`country helpers getConfigByISOName country configs united_states 1`] = 
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "mi",
+    "postalCodeName": "ZIP Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "ISNA",
   },
@@ -323,7 +379,11 @@ exports[`country helpers getConfigByISOName returns default config if country no
     "denomination": "sunni",
     "language_services": "english",
   },
-  "prayer_settings": {
+  "params": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "MWL",
   },
