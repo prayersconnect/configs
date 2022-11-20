@@ -138,6 +138,10 @@ const prayersConfigs: allConfigs = {
       language_services: 'english',
       denomination: 'sunni',
     },
+    features: {
+      mosques: true,
+      iqamahTimes: true,
+    },
   },
   india: {
     code: 356,
