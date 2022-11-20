@@ -178,6 +178,81 @@ exports[`quick range helpers getRangesForYear Canada 2024 (America/Toronto) 1`] 
 ]
 `;
 
+exports[`quick range helpers getRangesForYear New Zealand 2022 (Pacific/Auckland) 1`] = `
+[
+  [
+    "Year 2022",
+    "2022-01-01",
+    "2022-12-31",
+  ],
+  [
+    "DST Period Sep, 2021 - Apr, 2022",
+    "2021-09-26",
+    "2022-04-02",
+  ],
+  [
+    "DST Period Sep, 2022 - Apr, 2023",
+    "2022-09-25",
+    "2023-04-01",
+  ],
+  [
+    "Non-DST Period Apr, 2022 - Sep, 2022",
+    "2022-04-02",
+    "2022-09-25",
+  ],
+]
+`;
+
+exports[`quick range helpers getRangesForYear New Zealand 2023 (Pacific/Auckland) 1`] = `
+[
+  [
+    "Year 2023",
+    "2023-01-01",
+    "2023-12-31",
+  ],
+  [
+    "DST Period Sep, 2022 - Apr, 2023",
+    "2022-09-25",
+    "2023-04-01",
+  ],
+  [
+    "DST Period Sep, 2023 - Apr, 2024",
+    "2023-09-24",
+    "2024-04-06",
+  ],
+  [
+    "Non-DST Period Apr, 2023 - Sep, 2023",
+    "2023-04-01",
+    "2023-09-24",
+  ],
+]
+`;
+
+exports[`quick range helpers getRangesForYear New Zealand 2024 (Pacific/Auckland) 1`] = `
+[
+  [
+    "Year 2024",
+    "2024-01-01",
+    "2024-12-31",
+  ],
+  [
+    "DST Period Sep, 2023 - Apr, 2024",
+    "2023-09-24",
+    "2024-04-06",
+  ],
+  [
+    "DST Period Sep, 2024 - Apr, 2025",
+    "2024-09-29",
+    "2025-04-06",
+  ],
+  [
+    "Non-DST Period Apr, 2024 - Sep, 2024",
+    "2024-04-06",
+    "2024-09-29",
+  ],
+]
+`;
+
 exports[`quick range helpers getRangesForYear United Kingdom 2022 (Europe/London) 1`] = `
 [
   [
