@@ -163,8 +163,8 @@ exports[`country helpers getConfigByISOName country configs new_zealand 1`] = `
   "features": {
     "education": false,
     "events": false,
-    "iqamahTimes": false,
-    "mosques": false,
+    "iqamahTimes": true,
+    "mosques": true,
     "prayerTimes": true,
   },
   "intl": {

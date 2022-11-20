@@ -16,6 +16,14 @@ exports[`daylight savings getDSTEnd returns correct end date Canada 2023 1`] = `
 
 exports[`daylight savings getDSTEnd returns correct end date Canada 2024 1`] = `"2024-11-02"`;
 
+exports[`daylight savings getDSTEnd returns correct end date New Zealand 2021 1`] = `"2022-04-02"`;
+
+exports[`daylight savings getDSTEnd returns correct end date New Zealand 2022 1`] = `"2023-04-01"`;
+
+exports[`daylight savings getDSTEnd returns correct end date New Zealand 2023 1`] = `"2024-04-06"`;
+
+exports[`daylight savings getDSTEnd returns correct end date New Zealand 2024 1`] = `"2025-04-06"`;
+
 exports[`daylight savings getDSTEnd returns correct end date United Kingdom 2021 1`] = `"2021-10-30"`;
 
 exports[`daylight savings getDSTEnd returns correct end date United Kingdom 2022 1`] = `"2022-10-29"`;
@@ -47,6 +55,14 @@ exports[`daylight savings getDSTStart returns correct start date Canada 2022 1`]
 exports[`daylight savings getDSTStart returns correct start date Canada 2023 1`] = `"2023-03-12"`;
 
 exports[`daylight savings getDSTStart returns correct start date Canada 2024 1`] = `"2024-03-10"`;
+
+exports[`daylight savings getDSTStart returns correct start date New Zealand 2021 1`] = `"2021-09-26"`;
+
+exports[`daylight savings getDSTStart returns correct start date New Zealand 2022 1`] = `"2022-09-25"`;
+
+exports[`daylight savings getDSTStart returns correct start date New Zealand 2023 1`] = `"2023-09-24"`;
+
+exports[`daylight savings getDSTStart returns correct start date New Zealand 2024 1`] = `"2024-09-29"`;
 
 exports[`daylight savings getDSTStart returns correct start date United Kingdom 2021 1`] = `"2021-03-28"`;
 
