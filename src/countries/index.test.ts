@@ -1,4 +1,9 @@
-import { getConfigByISOName, getCountryByISOName, hasFeature } from './index';
+import {
+  getConfigByISOName,
+  getCountryAlpha2CodesByFeature,
+  getCountryByISOName,
+  hasFeature,
+} from './';
 import prayersConfigs from './prayers-configs';
 import cases from 'jest-in-case';
 
@@ -49,6 +54,21 @@ describe('country helpers', () => {
 
     it('returns false if country does not exist', () => {
       expect(hasFeature('Wonderland', 'iqamahTimes')).toBe(false);
+    });
+  });
+
+  fdescribe('getCountryAlpha2CodesByFeature', () => {
+    it('returns correct countries for mosque feature', () => {
+      expect(getCountryAlpha2CodesByFeature('mosques')).toMatchSnapshot();
+    });
+    it('returns correct countries for iqamah feature', () => {
+      expect(getCountryAlpha2CodesByFeature('iqamahTimes')).toMatchSnapshot();
+    });
+    it('returns correct countries for events feature', () => {
+      expect(getCountryAlpha2CodesByFeature('events')).toMatchSnapshot();
+    });
+    it('returns correct countries for education feature', () => {
+      expect(getCountryAlpha2CodesByFeature('education')).toMatchSnapshot();
     });
   });
 });

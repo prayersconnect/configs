@@ -390,6 +390,39 @@ exports[`country helpers getConfigByISOName returns default config if country no
 }
 `;
 
+exports[`country helpers getCountryAlpha2CodesByFeature returns correct countries for education feature 1`] = `
+[
+  "US",
+]
+`;
+
+exports[`country helpers getCountryAlpha2CodesByFeature returns correct countries for events feature 1`] = `
+[
+  "US",
+  "CA",
+]
+`;
+
+exports[`country helpers getCountryAlpha2CodesByFeature returns correct countries for iqamah feature 1`] = `
+[
+  "US",
+  "CA",
+  "GB",
+  "AU",
+  "NZ",
+]
+`;
+
+exports[`country helpers getCountryAlpha2CodesByFeature returns correct countries for mosque feature 1`] = `
+[
+  "US",
+  "CA",
+  "GB",
+  "AU",
+  "NZ",
+]
+`;
+
 exports[`country helpers getCountryByISOName returns country info if found 1`] = `
 {
   "aliases": [

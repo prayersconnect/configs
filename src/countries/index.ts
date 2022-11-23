@@ -1,6 +1,6 @@
 import { ICountry, ICountryFeatures } from './types';
 import countries from './list';
-import allConfigs, { defaultConfig } from './prayers-configs';
+import prayersConfigs, { defaultConfig } from './prayers-configs';
 import { ICountryConfig } from './types';
 
 export function getCountryByISOName(name: string): ICountry | null {
@@ -17,10 +17,10 @@ export function getCountryByISOName(name: string): ICountry | null {
 
 export function getConfigByISOName(name: string): ICountryConfig {
   let countryConf;
-  const countryConfOrAlias = allConfigs[countrySlug(name)] || {};
+  const countryConfOrAlias = prayersConfigs[name] || {};
 
   if (typeof countryConfOrAlias === 'string') {
-    countryConf = allConfigs[countrySlug(countryConfOrAlias)] as ICountryConfig;
+    countryConf = prayersConfigs[countryConfOrAlias] as ICountryConfig;
   } else {
     countryConf = countryConfOrAlias as ICountryConfig;
   }
@@ -58,15 +58,17 @@ export function hasFeature(
     return defaultConfig.features[feature];
   }
 }
-//
-// export function getCountriesByFeature(feature: keyof ICountryFeatures): string[] {
-//
-//   return Object.keys(countries).filter((countrySlug) => {
-//     const country =
-//     return hasFeature(country, feature);
-//   });
-// }
 
-function countrySlug(country: string): string {
-  return country;
+export function getCountryAlpha2CodesByFeature(
+  feature: keyof ICountryFeatures
+): string[] {
+  const alpha2Countries: string[] = [];
+  Object.keys(prayersConfigs).map((country) => {
+    if (hasFeature(country, feature)) {
+      const config = getConfigByISOName(country);
+      alpha2Countries.push(config.alpha2Code);
+    }
+  });
+
+  return alpha2Countries;
 }
