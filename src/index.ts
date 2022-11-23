@@ -2,6 +2,7 @@ export {
   getConfigByISOName,
   getCountryByISOName,
   hasFeature,
+  getCountryAlpha2CodesByFeature,
 } from './countries';
 export {
   getCalcMethodByName,
