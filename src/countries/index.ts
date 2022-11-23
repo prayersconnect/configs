@@ -58,7 +58,15 @@ export function hasFeature(
     return defaultConfig.features[feature];
   }
 }
+//
+// export function getCountriesByFeature(feature: keyof ICountryFeatures): string[] {
+//
+//   return Object.keys(countries).filter((countrySlug) => {
+//     const country =
+//     return hasFeature(country, feature);
+//   });
+// }
 
 function countrySlug(country: string): string {
-  return country.toLowerCase().replace(/\s+/, '_');
+  return country;
 }

@@ -41,7 +41,7 @@ export const defaultConfig = {
 };
 
 const prayersConfigs: allConfigs = {
-  united_states: {
+  'United States': {
     code: 840,
     alpha2Code: 'US',
     prayerSettings: {
@@ -62,7 +62,7 @@ const prayersConfigs: allConfigs = {
       postalCodeName: 'ZIP Code',
     },
   },
-  canada: {
+  Canada: {
     code: 124,
     alpha2Code: 'CA',
     prayerSettings: {
@@ -74,7 +74,7 @@ const prayersConfigs: allConfigs = {
       events: true,
     },
   },
-  bangladesh: {
+  Bangladesh: {
     code: 50,
     alpha2Code: 'BD',
     prayerSettings: {
@@ -86,7 +86,7 @@ const prayersConfigs: allConfigs = {
       denomination: 'sunni',
     },
   },
-  turkiye: {
+  Turkiye: {
     code: 792,
     alpha2Code: 'TR',
     prayerSettings: {
@@ -97,8 +97,8 @@ const prayersConfigs: allConfigs = {
       denomination: 'sunni',
     },
   },
-  turkey: 'turkiye',
-  united_kingdom: {
+  Turkey: 'Turkiye',
+  'United Kingdom': {
     code: 826,
     alpha2Code: 'GB',
     prayerSettings: {
@@ -117,7 +117,7 @@ const prayersConfigs: allConfigs = {
       postalCodeName: 'Post Code',
     },
   },
-  australia: {
+  Australia: {
     code: 36,
     alpha2Code: 'AU',
     prayerSettings: {
@@ -128,7 +128,7 @@ const prayersConfigs: allConfigs = {
       iqamahTimes: true,
     },
   },
-  new_zealand: {
+  'New Zealand': {
     code: 554,
     alpha2Code: 'NZ',
     prayerSettings: {
@@ -143,7 +143,7 @@ const prayersConfigs: allConfigs = {
       iqamahTimes: true,
     },
   },
-  india: {
+  India: {
     code: 356,
     alpha2Code: 'IN',
     prayerSettings: {
@@ -155,7 +155,7 @@ const prayersConfigs: allConfigs = {
       denomination: 'sunni',
     },
   },
-  pakistan: {
+  Pakistan: {
     code: 586,
     alpha2Code: 'PK',
     prayerSettings: {
@@ -167,28 +167,28 @@ const prayersConfigs: allConfigs = {
       denomination: 'sunni',
     },
   },
-  france: {
+  France: {
     code: 250,
     alpha2Code: 'FR',
     prayerSettings: {
       calculation_method: 'union-des-organisations-islamiques-de-france',
     },
   },
-  egypt: {
+  Egypt: {
     code: 818,
     alpha2Code: 'EG',
     prayerSettings: {
       calculation_method: 'Egypt',
     },
   },
-  saudi_arabia: {
+  'Saudi Arabia': {
     code: 682,
     alpha2Code: 'SA',
     prayerSettings: {
       calculation_method: 'Makkah',
     },
   },
-  united_arab_emirates: {
+  'United Arab Emirates': {
     code: 784,
     prayerSettings: {
       calculation_method: 'Karachi',
