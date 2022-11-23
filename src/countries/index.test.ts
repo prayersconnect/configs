@@ -57,7 +57,7 @@ describe('country helpers', () => {
     });
   });
 
-  fdescribe('getCountryAlpha2CodesByFeature', () => {
+  describe('getCountryAlpha2CodesByFeature', () => {
     it('returns correct countries for mosque feature', () => {
       expect(getCountryAlpha2CodesByFeature('mosques')).toMatchSnapshot();
     });
