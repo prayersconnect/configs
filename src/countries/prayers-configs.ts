@@ -85,6 +85,9 @@ const prayersConfigs: allConfigs = {
       language_services: 'bangla',
       denomination: 'sunni',
     },
+    features: {
+      mosques: true,
+    },
   },
   Turkiye: {
     code: 792,
@@ -96,6 +99,9 @@ const prayersConfigs: allConfigs = {
       language_services: 'Türkçe',
       denomination: 'sunni',
     },
+    features: {
+      mosques: true,
+    }
   },
   Turkey: 'Turkiye',
   'United Kingdom': {
@@ -172,6 +178,9 @@ const prayersConfigs: allConfigs = {
     alpha2Code: 'FR',
     prayerSettings: {
       calculation_method: 'union-des-organisations-islamiques-de-france',
+    },
+    features: {
+      mosques: true,
     },
   },
   Egypt: {
