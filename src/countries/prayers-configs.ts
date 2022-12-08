@@ -101,7 +101,7 @@ const prayersConfigs: allConfigs = {
     },
     features: {
       mosques: true,
-    }
+    },
   },
   Turkey: 'Turkiye',
   'United Kingdom': {
@@ -212,6 +212,20 @@ const prayersConfigs: allConfigs = {
     mosque: {
       language_services: 'russian',
       denomination: 'sunni',
+    },
+    features: {
+      mosques: true,
+    },
+  },
+  Germany: {
+    code: 276,
+    alpha2Code: 'DE',
+    mosque: {
+      language_services: 'german',
+      denomination: 'sunni',
+    },
+    features: {
+      mosques: true,
     },
   },
 };
