@@ -34,7 +34,7 @@ exports[`country helpers getConfigByISOName country configs Bangladesh 1`] = `
     "education": false,
     "events": false,
     "iqamahTimes": false,
-    "mosques": false,
+    "mosques": true,
     "prayerTimes": true,
   },
   "intl": {
@@ -112,7 +112,7 @@ exports[`country helpers getConfigByISOName country configs France 1`] = `
     "education": false,
     "events": false,
     "iqamahTimes": false,
-    "mosques": false,
+    "mosques": true,
     "prayerTimes": true,
   },
   "intl": {
@@ -126,6 +126,32 @@ exports[`country helpers getConfigByISOName country configs France 1`] = `
   "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "union-des-organisations-islamiques-de-france",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Germany 1`] = `
+{
+  "alpha2Code": "DE",
+  "code": 276,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "german",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
   },
 }
 `;
@@ -216,7 +242,7 @@ exports[`country helpers getConfigByISOName country configs Russia 1`] = `
     "education": false,
     "events": false,
     "iqamahTimes": false,
-    "mosques": false,
+    "mosques": true,
     "prayerTimes": true,
   },
   "intl": {
@@ -268,7 +294,7 @@ exports[`country helpers getConfigByISOName country configs Turkey 1`] = `
     "education": false,
     "events": false,
     "iqamahTimes": false,
-    "mosques": false,
+    "mosques": true,
     "prayerTimes": true,
   },
   "intl": {
@@ -294,7 +320,7 @@ exports[`country helpers getConfigByISOName country configs Turkiye 1`] = `
     "education": false,
     "events": false,
     "iqamahTimes": false,
-    "mosques": false,
+    "mosques": true,
     "prayerTimes": true,
   },
   "intl": {
@@ -443,9 +469,15 @@ exports[`country helpers getCountryAlpha2CodesByFeature returns correct countrie
 [
   "US",
   "CA",
+  "BD",
+  "TR",
+  "TR",
   "GB",
   "AU",
   "NZ",
+  "FR",
+  "RU",
+  "DE",
 ]
 `;
 

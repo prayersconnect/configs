@@ -85,6 +85,9 @@ const prayersConfigs: allConfigs = {
       language_services: 'bangla',
       denomination: 'sunni',
     },
+    features: {
+      mosques: true,
+    },
   },
   Turkiye: {
     code: 792,
@@ -95,6 +98,9 @@ const prayersConfigs: allConfigs = {
     mosque: {
       language_services: 'Türkçe',
       denomination: 'sunni',
+    },
+    features: {
+      mosques: true,
     },
   },
   Turkey: 'Turkiye',
@@ -173,6 +179,9 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       calculation_method: 'union-des-organisations-islamiques-de-france',
     },
+    features: {
+      mosques: true,
+    },
   },
   Egypt: {
     code: 818,
@@ -203,6 +212,20 @@ const prayersConfigs: allConfigs = {
     mosque: {
       language_services: 'russian',
       denomination: 'sunni',
+    },
+    features: {
+      mosques: true,
+    },
+  },
+  Germany: {
+    code: 276,
+    alpha2Code: 'DE',
+    mosque: {
+      language_services: 'german',
+      denomination: 'sunni',
+    },
+    features: {
+      mosques: true,
     },
   },
 };
