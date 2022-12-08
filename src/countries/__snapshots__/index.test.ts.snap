@@ -208,6 +208,32 @@ exports[`country helpers getConfigByISOName country configs Pakistan 1`] = `
 }
 `;
 
+exports[`country helpers getConfigByISOName country configs Russia 1`] = `
+{
+  "alpha2Code": "RU",
+  "code": 643,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "russian",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "Russia",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs Saudi Arabia 1`] = `
 {
   "alpha2Code": "SA",

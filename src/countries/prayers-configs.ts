@@ -194,6 +194,17 @@ const prayersConfigs: allConfigs = {
       calculation_method: 'Karachi',
     },
   },
+  Russia: {
+    code: 643,
+    alpha2Code: 'RU',
+    prayerSettings: {
+      calculation_method: 'Russia',
+    },
+    mosque: {
+      language_services: 'russian',
+      denomination: 'sunni',
+    },
+  },
 };
 
 export default prayersConfigs;
