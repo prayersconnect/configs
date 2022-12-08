@@ -105,6 +105,14 @@ exports[`calc-methods getCalcMethods returns all methods 1`] = `
       "isha": 18,
     },
   },
+  {
+    "label": "The Central Spiritual Administration of Muslims of Russia",
+    "name": "russia",
+    "value": {
+      "fajr": 16,
+      "isha": 15,
+    },
+  },
 ]
 `;
 

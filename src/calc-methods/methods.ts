@@ -106,4 +106,12 @@ export default [
       isha: 18,
     },
   },
+  {
+    name: 'russia',
+    label: 'The Central Spiritual Administration of Muslims of Russia',
+    value: {
+      fajr: 16,
+      isha: 15,
+    },
+  },
 ] as CalculationMethod[];
