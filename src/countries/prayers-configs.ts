@@ -228,6 +228,20 @@ const prayersConfigs: allConfigs = {
       mosques: true,
     },
   },
+  Ireland: {
+    code: 372,
+    alpha2Code: 'IE',
+    features: {
+      mosques: true,
+    },
+  },
+  Italy: {
+    code: 380,
+    alpha2Code: 'IT',
+    features: {
+      mosques: true,
+    },
+  },
 };
 
 export default prayersConfigs;

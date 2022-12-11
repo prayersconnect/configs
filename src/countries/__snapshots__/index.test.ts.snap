@@ -182,6 +182,58 @@ exports[`country helpers getConfigByISOName country configs India 1`] = `
 }
 `;
 
+exports[`country helpers getConfigByISOName country configs Ireland 1`] = `
+{
+  "alpha2Code": "IE",
+  "code": 372,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Italy 1`] = `
+{
+  "alpha2Code": "IT",
+  "code": 380,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs New Zealand 1`] = `
 {
   "alpha2Code": "NZ",
@@ -478,6 +530,8 @@ exports[`country helpers getCountryAlpha2CodesByFeature returns correct countrie
   "FR",
   "RU",
   "DE",
+  "IE",
+  "IT",
 ]
 `;
 
