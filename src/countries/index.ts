@@ -15,6 +15,22 @@ export function getCountryByISOName(name: string): ICountry | null {
   return countries[key];
 }
 
+export function getCountryByName(name: string): ICountry | null {
+  return getCountryByShortName(name) || getCountryByISOName(name);
+}
+
+function getCountryByShortName(name: string): ICountry | null {
+  const key = Object.keys(countries).find((key) => {
+    return countries[key].short === name;
+  });
+
+  if (!key) {
+    return null;
+  }
+
+  return countries[key];
+}
+
 export function getConfigByISOName(name: string): ICountryConfig {
   let countryConf;
   const countryConfOrAlias = prayersConfigs[name] || {};
