@@ -2372,6 +2372,7 @@ const countries: ICountries = {
     short: 'Russia',
     emoji: '🇷🇺',
     shortcode: ':flag-ru:',
+    pc_name: 'Russia',
   },
   RW: {
     alpha2: 'RW',
