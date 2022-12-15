@@ -537,69 +537,36 @@ exports[`country helpers getCountryAlpha2CodesByFeature returns correct countrie
 
 exports[`country helpers getCountryByISOName returns country info if found 1`] = `
 {
-  "aliases": [
-    "America",
-    "U.S.",
-    "U.S.A.",
-  ],
-  "alpha2": "US",
-  "alpha3": "USA",
   "emoji": "🇺🇸",
-  "fifa": "USA",
-  "ioc": "USA",
+  "gmap_name": "United States",
   "iso_name": "United States",
-  "numeric": "840",
-  "official": "United States of America",
-  "short": "United States",
-  "shortcode": ":flag-us:",
+  "pc_name": "United States",
 }
 `;
 
 exports[`country helpers getCountryByISOName returns country info if found 2`] = `
 {
-  "alpha2": "SA",
-  "alpha3": "SAU",
   "emoji": "🇸🇦",
-  "fifa": "KSA",
-  "ioc": "KSA",
+  "gmap_name": "Saudi Arabia",
   "iso_name": "Saudi Arabia",
-  "numeric": "682",
-  "official": "Kingdom of Saudi Arabia",
-  "short": "Saudi Arabia",
-  "shortcode": ":flag-sa:",
+  "pc_name": "Saudi Arabia",
 }
 `;
 
 exports[`country helpers getCountryByName returns country info by shortname 1`] = `
 {
-  "alpha2": "RU",
-  "alpha3": "RUS",
   "emoji": "🇷🇺",
-  "fifa": "RUS",
-  "ioc": "RUS",
+  "gmap_name": "Russian Federation",
   "iso_name": "Russian Federation",
-  "numeric": "643",
-  "official": "Russian Federation",
-  "short": "Russia",
-  "shortcode": ":flag-ru:",
+  "pc_name": "Russia",
 }
 `;
 
 exports[`country helpers getCountryByName returns country info by shortname 2`] = `
 {
-  "aliases": [
-    "Palestinian Territories",
-    "Palestinian Territory",
-  ],
-  "alpha2": "PS",
-  "alpha3": "PSE",
   "emoji": "🇵🇸",
-  "fifa": "PLE",
-  "ioc": "PLE",
+  "gmap_name": "Palestinian Territory, Occupied",
   "iso_name": "Palestinian Territory, Occupied",
-  "numeric": "275",
-  "official": "State of Palestine",
-  "short": "Palestine",
-  "shortcode": ":flag-ps:",
+  "pc_name": "Palestinian Territory, Occupied",
 }
 `;

@@ -6,6 +6,8 @@ export {
   getCountryAlpha2CodesByFeature,
 } from './countries';
 
+export { ICountryOutput } from './countries/types';
+
 export {
   getCalcMethodByName,
   getCalcMethods,

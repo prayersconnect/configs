@@ -1,3 +1,10 @@
+export interface ICountryOutput {
+  gmap_name: string; // name defined in Google Maps. if this attribute is not defined, then the iso_name is used
+  iso_name: string;
+  emoji: string;
+  pc_name: string; // name defined in pc api v2 database
+}
+
 export interface ICountry {
   aliases?: string[];
   alpha2: string;
@@ -5,6 +12,8 @@ export interface ICountry {
   fifa: string | null;
   ioc: string | null;
   iso_name: string;
+  gmap_name?: string;
+  pc_name?: string;
   numeric: string;
   official: string;
   short: string | null;
