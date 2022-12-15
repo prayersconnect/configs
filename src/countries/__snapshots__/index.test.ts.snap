@@ -558,7 +558,7 @@ exports[`country helpers getCountryByName returns country info by shortname 1`] 
   "emoji": "🇷🇺",
   "gmap_name": "Russian Federation",
   "iso_name": "Russian Federation",
-  "pc_name": "Russian Federation",
+  "pc_name": "Russia",
 }
 `;
 
