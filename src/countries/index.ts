@@ -1,7 +1,11 @@
-import { ICountryFeatures, ICountryOutput, ICountry } from './types';
 import countries from './list';
 import prayersConfigs, { defaultConfig } from './prayers-configs';
-import { ICountryConfig } from './types';
+import {
+  ICountry,
+  ICountryConfig,
+  ICountryFeatures,
+  ICountryOutput,
+} from './types';
 
 export function getCountryByISOName(name: string): ICountryOutput | null {
   const key = Object.keys(countries).find((key) => {
@@ -18,12 +22,30 @@ export function getCountryByISOName(name: string): ICountryOutput | null {
 }
 
 export function getCountryByName(name: string): ICountryOutput | null {
-  return getCountryByShortName(name) || getCountryByISOName(name);
+  return (
+    getCountryByShortName(name) ||
+    getCountryByISOName(name) ||
+    getCountryByIoc(name)
+  );
 }
 
 function getCountryByShortName(name: string): ICountryOutput | null {
   const key = Object.keys(countries).find((key) => {
     return countries[key].short === name;
+  });
+
+  if (!key) {
+    return null;
+  }
+
+  const config = countries[key];
+
+  return formatCountyInfo(config);
+}
+
+function getCountryByIoc(name: string): ICountryOutput | null {
+  const key = Object.keys(countries).find((key) => {
+    return countries[key].ioc === name;
   });
 
   if (!key) {

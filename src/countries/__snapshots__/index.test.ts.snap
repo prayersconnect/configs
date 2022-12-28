@@ -553,6 +553,24 @@ exports[`country helpers getCountryByISOName returns country info if found 2`] =
 }
 `;
 
+exports[`country helpers getCountryByName returns country info by ioc 1`] = `
+{
+  "emoji": "🇺🇸",
+  "gmap_name": "United States",
+  "iso_name": "United States",
+  "pc_name": "United States",
+}
+`;
+
+exports[`country helpers getCountryByName returns country info by ioc 2`] = `
+{
+  "emoji": "🇬🇧",
+  "gmap_name": "United Kingdom",
+  "iso_name": "United Kingdom",
+  "pc_name": "United Kingdom",
+}
+`;
+
 exports[`country helpers getCountryByName returns country info by shortname 1`] = `
 {
   "emoji": "🇷🇺",

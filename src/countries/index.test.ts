@@ -1,3 +1,4 @@
+import cases from 'jest-in-case';
 import {
   getConfigByISOName,
   getCountryAlpha2CodesByFeature,
@@ -6,7 +7,6 @@ import {
   hasFeature,
 } from './';
 import prayersConfigs from './prayers-configs';
-import cases from 'jest-in-case';
 
 describe('country helpers', () => {
   describe('getCountryByISOName', () => {
@@ -28,6 +28,11 @@ describe('country helpers', () => {
     it('returns country info by shortname', () => {
       expect(getCountryByName('Russia')).toMatchSnapshot();
       expect(getCountryByName('Palestine')).toMatchSnapshot();
+    });
+
+    it('returns country info by ioc', () => {
+      expect(getCountryByName('USA')).toMatchSnapshot();
+      expect(getCountryByName('GBR')).toMatchSnapshot();
     });
   });
 
