@@ -307,7 +307,7 @@ exports[`country helpers getConfigByISOName country configs Russia 1`] = `
   },
   "prayerSettings": {
     "asr_method": "Standard",
-    "calculation_method": "Russia",
+    "calculation_method": "russia",
   },
 }
 `;
