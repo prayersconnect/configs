@@ -1,7 +1,8 @@
 import {
   getCalcMethodByName,
   getCalcMethods,
-  getCalcMethodsByCountry, getJuristicMethods,
+  getCalcMethodsByCountry,
+  getJuristicMethods,
 } from './index';
 
 describe('calc-methods', () => {
@@ -70,6 +71,15 @@ describe('calc-methods', () => {
         }
       `);
     });
+    it('returns method and asr method for Russia', () => {
+      const methods = getCalcMethodsByCountry('Russia');
+      expect(methods).toMatchInlineSnapshot(`
+        {
+          "asrMethod": "Standard",
+          "method": "russia",
+        }
+      `);
+    });
     it('returns default config if country not found', () => {
       const methods = getCalcMethodsByCountry('foo');
       expect(methods).toMatchInlineSnapshot(`
@@ -90,5 +100,5 @@ describe('calc-methods', () => {
       const methods = getJuristicMethods();
       expect(methods).toMatchSnapshot();
     });
-  })
+  });
 });

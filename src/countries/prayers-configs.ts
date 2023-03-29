@@ -207,7 +207,7 @@ const prayersConfigs: allConfigs = {
     code: 643,
     alpha2Code: 'RU',
     prayerSettings: {
-      calculation_method: 'Russia',
+      calculation_method: 'russia',
     },
     mosque: {
       language_services: 'russian',
