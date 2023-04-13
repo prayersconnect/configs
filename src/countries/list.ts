@@ -1354,6 +1354,7 @@ const countries: ICountries = {
     short: 'Iran',
     emoji: '🇮🇷',
     shortcode: ':flag-ir:',
+    pc_name: 'Iran',
   },
   IS: {
     alpha2: 'IS',
@@ -2808,6 +2809,7 @@ const countries: ICountries = {
     short: 'Turkey',
     emoji: '🇹🇷',
     shortcode: ':flag-tr:',
+    pc_name: 'Turkiye',
   },
   TT: {
     alpha2: 'TT',
