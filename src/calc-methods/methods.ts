@@ -109,9 +109,17 @@ export default [
   {
     name: 'russia',
     label: 'The Central Spiritual Administration of Muslims of Russia',
-    value: {
+    values: {
       fajr: 16,
       isha: 15,
+    },
+  },
+  {
+    name: 'gaiae',
+    label: 'General Authority of Islamic Affairs and Endowments (GAIAE) of UAE',
+    values: {
+      fajr: 18,
+      isha: 17.5,
     },
   },
 ] as CalculationMethod[];
