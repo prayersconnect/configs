@@ -411,7 +411,7 @@ exports[`country helpers getConfigByISOName country configs United Arab Emirates
   },
   "prayerSettings": {
     "asr_method": "Standard",
-    "calculation_method": "Karachi",
+    "calculation_method": "gaiae",
   },
 }
 `;

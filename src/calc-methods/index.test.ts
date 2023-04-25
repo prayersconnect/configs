@@ -22,6 +22,10 @@ describe('calc-methods', () => {
     it('returns all methods', () => {
       const methods = getCalcMethods();
       expect(methods).toMatchSnapshot();
+      methods.forEach((method) => {
+        expect(method).toHaveProperty('values');
+        expect(method.values).toMatchSnapshot(`values for ${method.name}`);
+      });
     });
   });
 
@@ -73,6 +77,7 @@ describe('calc-methods', () => {
     });
     it('returns method and asr method for Russia', () => {
       const methods = getCalcMethodsByCountry('Russia');
+
       expect(methods).toMatchInlineSnapshot(`
         {
           "asrMethod": "Standard",

@@ -108,12 +108,115 @@ exports[`calc-methods getCalcMethods returns all methods 1`] = `
   {
     "label": "The Central Spiritual Administration of Muslims of Russia",
     "name": "russia",
-    "value": {
+    "values": {
       "fajr": 16,
       "isha": 15,
     },
   },
+  {
+    "label": "General Authority of Islamic Affairs and Endowments (GAIAE) of UAE",
+    "name": "gaiae",
+    "values": {
+      "fajr": 18,
+      "isha": 17.5,
+    },
+  },
 ]
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for Egypt 1`] = `
+{
+  "fajr": 19.5,
+  "isha": 17.5,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for ISNA 1`] = `
+{
+  "fajr": 15,
+  "isha": 15,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for Jafari 1`] = `
+{
+  "fajr": 16,
+  "isha": 14,
+  "maghrib": 4,
+  "midnight": "Jafari",
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for Karachi 1`] = `
+{
+  "fajr": 18,
+  "isha": 18,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for MWL 1`] = `
+{
+  "fajr": 18,
+  "isha": 17,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for Makkah 1`] = `
+{
+  "fajr": 18.5,
+  "isha": "90min",
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for Tehran 1`] = `
+{
+  "fajr": 17.7,
+  "isha": 14,
+  "maghrib": 4.5,
+  "midnight": "Jafari",
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for france-15-degree 1`] = `
+{
+  "fajr": 15,
+  "isha": 15,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for france-18-degree 1`] = `
+{
+  "fajr": 18,
+  "isha": 18,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for gaiae 1`] = `
+{
+  "fajr": 18,
+  "isha": 17.5,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for russia 1`] = `
+{
+  "fajr": 16,
+  "isha": 15,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for turkey-presidency-of-religious-affairs 1`] = `
+{
+  "fajr": 18,
+  "isha": 17,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for union-des-organisations-islamiques-de-france 1`] = `
+{
+  "fajr": 12,
+  "isha": 12,
+}
 `;
 
 exports[`calc-methods getJuristicMethods returns all asr methods 1`] = `

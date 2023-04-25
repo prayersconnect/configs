@@ -200,7 +200,7 @@ const prayersConfigs: allConfigs = {
   'United Arab Emirates': {
     code: 784,
     prayerSettings: {
-      calculation_method: 'Karachi',
+      calculation_method: 'gaiae',
     },
   },
   Russia: {
