@@ -1,5 +1,5 @@
 on: [push, pull_request]
-name: Build, Test and maybe Publish
+name: Build, Test and Publish
 jobs:
   test:
     name: Build & Test
@@ -40,12 +40,9 @@ jobs:
       - name: Install
         if: steps.cache-modules.outputs.cache-hit != 'true'
         run: yarn install
-      - name: Test
-        run: yarn test
       - name: Build
         run: yarn build
-      - name: Publish
-        uses: mikeal/merge-release@master
+      - name: publish
+        uses: JS-DevTools/npm-publish@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
