@@ -44,5 +44,5 @@ jobs:
         run: yarn build
       - name: publish
         uses: JS-DevTools/npm-publish@v1
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
