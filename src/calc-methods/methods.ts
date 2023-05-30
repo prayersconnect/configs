@@ -122,4 +122,12 @@ export default [
       isha: 17.5,
     },
   },
+  {
+    name: 'london-unified',
+    label: 'London Unified Prayer Times',
+    values: {
+      fajr: 13.5,
+      isha: 9.5,
+    },
+  },
 ] as CalculationMethod[];
