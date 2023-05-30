@@ -122,11 +122,12 @@ exports[`calc-methods getCalcMethods returns all methods 1`] = `
     },
   },
   {
-    "label": "London Unified Prayer Times",
+    "hidden": true,
+    "label": "London Unified Prayer Times (Slightly Inaccurate)",
     "name": "london-unified",
     "values": {
-      "fajr": 13.5,
-      "isha": 9.5,
+      "fajr": 12.2,
+      "isha": 9.2,
     },
   },
 ]
@@ -208,8 +209,8 @@ exports[`calc-methods getCalcMethods returns all methods: values for gaiae 1`] =
 
 exports[`calc-methods getCalcMethods returns all methods: values for london-unified 1`] = `
 {
-  "fajr": 13.5,
-  "isha": 9.5,
+  "fajr": 12.2,
+  "isha": 9.2,
 }
 `;
 

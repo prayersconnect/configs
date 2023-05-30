@@ -5,6 +5,7 @@
 export interface CalculationMethod {
   name: string;
   label: string;
+  hidden?: boolean; // false by default
   values: {
     fajr?: number;
     isha?: number;
@@ -124,10 +125,11 @@ export default [
   },
   {
     name: 'london-unified',
-    label: 'London Unified Prayer Times',
+    label: 'London Unified Prayer Times (Slightly Inaccurate)',
     values: {
-      fajr: 13.5,
-      isha: 9.5,
+      fajr: 12.2,
+      isha: 9.2,
     },
+    hidden: true,
   },
 ] as CalculationMethod[];
