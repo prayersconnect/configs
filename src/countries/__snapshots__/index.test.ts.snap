@@ -572,6 +572,58 @@ exports[`country helpers getConfigByISOName country configs United States 1`] = 
 }
 `;
 
+exports[`country helpers getConfigByISOName returns country config for Netherlands 1`] = `
+{
+  "alpha2Code": "NL",
+  "code": 528,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName returns country config for Switzerland 1`] = `
+{
+  "alpha2Code": "CH",
+  "code": 756,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName returns default config if country not found 1`] = `
 {
   "alpha2Code": undefined,

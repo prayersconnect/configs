@@ -41,27 +41,19 @@ describe('country helpers', () => {
         getConfigByISOName('Turkiye')
       );
     });
+
     cases(
       `country configs`,
       (opts: { name: string; country: string }) => {
         expect(getConfigByISOName(opts.country)).toMatchSnapshot();
       },
-      [
-        ...Object.keys(prayersConfigs).map((country) => {
-          return {
-            name: country,
-            country,
-          };
-        }),
-        {
-          name: 'Netherlands',
-          country: 'Netherlands',
-        },
-        {
-          name: 'Switzerland',
-          country: 'Switzerland',
-        },
-      ]
+
+      Object.keys(prayersConfigs).map((country) => {
+        return {
+          name: country,
+          country,
+        };
+      })
     );
   });
 
