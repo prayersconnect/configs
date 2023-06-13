@@ -242,6 +242,20 @@ const prayersConfigs: allConfigs = {
       mosques: true,
     },
   },
+  Netherlands: {
+    code: 528,
+    alpha2Code: 'NL',
+    features: {
+      mosques: true,
+    },
+  },
+  Switzerland: {
+    code: 756,
+    alpha2Code: 'CH',
+    features: {
+      mosques: true,
+    },
+  },
 };
 
 export default prayersConfigs;
