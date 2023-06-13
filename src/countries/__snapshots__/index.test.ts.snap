@@ -260,6 +260,32 @@ exports[`country helpers getConfigByISOName country configs Netherlands 1`] = `
 }
 `;
 
+exports[`country helpers getConfigByISOName country configs Netherlands 2`] = `
+{
+  "alpha2Code": "NL",
+  "code": 528,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs New Zealand 1`] = `
 {
   "alpha2Code": "NZ",
@@ -365,6 +391,32 @@ exports[`country helpers getConfigByISOName country configs Saudi Arabia 1`] = `
 `;
 
 exports[`country helpers getConfigByISOName country configs Switzerland 1`] = `
+{
+  "alpha2Code": "CH",
+  "code": 756,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Switzerland 2`] = `
 {
   "alpha2Code": "CH",
   "code": 756,

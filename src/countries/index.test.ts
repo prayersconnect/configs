@@ -46,12 +46,22 @@ describe('country helpers', () => {
       (opts: { name: string; country: string }) => {
         expect(getConfigByISOName(opts.country)).toMatchSnapshot();
       },
-      Object.keys(prayersConfigs).map((country) => {
-        return {
-          name: country,
-          country,
-        };
-      })
+      [
+        ...Object.keys(prayersConfigs).map((country) => {
+          return {
+            name: country,
+            country,
+          };
+        }),
+        {
+          name: 'Netherlands',
+          country: 'Netherlands',
+        },
+        {
+          name: 'Switzerland',
+          country: 'Switzerland',
+        },
+      ]
     );
   });
 
