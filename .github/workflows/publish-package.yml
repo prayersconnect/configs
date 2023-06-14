@@ -43,6 +43,6 @@ jobs:
       - name: Build
         run: yarn build
       - name: publish
-        uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
