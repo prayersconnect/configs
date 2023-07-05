@@ -18,3 +18,5 @@ export {
 export { CalculationMethod } from './calc-methods/methods';
 export { getDSTStart, getDSTEnd } from './daylight-savings/index';
 export { getRangesForYear } from './daylight-savings/range-helpers';
+export { calculateAdhan } from './adhan/calculate';
+export { formatAdhanTimes } from './adhan/formatter';
