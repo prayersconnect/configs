@@ -1,6 +1,6 @@
 {
   "name": "@prayersconnect/configs",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Country specific configuration for Prayers Connect",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
