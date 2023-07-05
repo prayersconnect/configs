@@ -6,15 +6,7 @@ import {
   PrayerTimes,
 } from 'adhan';
 import { DateTime } from 'luxon';
-import { ICoords } from './types';
-
-interface IExtras {
-  calculation_method_meta?: {
-    fajr?: number;
-    isha?: number;
-  };
-  highLatRule?: string;
-}
+import { ICoords, IAdhanCalculationExtras } from './types';
 
 const getMethodFromShortName = (shortName: string) => {
   switch (shortName) {
@@ -75,7 +67,7 @@ const getMethodFromShortName = (shortName: string) => {
 const getCalculationParams = (
   shortName: string,
   juristicMethod: string,
-  extras: IExtras = {}
+  extras: IAdhanCalculationExtras = {}
 ) => {
   //handle custom methods first
   const isCustomMethod = shortName.startsWith('custom');
@@ -115,7 +107,7 @@ export function calculateAdhan(
   coords: ICoords,
   method: string,
   asrMethod: string,
-  extras = {} as IExtras
+  extras = {} as IAdhanCalculationExtras
 ) {
   const coordinates = new Coordinates(coords.latitude, coords.longitude);
   const params = getCalculationParams(method, asrMethod, extras);
