@@ -1,3 +1,5 @@
+import { DateTime } from 'luxon';
+
 export interface ICoords {
   latitude: number;
   longitude: number;
@@ -9,4 +11,14 @@ export interface IAdhanCalculationExtras {
     isha?: number;
   };
   highLatRule?: string;
+}
+
+export interface IAdhanCalculated {
+  fajr: DateTime;
+  sunrise: DateTime;
+  dhuhr: DateTime;
+  asr: DateTime;
+  sunset: DateTime;
+  maghrib: DateTime;
+  isha: DateTime;
 }

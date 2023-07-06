@@ -6,7 +6,7 @@ import {
   PrayerTimes,
 } from 'adhan';
 import { DateTime } from 'luxon';
-import { ICoords, IAdhanCalculationExtras } from './types';
+import { IAdhanCalculated, IAdhanCalculationExtras, ICoords } from './types';
 
 const getMethodFromShortName = (shortName: string) => {
   switch (shortName) {
@@ -108,9 +108,18 @@ export function calculateAdhan(
   method: string,
   asrMethod: string,
   extras = {} as IAdhanCalculationExtras
-) {
+): IAdhanCalculated {
   const coordinates = new Coordinates(coords.latitude, coords.longitude);
   const params = getCalculationParams(method, asrMethod, extras);
 
-  return new PrayerTimes(coordinates, date.toJSDate(), params);
+  const calculated = new PrayerTimes(coordinates, date.toJSDate(), params);
+  return {
+    fajr: DateTime.fromJSDate(calculated.fajr),
+    sunrise: DateTime.fromJSDate(calculated.sunrise),
+    dhuhr: DateTime.fromJSDate(calculated.dhuhr),
+    asr: DateTime.fromJSDate(calculated.asr),
+    sunset: DateTime.fromJSDate(calculated.sunset),
+    maghrib: DateTime.fromJSDate(calculated.maghrib),
+    isha: DateTime.fromJSDate(calculated.isha),
+  };
 }

@@ -1,17 +1,58 @@
 import { DateTime, Settings } from 'luxon';
 import { calculateAdhan } from './calculate';
 import { formatAdhanTimes } from './formatter';
+import { ICoords } from './types';
 
 describe('calculateAdhan', () => {
+  let method: string,
+    asrMethod: string,
+    coords: ICoords,
+    date: DateTime,
+    format: string;
   beforeEach(() => {
     Settings.defaultZone = 'America/New_York';
+    method = 'ISNA';
+    asrMethod = 'Standard';
+    coords = { latitude: 40.7128, longitude: -74.006 };
+    date = DateTime.local(2022, 1, 1);
+
+    format = '12h';
   });
+
+  it('returns calculated prayer times in correct format', () => {
+    const prayerTimes = calculateAdhan(date, coords, method, asrMethod);
+    expect(prayerTimes.fajr).toBeInstanceOf(DateTime);
+    expect(prayerTimes.dhuhr).toBeInstanceOf(DateTime);
+    expect(prayerTimes.asr).toBeInstanceOf(DateTime);
+    expect(prayerTimes.maghrib).toBeInstanceOf(DateTime);
+    expect(prayerTimes.isha).toBeInstanceOf(DateTime);
+    expect(prayerTimes.sunrise).toBeInstanceOf(DateTime);
+    expect(prayerTimes.sunset).toBeInstanceOf(DateTime);
+  });
+
+  it('output timezone matches input timezone', () => {
+    const prayerTimes = calculateAdhan(date, coords, method, asrMethod);
+    expect(prayerTimes.fajr.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.dhuhr.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.asr.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.maghrib.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.isha.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.sunrise.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.sunset.zoneName).toEqual(date.zoneName);
+  });
+
+  it('output offset matches input offset', () => {
+    const prayerTimes = calculateAdhan(date, coords, method, asrMethod);
+    expect(prayerTimes.fajr.offset).toEqual(date.offset);
+    expect(prayerTimes.dhuhr.offset).toEqual(date.offset);
+    expect(prayerTimes.asr.offset).toEqual(date.offset);
+    expect(prayerTimes.maghrib.offset).toEqual(date.offset);
+    expect(prayerTimes.isha.offset).toEqual(date.offset);
+    expect(prayerTimes.sunrise.offset).toEqual(date.offset);
+    expect(prayerTimes.sunset.offset).toEqual(date.offset);
+  });
+
   it('returns correct prayer times for ISNA method', () => {
-    const date = DateTime.local(2022, 1, 1);
-    const coords = { latitude: 40.7128, longitude: -74.006 };
-    const method = 'ISNA';
-    const asrMethod = 'Standard';
-    const format = '12h';
     const prayerTimes = calculateAdhan(date, coords, method, asrMethod);
     expect(formatAdhanTimes(prayerTimes, format)).toEqual({
       asr: '2:22 PM',
@@ -25,10 +66,6 @@ describe('calculateAdhan', () => {
   });
   it('returns correct prayer times for ISNA method during EST Daylight Savings Time', () => {
     const date = DateTime.local(2022, 6, 1);
-    const coords = { latitude: 40.7128, longitude: -74.006 };
-    const method = 'ISNA';
-    const asrMethod = 'Standard';
-    const format = '12h';
     const prayerTimes = calculateAdhan(date, coords, method, asrMethod);
     expect(formatAdhanTimes(prayerTimes, format)).toEqual({
       asr: '4:53 PM',
@@ -42,7 +79,6 @@ describe('calculateAdhan', () => {
   });
 
   it('returns correct prayer times for MWL method', () => {
-    const date = DateTime.local(2022, 1, 1);
     const coords = { latitude: 40.7128, longitude: -74.006 };
     const method = 'MWL';
     const asrMethod = 'Standard';
@@ -60,11 +96,8 @@ describe('calculateAdhan', () => {
   });
 
   it('returns correct prayer times for ISNA and Hanafi method', () => {
-    const date = DateTime.local(2022, 1, 1);
-    const coords = { latitude: 40.7128, longitude: -74.006 };
     const method = 'MWL';
     const asrMethod = 'Hanafi';
-    const format = '12h';
     const prayerTimes = formatAdhanTimes(
       calculateAdhan(date, coords, method, asrMethod),
       format
@@ -75,7 +108,6 @@ describe('calculateAdhan', () => {
   });
 
   it('returns correct prayer times in 24h format', () => {
-    const date = DateTime.local(2022, 1, 1);
     const coords = { latitude: 40.7128, longitude: -74.006 };
     const method = 'ISNA';
     const asrMethod = 'Standard';
@@ -94,9 +126,7 @@ describe('calculateAdhan', () => {
 
   it('returns correct time for custom method', () => {
     const date = DateTime.local(2022, 1, 14);
-    const coords = { latitude: 40.7128, longitude: -74.006 };
     const method = 'custom-1';
-    const asrMethod = 'Standard';
     const prayerTimes = calculateAdhan(date, coords, method, asrMethod, {
       calculation_method_meta: {
         fajr: 17.5,
