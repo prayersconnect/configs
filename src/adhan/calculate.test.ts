@@ -41,6 +41,20 @@ describe('calculateAdhan', () => {
     expect(prayerTimes.sunset.zoneName).toEqual(date.zoneName);
   });
 
+  it('output timezone matches input timezone (BDT)', () => {
+    const date = DateTime.fromISO('2023-07-07T06:33:45.244+06:00').setZone(
+      'Asia/Dhaka'
+    );
+    const prayerTimes = calculateAdhan(date, coords, method, asrMethod);
+    expect(prayerTimes.fajr.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.dhuhr.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.asr.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.maghrib.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.isha.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.sunrise.zoneName).toEqual(date.zoneName);
+    expect(prayerTimes.sunset.zoneName).toEqual(date.zoneName);
+  });
+
   it('output offset matches input offset', () => {
     const prayerTimes = calculateAdhan(date, coords, method, asrMethod);
     expect(prayerTimes.fajr.offset).toEqual(date.offset);

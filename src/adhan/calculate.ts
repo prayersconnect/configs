@@ -112,14 +112,15 @@ export function calculateAdhan(
   const coordinates = new Coordinates(coords.latitude, coords.longitude);
   const params = getCalculationParams(method, asrMethod, extras);
 
+  const timezone = date.zoneName; //ref: https://github.com/batoulapps/adhan-js#prayer-times
   const calculated = new PrayerTimes(coordinates, date.toJSDate(), params);
   return {
-    fajr: DateTime.fromJSDate(calculated.fajr),
-    sunrise: DateTime.fromJSDate(calculated.sunrise),
-    dhuhr: DateTime.fromJSDate(calculated.dhuhr),
-    asr: DateTime.fromJSDate(calculated.asr),
-    sunset: DateTime.fromJSDate(calculated.sunset),
-    maghrib: DateTime.fromJSDate(calculated.maghrib),
-    isha: DateTime.fromJSDate(calculated.isha),
+    fajr: DateTime.fromJSDate(calculated.fajr).setZone(timezone),
+    sunrise: DateTime.fromJSDate(calculated.sunrise).setZone(timezone),
+    dhuhr: DateTime.fromJSDate(calculated.dhuhr).setZone(timezone),
+    asr: DateTime.fromJSDate(calculated.asr).setZone(timezone),
+    sunset: DateTime.fromJSDate(calculated.sunset).setZone(timezone),
+    maghrib: DateTime.fromJSDate(calculated.maghrib).setZone(timezone),
+    isha: DateTime.fromJSDate(calculated.isha).setZone(timezone),
   };
 }
