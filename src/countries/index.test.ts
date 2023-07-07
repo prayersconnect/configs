@@ -29,6 +29,10 @@ describe('country helpers', () => {
       expect(getCountryByName('Russia')).toMatchSnapshot();
       expect(getCountryByName('Palestine')).toMatchSnapshot();
     });
+
+    it('returns country info by pc name override', () => {
+      expect(getCountryByName('Turkiye')?.pc_name).toEqual('Turkiye');
+    });
   });
 
   describe('getConfigByISOName', () => {

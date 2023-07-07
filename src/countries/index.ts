@@ -17,10 +17,6 @@ export function getCountryByISOName(name: string): ICountryOutput | null {
   return formatCountyInfo(config);
 }
 
-export function getCountryByName(name: string): ICountryOutput | null {
-  return getCountryByShortName(name) || getCountryByISOName(name);
-}
-
 function getCountryByShortName(name: string): ICountryOutput | null {
   const key = Object.keys(countries).find((key) => {
     return countries[key].short === name;
@@ -33,6 +29,28 @@ function getCountryByShortName(name: string): ICountryOutput | null {
   const config = countries[key];
 
   return formatCountyInfo(config);
+}
+
+function getCountryByPCName(name: string): ICountryOutput | null {
+  const key = Object.keys(countries).find((key) => {
+    return countries[key].pc_name === name;
+  });
+
+  if (!key) {
+    return null;
+  }
+
+  const config = countries[key];
+
+  return formatCountyInfo(config);
+}
+
+export function getCountryByName(name: string): ICountryOutput | null {
+  return (
+    getCountryByShortName(name) ||
+    getCountryByISOName(name) ||
+    getCountryByPCName(name)
+  );
 }
 
 function formatCountyInfo(countryInfo: ICountry): ICountryOutput {
