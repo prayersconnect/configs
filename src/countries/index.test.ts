@@ -33,6 +33,11 @@ describe('country helpers', () => {
     it('returns country info by pc name override', () => {
       expect(getCountryByName('Turkiye')?.pc_name).toEqual('Turkiye');
     });
+
+    it('returns country if it it contains non-ascii characters', () => {
+      expect(getCountryByName('Türkiye')?.pc_name).toEqual('Turkiye');
+      expect(getCountryByName('العراق')?.pc_name).toEqual('Iraq');
+    });
   });
 
   describe('getConfigByISOName', () => {

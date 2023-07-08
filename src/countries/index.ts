@@ -1,7 +1,12 @@
-import { ICountryFeatures, ICountryOutput, ICountry } from './types';
+import {
+  ICountry,
+  ICountryConfig,
+  ICountryFeatures,
+  ICountryOutput,
+} from './types';
 import countries from './list';
 import prayersConfigs, { defaultConfig } from './prayers-configs';
-import { ICountryConfig } from './types';
+import { nonAsciiCountries } from './non-ascii-aliases';
 
 export function getCountryByISOName(name: string): ICountryOutput | null {
   const key = Object.keys(countries).find((key) => {
@@ -45,10 +50,28 @@ function getCountryByPCName(name: string): ICountryOutput | null {
   return formatCountyInfo(config);
 }
 
+const hasNonAscii = (str: string): boolean => {
+  return /[^\x00-\x7F]/.test(str);
+};
+
+function getISONameFromNonAscii(name: string) {
+  const match = nonAsciiCountries.find((country) => {
+    if (country[0] === name) {
+      return country;
+    }
+  });
+
+  return match?.[1];
+}
+
 export function getCountryByName(name: string): ICountryOutput | null {
+  if (hasNonAscii(name)) {
+    name = getISONameFromNonAscii(name) || name;
+  }
+
   return (
-    getCountryByShortName(name) ||
     getCountryByISOName(name) ||
+    getCountryByShortName(name) ||
     getCountryByPCName(name)
   );
 }
