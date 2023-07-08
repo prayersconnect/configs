@@ -43,6 +43,7 @@ export interface ICountryFeatures {
 export interface IIntlParams {
   distanceUnit?: string;
   postalCodeName?: string;
+  labelForProvince?: string;
 }
 
 export interface ICountryConfig {
