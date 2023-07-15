@@ -37,6 +37,7 @@ export const defaultConfig = {
   intl: {
     distanceUnit: 'km',
     postalCodeName: 'Postal Code',
+    labelForProvince: 'Province',
   } as IIntlParams,
 };
 
@@ -60,6 +61,7 @@ const prayersConfigs: allConfigs = {
     intl: {
       distanceUnit: 'mi',
       postalCodeName: 'ZIP Code',
+      labelForProvince: 'State',
     },
   },
   Canada: {
@@ -133,6 +135,9 @@ const prayersConfigs: allConfigs = {
       mosques: true,
       iqamahTimes: true,
     },
+    intl: {
+      labelForProvince: 'State',
+    },
   },
   'New Zealand': {
     code: 554,
@@ -159,6 +164,9 @@ const prayersConfigs: allConfigs = {
     mosque: {
       language_services: 'hindi',
       denomination: 'sunni',
+    },
+    intl: {
+      labelForProvince: 'State',
     },
   },
   Pakistan: {
@@ -254,6 +262,48 @@ const prayersConfigs: allConfigs = {
     alpha2Code: 'CH',
     features: {
       mosques: true,
+    },
+  },
+  Mexico: {
+    code: 484,
+    alpha2Code: 'MX',
+    intl: {
+      labelForProvince: 'State',
+    },
+  },
+  Brazil: {
+    code: 76,
+    alpha2Code: 'BR',
+    intl: {
+      labelForProvince: 'State',
+    },
+  },
+  Malaysia: {
+    code: 458,
+    alpha2Code: 'MY',
+    intl: {
+      labelForProvince: 'State',
+    },
+  },
+  Venezuela: {
+    code: 862,
+    alpha2Code: 'VE',
+    intl: {
+      labelForProvince: 'State',
+    },
+  },
+  Nigeria: {
+    code: 566,
+    alpha2Code: 'NG',
+    intl: {
+      labelForProvince: 'State',
+    },
+  },
+  Sudan: {
+    code: 729,
+    alpha2Code: 'SD',
+    intl: {
+      labelForProvince: 'State',
     },
   },
 };

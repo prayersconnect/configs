@@ -13,6 +13,7 @@ exports[`country helpers getConfigByISOName country configs Australia 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "State",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -39,6 +40,7 @@ exports[`country helpers getConfigByISOName country configs Bangladesh 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -48,6 +50,33 @@ exports[`country helpers getConfigByISOName country configs Bangladesh 1`] = `
   "prayerSettings": {
     "asr_method": "Hanafi",
     "calculation_method": "Karachi",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Brazil 1`] = `
+{
+  "alpha2Code": "BR",
+  "code": 76,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "State",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
   },
 }
 `;
@@ -65,6 +94,7 @@ exports[`country helpers getConfigByISOName country configs Canada 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -91,6 +121,7 @@ exports[`country helpers getConfigByISOName country configs Egypt 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -117,6 +148,7 @@ exports[`country helpers getConfigByISOName country configs France 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -143,6 +175,7 @@ exports[`country helpers getConfigByISOName country configs Germany 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -169,6 +202,7 @@ exports[`country helpers getConfigByISOName country configs India 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "State",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -195,6 +229,7 @@ exports[`country helpers getConfigByISOName country configs Ireland 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -221,6 +256,61 @@ exports[`country helpers getConfigByISOName country configs Italy 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Malaysia 1`] = `
+{
+  "alpha2Code": "MY",
+  "code": 458,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "State",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Mexico 1`] = `
+{
+  "alpha2Code": "MX",
+  "code": 484,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "State",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -247,6 +337,7 @@ exports[`country helpers getConfigByISOName country configs Netherlands 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -273,6 +364,7 @@ exports[`country helpers getConfigByISOName country configs New Zealand 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -281,6 +373,33 @@ exports[`country helpers getConfigByISOName country configs New Zealand 1`] = `
   },
   "prayerSettings": {
     "asr_method": "Hanafi",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Nigeria 1`] = `
+{
+  "alpha2Code": "NG",
+  "code": 566,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "State",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
     "calculation_method": "MWL",
   },
 }
@@ -299,6 +418,7 @@ exports[`country helpers getConfigByISOName country configs Pakistan 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -325,6 +445,7 @@ exports[`country helpers getConfigByISOName country configs Russia 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -351,6 +472,7 @@ exports[`country helpers getConfigByISOName country configs Saudi Arabia 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -360,6 +482,33 @@ exports[`country helpers getConfigByISOName country configs Saudi Arabia 1`] = `
   "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "Makkah",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Sudan 1`] = `
+{
+  "alpha2Code": "SD",
+  "code": 729,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "State",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
   },
 }
 `;
@@ -377,6 +526,7 @@ exports[`country helpers getConfigByISOName country configs Switzerland 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -403,6 +553,7 @@ exports[`country helpers getConfigByISOName country configs Turkey 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -429,6 +580,7 @@ exports[`country helpers getConfigByISOName country configs Turkiye 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -455,6 +607,7 @@ exports[`country helpers getConfigByISOName country configs United Arab Emirates
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -481,6 +634,7 @@ exports[`country helpers getConfigByISOName country configs United Kingdom 1`] =
   },
   "intl": {
     "distanceUnit": "mi",
+    "labelForProvince": "Province",
     "postalCodeName": "Post Code",
   },
   "mosque": {
@@ -507,6 +661,7 @@ exports[`country helpers getConfigByISOName country configs United States 1`] = 
   },
   "intl": {
     "distanceUnit": "mi",
+    "labelForProvince": "State",
     "postalCodeName": "ZIP Code",
   },
   "mosque": {
@@ -516,6 +671,33 @@ exports[`country helpers getConfigByISOName country configs United States 1`] = 
   "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "ISNA",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs Venezuela 1`] = `
+{
+  "alpha2Code": "VE",
+  "code": 862,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": false,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "State",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
   },
 }
 `;
@@ -533,6 +715,7 @@ exports[`country helpers getConfigByISOName returns default config if country no
   },
   "intl": {
     "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
