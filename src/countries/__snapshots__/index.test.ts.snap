@@ -40,7 +40,7 @@ exports[`country helpers getConfigByISOName country configs Bangladesh 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
-    "labelForProvince": "Province",
+    "labelForProvince": "Division",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
