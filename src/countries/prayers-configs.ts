@@ -90,6 +90,9 @@ const prayersConfigs: allConfigs = {
     features: {
       mosques: true,
     },
+    intl: {
+      labelForProvince: 'Division',
+    },
   },
   Turkiye: {
     code: 792,
