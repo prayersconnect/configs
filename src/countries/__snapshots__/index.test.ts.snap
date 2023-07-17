@@ -772,6 +772,24 @@ exports[`country helpers getCountryAlpha2CodesByFeature returns correct countrie
 ]
 `;
 
+exports[`country helpers getCountryByAlpha2Name returns country info if found 1`] = `
+{
+  "emoji": "🇺🇸",
+  "gmap_name": "United States",
+  "iso_name": "United States",
+  "pc_name": "United States",
+}
+`;
+
+exports[`country helpers getCountryByAlpha2Name returns country info if found 2`] = `
+{
+  "emoji": "🇨🇦",
+  "gmap_name": "Canada",
+  "iso_name": "Canada",
+  "pc_name": "Canada",
+}
+`;
+
 exports[`country helpers getCountryByISOName returns country info if found 1`] = `
 {
   "emoji": "🇺🇸",
