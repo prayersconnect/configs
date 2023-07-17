@@ -36,6 +36,16 @@ function getCountryByShortName(name: string): ICountryOutput | null {
   return formatCountyInfo(config);
 }
 
+export function getCountryByAlpha2Name(name: string): ICountryOutput | null {
+  const key = countries[name];
+
+  if (!key) {
+    return null;
+  }
+
+  return formatCountyInfo(key);
+}
+
 function getCountryByPCName(name: string): ICountryOutput | null {
   const key = Object.keys(countries).find((key) => {
     return countries[key].pc_name === name;
