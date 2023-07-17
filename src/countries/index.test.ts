@@ -3,6 +3,7 @@ import {
   getCountryAlpha2CodesByFeature,
   getCountryByISOName,
   getCountryByName,
+  getCountryByAlpha2Name,
   hasFeature,
 } from './';
 import prayersConfigs from './prayers-configs';
@@ -17,6 +18,17 @@ describe('country helpers', () => {
     it('returns country info if found', () => {
       expect(getCountryByISOName('United States')).toMatchSnapshot();
       expect(getCountryByISOName('Saudi Arabia')).toMatchSnapshot();
+    });
+  });
+
+  describe('getCountryByAlpha2Name', () => {
+    it('returns null if country not found', () => {
+      expect(getCountryByAlpha2Name('not-found')).toBeNull();
+    });
+
+    it('returns country info if found', () => {
+      expect(getCountryByAlpha2Name('US')).toMatchSnapshot();
+      expect(getCountryByAlpha2Name('CA')).toMatchSnapshot();
     });
   });
 
