@@ -4,7 +4,7 @@ import {
   HighLatitudeRule,
   Madhab,
   PrayerTimes,
-} from 'adhan';
+} from 'adhan-extended';
 import { DateTime } from 'luxon';
 import { IAdhanCalculated, IAdhanCalculationExtras, ICoords } from './types';
 
