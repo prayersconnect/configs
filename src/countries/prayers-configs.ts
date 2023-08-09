@@ -267,6 +267,13 @@ const prayersConfigs: allConfigs = {
       mosques: true,
     },
   },
+  Spain: {
+    code: 724,
+    alpha2Code: 'ES',
+    features: {
+      mosques: true,
+    },
+  },
   Mexico: {
     code: 484,
     alpha2Code: 'MX',
