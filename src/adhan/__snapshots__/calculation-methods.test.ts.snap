@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calculatePrayerTimes should calculate Dubai prayer times using Dubai 1`] = `
+{
+  "asr": "3:55 PM",
+  "dhuhr": "12:27 PM",
+  "fajr": "4:27 AM",
+  "isha": "8:21 PM",
+  "maghrib": "7:02 PM",
+  "midnight": "12:24 AM",
+  "sunrise": "5:47 AM",
+  "sunset": "7:01 PM",
+  "tahajjud": "2:12 AM",
+}
+`;
+
+exports[`calculatePrayerTimes should calculate Makkah prayer times using UmmAlQura 1`] = `
+{
+  "asr": "3:47 PM",
+  "dhuhr": "12:26 PM",
+  "fajr": "4:36 AM",
+  "isha": "8:25 PM",
+  "maghrib": "6:56 PM",
+  "midnight": "12:27 AM",
+  "sunrise": "5:57 AM",
+  "sunset": "6:55 PM",
+  "tahajjud": "2:17 AM",
+}
+`;
+
+exports[`calculatePrayerTimes should calculate Manchester prayer times using MoonsightingCommittee 1`] = `
+{
+  "asr": "6:24 PM",
+  "dhuhr": "1:19 PM",
+  "fajr": "3:53 AM",
+  "isha": "9:55 PM",
+  "maghrib": "8:53 PM",
+  "midnight": "1:17 AM",
+  "sunrise": "5:39 AM",
+  "sunset": "8:52 PM",
+  "tahajjud": "2:45 AM",
+}
+`;
+
+exports[`calculatePrayerTimes should calculate Turkey prayer times using Turkey 1`] = `
+{
+  "asr": "4:48 PM",
+  "dhuhr": "12:59 PM",
+  "fajr": "4:11 AM",
+  "isha": "9:29 PM",
+  "maghrib": "8:00 PM",
+  "midnight": "12:54 AM",
+  "sunrise": "5:48 AM",
+  "sunset": "7:59 PM",
+  "tahajjud": "2:32 AM",
+}
+`;
