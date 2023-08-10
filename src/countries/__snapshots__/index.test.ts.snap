@@ -121,7 +121,7 @@ exports[`country helpers getConfigByISOName country configs Egypt 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
-    "labelForProvince": "Province",
+    "labelForProvince": "Governorate",
     "postalCodeName": "Postal Code",
   },
   "mosque": {

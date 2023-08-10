@@ -200,6 +200,9 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       calculation_method: 'Egypt',
     },
+    intl: {
+      labelForProvince: 'Governorate',
+    },
   },
   'Saudi Arabia': {
     code: 682,
