@@ -122,4 +122,12 @@ export default [
       isha: 17.5,
     },
   },
+  {
+    name: 'muis',
+    label: 'Islamic Religious Council of Singapore (MUIS)',
+    values: {
+      fajr: 20,
+      isha: 18,
+    },
+  },
 ] as CalculationMethod[];
