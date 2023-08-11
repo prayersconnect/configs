@@ -312,6 +312,19 @@ const prayersConfigs: allConfigs = {
       labelForProvince: 'State',
     },
   },
+  Singapore: {
+    code: 702,
+    alpha2Code: 'SG',
+    intl: {
+      labelForProvince: 'CDC',
+    },
+    features: {
+      mosques: true,
+    },
+    prayerSettings: {
+      calculation_method: 'muis',
+    },
+  },
 };
 
 export default prayersConfigs;

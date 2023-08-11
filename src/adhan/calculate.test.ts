@@ -149,15 +149,36 @@ describe('calculateAdhan', () => {
     });
 
     expect(formatAdhanTimes(prayerTimes, 'iso')).toMatchInlineSnapshot(`
-{
-  "asr": "2022-01-14T14:34:00.000-05:00",
-  "dhuhr": "2022-01-14T12:05:00.000-05:00",
-  "fajr": "2022-01-14T05:44:00.000-05:00",
-  "isha": "2022-01-14T18:07:00.000-05:00",
-  "maghrib": "2022-01-14T16:53:00.000-05:00",
-  "sunrise": "2022-01-14T07:18:00.000-05:00",
-  "sunset": "2022-01-14T16:52:00.000-05:00",
-}
-`);
+      {
+        "asr": "2022-01-14T14:34:00.000-05:00",
+        "dhuhr": "2022-01-14T12:05:00.000-05:00",
+        "fajr": "2022-01-14T05:44:00.000-05:00",
+        "isha": "2022-01-14T18:07:00.000-05:00",
+        "maghrib": "2022-01-14T16:53:00.000-05:00",
+        "sunrise": "2022-01-14T07:18:00.000-05:00",
+        "sunset": "2022-01-14T16:52:00.000-05:00",
+      }
+    `);
+  });
+
+  it('returns correct time for muis (singapore) method', () => {
+    const date = DateTime.local(2023, 8, 11).setZone('Asia/Singapore');
+    const prayerTimes = calculateAdhan(
+      date,
+      { latitude: 1.3553794, longitude: 103.8677444 },
+      'muis',
+      asrMethod
+    );
+    expect(formatAdhanTimes(prayerTimes, '24h')).toMatchInlineSnapshot(`
+      {
+        "asr": "16:31",
+        "dhuhr": "13:11",
+        "fajr": "05:46",
+        "isha": "20:27",
+        "maghrib": "19:16",
+        "sunrise": "07:05",
+        "sunset": "19:15",
+      }
+    `);
   });
 });

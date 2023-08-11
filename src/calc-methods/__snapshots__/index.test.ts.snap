@@ -121,6 +121,14 @@ exports[`calc-methods getCalcMethods returns all methods 1`] = `
       "isha": 17.5,
     },
   },
+  {
+    "label": "Islamic Religious Council of Singapore (MUIS)",
+    "name": "muis",
+    "values": {
+      "fajr": 20,
+      "isha": 18,
+    },
+  },
 ]
 `;
 
@@ -195,6 +203,13 @@ exports[`calc-methods getCalcMethods returns all methods: values for gaiae 1`] =
 {
   "fajr": 18,
   "isha": 17.5,
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for muis 1`] = `
+{
+  "fajr": 20,
+  "isha": 18,
 }
 `;
 
