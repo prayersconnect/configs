@@ -513,6 +513,33 @@ exports[`country helpers getConfigByISOName country configs Singapore 1`] = `
 }
 `;
 
+exports[`country helpers getConfigByISOName country configs Spain 1`] = `
+{
+  "alpha2Code": "ES",
+  "code": 724,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs Sudan 1`] = `
 {
   "alpha2Code": "SD",
@@ -796,6 +823,8 @@ exports[`country helpers getCountryAlpha2CodesByFeature returns correct countrie
   "IT",
   "NL",
   "CH",
+  "ES",
+  "SG",
 ]
 `;
 
