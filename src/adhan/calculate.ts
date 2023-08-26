@@ -4,7 +4,7 @@ import {
   HighLatitudeRule,
   Madhab,
   PrayerTimes,
-} from 'adhan';
+} from 'adhan-extended';
 import { DateTime } from 'luxon';
 import { IAdhanCalculated, IAdhanCalculationExtras, ICoords } from './types';
 
@@ -60,6 +60,9 @@ const getMethodFromShortName = (shortName: string) => {
       gaiae.fajrAngle = 18;
       gaiae.ishaAngle = 17.5;
       return gaiae;
+    case 'muis':
+      return CalculationMethod.Singapore();
+
     default:
       return CalculationMethod.MuslimWorldLeague();
   }

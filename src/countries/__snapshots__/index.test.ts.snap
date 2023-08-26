@@ -121,7 +121,7 @@ exports[`country helpers getConfigByISOName country configs Egypt 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
-    "labelForProvince": "Province",
+    "labelForProvince": "Governorate",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -486,10 +486,10 @@ exports[`country helpers getConfigByISOName country configs Saudi Arabia 1`] = `
 }
 `;
 
-exports[`country helpers getConfigByISOName country configs Spain 1`] = `
+exports[`country helpers getConfigByISOName country configs Singapore 1`] = `
 {
-  "alpha2Code": "ES",
-  "code": 724,
+  "alpha2Code": "SG",
+  "code": 702,
   "features": {
     "education": false,
     "events": false,
@@ -499,7 +499,7 @@ exports[`country helpers getConfigByISOName country configs Spain 1`] = `
   },
   "intl": {
     "distanceUnit": "km",
-    "labelForProvince": "Province",
+    "labelForProvince": "CDC",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -508,7 +508,7 @@ exports[`country helpers getConfigByISOName country configs Spain 1`] = `
   },
   "prayerSettings": {
     "asr_method": "Standard",
-    "calculation_method": "MWL",
+    "calculation_method": "muis",
   },
 }
 `;
@@ -796,7 +796,6 @@ exports[`country helpers getCountryAlpha2CodesByFeature returns correct countrie
   "IT",
   "NL",
   "CH",
-  "ES",
 ]
 `;
 

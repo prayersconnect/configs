@@ -200,6 +200,9 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       calculation_method: 'Egypt',
     },
+    intl: {
+      labelForProvince: 'Governorate',
+    },
   },
   'Saudi Arabia': {
     code: 682,
@@ -314,6 +317,19 @@ const prayersConfigs: allConfigs = {
     alpha2Code: 'SD',
     intl: {
       labelForProvince: 'State',
+    },
+  },
+  Singapore: {
+    code: 702,
+    alpha2Code: 'SG',
+    intl: {
+      labelForProvince: 'CDC',
+    },
+    features: {
+      mosques: true,
+    },
+    prayerSettings: {
+      calculation_method: 'muis',
     },
   },
 };
