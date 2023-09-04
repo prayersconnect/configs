@@ -108,6 +108,60 @@ exports[`country helpers getConfigByISOName country configs Canada 1`] = `
 }
 `;
 
+exports[`country helpers getConfigByISOName country configs DK 1`] = `
+{
+  "alpha2Code": "DK",
+  "code": 208,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs DZ 1`] = `
+{
+  "alpha2Code": "DZ",
+  "code": 12,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs Egypt 1`] = `
 {
   "alpha2Code": "EG",
@@ -824,6 +878,8 @@ exports[`country helpers getCountryAlpha2CodesByFeature returns correct countrie
   "NL",
   "CH",
   "ES",
+  "DK",
+  "DZ",
   "SG",
 ]
 `;

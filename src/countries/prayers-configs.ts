@@ -277,6 +277,20 @@ const prayersConfigs: allConfigs = {
       mosques: true,
     },
   },
+  DK: {
+    code: 208,
+    alpha2Code: 'DK',
+    features: {
+      mosques: true,
+    },
+  },
+  DZ: {
+    code: 12,
+    alpha2Code: 'DZ',
+    features: {
+      mosques: true,
+    },
+  },
   Mexico: {
     code: 484,
     alpha2Code: 'MX',
