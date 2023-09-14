@@ -129,6 +129,14 @@ exports[`calc-methods getCalcMethods returns all methods 1`] = `
       "isha": 18,
     },
   },
+  {
+    "label": "Ministry of Religious Affairs and Wakfs, Algeria",
+    "name": "algeria",
+    "values": {
+      "fajr": 18,
+      "isha": 17,
+    },
+  },
 ]
 `;
 
@@ -182,6 +190,13 @@ exports[`calc-methods getCalcMethods returns all methods: values for Tehran 1`] 
   "isha": 14,
   "maghrib": 4.5,
   "midnight": "Jafari",
+}
+`;
+
+exports[`calc-methods getCalcMethods returns all methods: values for algeria 1`] = `
+{
+  "fajr": 18,
+  "isha": 17,
 }
 `;
 

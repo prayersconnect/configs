@@ -1,21 +1,44 @@
 import { DateTime } from 'luxon';
 
-export function isRamadan(date: DateTime): boolean {
-  return getHijriMonth(date) === 'Ramadan';
+export enum MonthFormat {
+  NAME,
+  NUMBER,
+}
+export function isFriday(date: DateTime): boolean {
+  return date.weekday === 5;
 }
 
-function getHijriMonth(date: DateTime): string {
+export function isRamadan(date: DateTime): boolean {
+  return getHijriMonth(date, MonthFormat.NUMBER) === 9;
+}
+
+export function getHijriMonth(
+  date: DateTime,
+  format: MonthFormat
+): string | number {
+  // Determine the month format for Intl.DateTimeFormat
+  const monthFormat = format === MonthFormat.NAME ? 'long' : 'numeric';
+
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
-    month: 'long',
+    month: monthFormat,
     day: 'numeric',
   };
 
-  const format = new Intl.DateTimeFormat('en-u-ca-islamic-nu-latn', options);
-  const parts = format.formatToParts(date.toJSDate());
+  const intlFormat = new Intl.DateTimeFormat(
+    'en-u-ca-islamic-nu-latn',
+    options
+  );
+  const parts = intlFormat.formatToParts(date.toJSDate());
 
   // Extract the month from the formatted parts
   const monthPart = parts.find((part) => part.type === 'month');
 
-  return monthPart ? monthPart.value : '';
+  if (monthPart) {
+    return format === MonthFormat.NAME
+      ? monthPart.value
+      : parseInt(monthPart.value);
+  }
+
+  return '';
 }

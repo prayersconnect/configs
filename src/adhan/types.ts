@@ -1,15 +1,15 @@
 import {
-  Madhab,
   MidnightMethod,
   HighLatitudeRule,
   Shafaq,
   CalculationParameters,
   Coordinates,
-  PrayerTimes,
   Rounding,
 } from 'adhan-extended';
 import { DateTime } from 'luxon';
 import { PrayerAndSunnahTimes } from './prayer-and-sunnah-times';
+
+export { MidnightMethod } from 'adhan-extended';
 
 export interface ICoords {
   latitude: number;
@@ -34,8 +34,33 @@ export interface IAdhanCalculated {
   isha: DateTime;
 }
 
+export type CalculationMethodKey =
+  | 'Custom'
+  | 'Algeria'
+  | 'Brunei'
+  | 'Dubai'
+  | 'Egyptian'
+  | 'France'
+  | 'Gulf'
+  | 'IslamicSocietyOfNorthAmerica'
+  | 'Jafari'
+  | 'Karachi'
+  | 'Indonesia'
+  | 'Kuwait'
+  | 'MoonsightingCommittee'
+  | 'MuslimWorldLeague'
+  | 'Qatar'
+  | 'Russia'
+  | 'Singapore'
+  | 'Tehran'
+  | 'Tunisia'
+  | 'Turkey'
+  | 'UmmAlQura';
+
 export type CalculationMethodEntry = {
+  calculationKey: CalculationMethodKey;
   label: string;
+  otherLabel?: string;
   info: string;
   url?: string;
   region?: string;
@@ -69,7 +94,7 @@ export type PrayerTimesOptions = {
   calculationParameters: CalculationParameters;
   coordinates: Coordinates;
   calculationMethod?: CalculationMethodEntry;
-  midnightMethod: keyof typeof MidnightMethod;
+  midnightMethod?: keyof typeof MidnightMethod;
   /** Ajustments in minutes */
   midnightAdjustment: number;
 };
@@ -86,6 +111,16 @@ export enum Prayer {
   Midnight = 'midnight',
   /** last third of the night */
   Tahajjud = 'tahajjud',
+}
+
+export enum JamaatPrayer {
+  Fajr = 'fajr',
+  Dhuhr = 'dhuhr',
+  Asr = 'asr',
+  Maghrib = 'maghrib',
+  Isha = 'isha',
+  Eid = 'eid',
+  Jumma = 'jumma',
 }
 
 export const NonPrayer = [
@@ -109,47 +144,29 @@ export const PrayersInOrder = [
   Prayer.Tahajjud,
 ];
 
-export type formatOptions = {
+export type FormatOptions = {
   use24HourFormat: boolean;
   timezone?: string;
 };
 
-// FIX: Typescript intelisence
-// export type CalculationMethodKey = keyof typeof CalculationMethods;
-export type CalculationMethodKey =
-  | 'Custom'
-  | 'Algeria'
-  | 'Brunei'
-  | 'Dubai'
-  | 'Egyptian'
-  | 'France'
-  | 'Gulf'
-  | 'Jafari'
-  | 'Karachi'
-  | 'Kemenag'
-  | 'Kuwait'
-  | 'MoonsightingCommittee'
-  | 'MuslimWorldLeague'
-  | 'NorthAmerica'
-  | 'Qatar'
-  | 'Russia'
-  | 'Singapore'
-  | 'Tehran'
-  | 'Turkey'
-  | 'UmmAlQura';
+export type AsrCalculationType = 'Standard' | 'Hanafi';
 
 export type CalculationSettings = {
-  location: Coordinates | undefined;
+  location: ICoords | undefined;
   calculationMethod: CalculationMethodKey;
-  asrCalculation: typeof Madhab[keyof typeof Madhab];
-  midnightMethod: keyof typeof MidnightMethod;
+  asrCalculation: AsrCalculationType;
 
   // Used alternative calculation methods i.e france 12, 15, 18 degrees
   alternativeCalculation?: string;
   timezone?: string;
 
+  midnightMethod?: keyof typeof MidnightMethod;
+
   highLatitudeRule?:
-    | typeof HighLatitudeRule[keyof typeof HighLatitudeRule]
+    | typeof HighLatitudeRule[keyof Omit<
+        typeof HighLatitudeRule,
+        'recommended'
+      >]
     | undefined;
   shafaq?: typeof Shafaq[keyof typeof Shafaq];
   polarResolution?: string;

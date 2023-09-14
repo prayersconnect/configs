@@ -3,12 +3,16 @@ import { DateTime } from 'luxon';
 
 const formatString = 'yyyy-MM-dd';
 
-function parseDateInZone(date: string, timezone: string): DateTime {
+function parseDateInZone(date: string, timezone: string | null): DateTime {
+  if (timezone == null) {
+    throw new Error('Invalid Time Zone');
+  }
+
   return DateTime.fromISO(date, { zone: timezone }).set({ hour: 3 });
 }
 
 function getDSTRanges(dstStart: DateTime, dstEnd: DateTime, country: string) {
-  let ranges = [];
+  const ranges = [];
   if (dstStart.year === dstEnd.year) {
     ranges.push([
       `DST Period ${dstStart.year}`,
@@ -93,7 +97,9 @@ export function getRangesForYear(
   country: string,
   timezone: string
 ) {
-  const today = parseDateInZone(DateTime.local().toISODate(), timezone).set({
+  const isoDate = DateTime.local().toISODate() as string;
+
+  const today = parseDateInZone(isoDate, timezone).set({
     year,
   });
   const dstStart = parseDateInZone(
@@ -106,7 +112,7 @@ export function getRangesForYear(
     timezone
   );
 
-  let ranges = [
+  const ranges = [
     [
       `Year ${dstStart.year}`,
       `${dstStart.startOf('year').toFormat(formatString)}`,

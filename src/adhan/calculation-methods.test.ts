@@ -16,10 +16,10 @@ describe('calculatePrayerTimes', () => {
       },
       timezone: 'Europe/London',
       calculationMethod: 'MoonsightingCommittee',
-      asrCalculation: 'hanafi',
+      asrCalculation: 'Hanafi',
       highLatitudeRule: 'middleofthenight',
       shafaq: 'general',
-      midnightMethod: 'Standard',
+      midnightMethod: 'SunsetToSunrise',
     },
     makkah: {
       location: {
@@ -28,8 +28,8 @@ describe('calculatePrayerTimes', () => {
       },
       timezone: 'Asia/Riyadh',
       calculationMethod: 'UmmAlQura',
-      asrCalculation: 'shafi',
-      midnightMethod: 'Standard',
+      asrCalculation: 'Standard',
+      midnightMethod: 'SunsetToSunrise',
       highLatitudeRule: 'middleofthenight',
     },
     dubai: {
@@ -39,9 +39,9 @@ describe('calculatePrayerTimes', () => {
       },
       timezone: 'Asia/Dubai',
       calculationMethod: 'Dubai',
-      asrCalculation: 'shafi',
+      asrCalculation: 'Standard',
       highLatitudeRule: 'middleofthenight',
-      midnightMethod: 'Standard',
+      midnightMethod: 'SunsetToSunrise',
     },
     turkey: {
       location: {
@@ -50,9 +50,9 @@ describe('calculatePrayerTimes', () => {
       },
       timezone: 'Europe/Istanbul',
       calculationMethod: 'Turkey',
-      asrCalculation: 'shafi',
+      asrCalculation: 'Standard',
       highLatitudeRule: 'middleofthenight',
-      midnightMethod: 'Standard',
+      midnightMethod: 'SunsetToSunrise',
     },
   };
 

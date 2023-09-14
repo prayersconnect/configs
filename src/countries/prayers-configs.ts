@@ -1,6 +1,7 @@
 // for country code, visit https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes and get the corresponding numeric code for the country
 // value for calculation_method must match values defined in calculation-method.yml
 
+import { CalculationSettings } from '../adhan/types';
 import {
   ICountryConfigValues,
   ICountryFeatures,
@@ -23,6 +24,10 @@ export const defaultConfig = {
     asr_method: 'Standard',
     calculation_method: 'MWL',
   } as IPrayerSettings,
+  calculationSettings: {
+    calculationMethod: 'MuslimWorldLeague',
+    asrCalculation: 'Standard',
+  } as CalculationSettings,
   mosque: {
     denomination: 'sunni',
     language_services: 'english',
@@ -48,6 +53,9 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       calculation_method: 'ISNA',
     },
+    calculationSettings: {
+      calculationMethod: 'IslamicSocietyOfNorthAmerica',
+    },
     mosque: {
       language_services: 'english',
       denomination: 'sunni',
@@ -70,6 +78,9 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       calculation_method: 'ISNA',
     },
+    calculationSettings: {
+      calculationMethod: 'IslamicSocietyOfNorthAmerica',
+    },
     features: {
       mosques: true,
       iqamahTimes: true,
@@ -82,6 +93,10 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       asr_method: 'Hanafi',
       calculation_method: 'Karachi',
+    },
+    calculationSettings: {
+      calculationMethod: 'Karachi',
+      asrCalculation: 'Hanafi',
     },
     mosque: {
       language_services: 'bangla',
@@ -100,6 +115,9 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       calculation_method: 'turkey-presidency-of-religious-affairs',
     },
+    calculationSettings: {
+      calculationMethod: 'Turkey',
+    },
     mosque: {
       language_services: 'Türkçe',
       denomination: 'sunni',
@@ -114,6 +132,9 @@ const prayersConfigs: allConfigs = {
     alpha2Code: 'GB',
     prayerSettings: {
       calculation_method: 'MWL',
+    },
+    calculationSettings: {
+      calculationMethod: 'MoonsightingCommittee',
     },
     mosque: {
       language_services: 'english',
@@ -134,6 +155,9 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       asr_method: 'Hanafi',
     },
+    calculationSettings: {
+      asrCalculation: 'Hanafi',
+    },
     features: {
       mosques: true,
       iqamahTimes: true,
@@ -147,6 +171,9 @@ const prayersConfigs: allConfigs = {
     alpha2Code: 'NZ',
     prayerSettings: {
       asr_method: 'Hanafi',
+    },
+    calculationSettings: {
+      asrCalculation: 'Hanafi',
     },
     mosque: {
       language_services: 'english',
@@ -164,6 +191,10 @@ const prayersConfigs: allConfigs = {
       calculation_method: 'Karachi',
       asr_method: 'Hanafi',
     },
+    calculationSettings: {
+      calculationMethod: 'Karachi',
+      asrCalculation: 'Hanafi',
+    },
     mosque: {
       language_services: 'hindi',
       denomination: 'sunni',
@@ -179,6 +210,10 @@ const prayersConfigs: allConfigs = {
       calculation_method: 'Karachi',
       asr_method: 'Hanafi',
     },
+    calculationSettings: {
+      calculationMethod: 'Karachi',
+      asrCalculation: 'Hanafi',
+    },
     mosque: {
       language_services: 'urdu',
       denomination: 'sunni',
@@ -190,6 +225,9 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       calculation_method: 'union-des-organisations-islamiques-de-france',
     },
+    calculationSettings: {
+      calculationMethod: 'France',
+    },
     features: {
       mosques: true,
     },
@@ -199,6 +237,9 @@ const prayersConfigs: allConfigs = {
     alpha2Code: 'EG',
     prayerSettings: {
       calculation_method: 'Egypt',
+    },
+    calculationSettings: {
+      calculationMethod: 'Egyptian',
     },
     intl: {
       labelForProvince: 'Governorate',
@@ -210,11 +251,17 @@ const prayersConfigs: allConfigs = {
     prayerSettings: {
       calculation_method: 'Makkah',
     },
+    calculationSettings: {
+      calculationMethod: 'UmmAlQura',
+    },
   },
   'United Arab Emirates': {
     code: 784,
     prayerSettings: {
       calculation_method: 'gaiae',
+    },
+    calculationSettings: {
+      calculationMethod: 'Gulf',
     },
   },
   Russia: {
@@ -222,6 +269,9 @@ const prayersConfigs: allConfigs = {
     alpha2Code: 'RU',
     prayerSettings: {
       calculation_method: 'russia',
+    },
+    calculationSettings: {
+      calculationMethod: 'Russia',
     },
     mosque: {
       language_services: 'russian',
@@ -344,6 +394,9 @@ const prayersConfigs: allConfigs = {
     },
     prayerSettings: {
       calculation_method: 'muis',
+    },
+    calculationSettings: {
+      calculationMethod: 'Singapore',
     },
   },
   BA: {
