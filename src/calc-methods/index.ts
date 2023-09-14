@@ -1,5 +1,7 @@
 import methodsData, { CalculationMethod } from './methods';
 import { getConfigByISOName } from '../countries';
+import { CalculationMethodEntry, CalculationSettings } from '../adhan/types';
+import { CalculationMethods } from '../adhan/calculation-methods';
 
 export interface IMethodResponse {
   method: string;
@@ -20,7 +22,13 @@ export const getCalcMethods = (): CalculationMethod[] => {
   return methodsData;
 };
 
+export const getCalculationMethods = (): CalculationMethodEntry[] => {
+  return Object.values(CalculationMethods);
+};
+
 /**
+ * @deprecated This method is deprecated. Use getCalculationMethodByCountry instead.
+ *
  * Returns the calculation method and asr method for a given country's ISO name
  * @param country ISO Country Name
  */
@@ -35,6 +43,22 @@ export const getCalcMethodsByCountry = (
   return {
     method: countryConf.prayerSettings.calculation_method as string,
     asrMethod: countryConf.prayerSettings.asr_method || 'Standard',
+  };
+};
+
+export const getCalculationMethodByCountry = (
+  country: string | undefined
+): CalculationSettings | null => {
+  if (!country) {
+    return null;
+  }
+  const countryConf = getConfigByISOName(country);
+
+  return {
+    ...countryConf.calculationSettings,
+    calculationMethod: countryConf.calculationSettings.calculationMethod,
+    asrCalculation:
+      countryConf.calculationSettings.asrCalculation || 'Standard',
   };
 };
 

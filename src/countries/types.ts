@@ -1,3 +1,5 @@
+import { CalculationMethodKey, CalculationSettings } from '../adhan/types';
+
 export interface ICountryOutput {
   gmap_name: string; // name defined in Google Maps. if this attribute is not defined, then the iso_name is used
   iso_name: string;
@@ -50,6 +52,7 @@ export interface ICountryConfig {
   code: number | null;
   alpha2Code: string; //alpha-2 code from https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
   prayerSettings: Required<IPrayerSettings>;
+  calculationSettings: Required<CalculationSettings>;
   mosque: IMosqueSettings;
   features: ICountryFeatures;
   intl: Required<IIntlParams>; //internationalization params

@@ -62,6 +62,13 @@ const getMethodFromShortName = (shortName: string) => {
       return gaiae;
     case 'muis':
       return CalculationMethod.Singapore();
+    case 'algeria':
+      const algeria = CalculationMethod.Other();
+      algeria.fajrAngle = 18;
+      algeria.ishaAngle = 17;
+      algeria.methodAdjustments.sunset = 3;
+      algeria.methodAdjustments.maghrib = 3;
+      return algeria;
 
     default:
       return CalculationMethod.MuslimWorldLeague();
@@ -115,7 +122,7 @@ export function calculateAdhan(
   const coordinates = new Coordinates(coords.latitude, coords.longitude);
   const params = getCalculationParams(method, asrMethod, extras);
 
-  const timezone = date.zoneName; //ref: https://github.com/batoulapps/adhan-js#prayer-times
+  const timezone = date.zoneName || 'UTC'; //ref: https://github.com/batoulapps/adhan-js#prayer-times
   const calculated = new PrayerTimes(coordinates, date.toJSDate(), params);
   return {
     fajr: DateTime.fromJSDate(calculated.fajr).setZone(timezone),

@@ -10,7 +10,7 @@ import { DateTime } from 'luxon';
 import {
   IAdhanCalculatedType,
   PrayerTimesOptions,
-  formatOptions,
+  FormatOptions,
 } from './types';
 import { ValueOf } from 'adhan-extended/lib/types/TypeUtils';
 
@@ -148,7 +148,7 @@ export class PrayerAndSunnahTimes {
     return this.prayerTimes.nextPrayer(date.toJSDate());
   }
 
-  format(options: formatOptions): IAdhanCalculatedType {
+  format(options: FormatOptions): IAdhanCalculatedType {
     const timezone = options.timezone || 'UTC';
     const formatString = options.use24HourFormat ? 'HH:mm' : 'h:mm a';
 

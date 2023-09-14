@@ -130,4 +130,12 @@ export default [
       isha: 18,
     },
   },
+  {
+    name: 'algeria',
+    label: 'Ministry of Religious Affairs and Wakfs, Algeria',
+    values: {
+      fajr: 18,
+      isha: 17,
+    },
+  },
 ] as CalculationMethod[];

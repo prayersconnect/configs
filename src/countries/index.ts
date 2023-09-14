@@ -61,17 +61,23 @@ function getCountryByPCName(name: string): ICountryOutput | null {
 }
 
 const hasNonAscii = (str: string): boolean => {
-  return /[^\x00-\x7F]/.test(str);
+  return /[\u0080-\uFFFF]/.test(str);
 };
 
+/**
+ * Get the ISO name for a country based on its non-ASCII name.
+ *
+ * @param name - The non-ASCII name of the country.
+ * @returns The ISO name of the country, or undefined if not found.
+ */
 function getISONameFromNonAscii(name: string) {
-  const match = nonAsciiCountries.find((country) => {
-    if (country[0] === name) {
-      return country;
-    }
-  });
+  // Find the matching country tuple where the first element matches the given name.
+  const matchingCountry = nonAsciiCountries.find(
+    (country) => country[0] === name
+  );
 
-  return match?.[1];
+  // Return the second element of the tuple, which is the ISO name.
+  return matchingCountry?.[1];
 }
 
 export function getCountryByName(name: string): ICountryOutput | null {
@@ -111,6 +117,10 @@ export function getConfigByISOName(name: string): ICountryConfig {
     prayerSettings: {
       ...defaultConfig.prayerSettings,
       ...countryConf?.prayerSettings,
+    },
+    calculationSettings: {
+      ...defaultConfig.calculationSettings,
+      ...countryConf?.calculationSettings,
     },
     mosque: {
       ...defaultConfig.mosque,

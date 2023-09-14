@@ -3,6 +3,10 @@
 exports[`country helpers getConfigByISOName country configs Australia 1`] = `
 {
   "alpha2Code": "AU",
+  "calculationSettings": {
+    "asrCalculation": "Hanafi",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 36,
   "features": {
     "education": false,
@@ -57,6 +61,10 @@ exports[`country helpers getConfigByISOName country configs BA 1`] = `
 exports[`country helpers getConfigByISOName country configs Bangladesh 1`] = `
 {
   "alpha2Code": "BD",
+  "calculationSettings": {
+    "asrCalculation": "Hanafi",
+    "calculationMethod": "Karachi",
+  },
   "code": 50,
   "features": {
     "education": false,
@@ -84,6 +92,10 @@ exports[`country helpers getConfigByISOName country configs Bangladesh 1`] = `
 exports[`country helpers getConfigByISOName country configs Brazil 1`] = `
 {
   "alpha2Code": "BR",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 76,
   "features": {
     "education": false,
@@ -111,6 +123,10 @@ exports[`country helpers getConfigByISOName country configs Brazil 1`] = `
 exports[`country helpers getConfigByISOName country configs Canada 1`] = `
 {
   "alpha2Code": "CA",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "IslamicSocietyOfNorthAmerica",
+  },
   "code": 124,
   "features": {
     "education": false,
@@ -138,6 +154,10 @@ exports[`country helpers getConfigByISOName country configs Canada 1`] = `
 exports[`country helpers getConfigByISOName country configs DK 1`] = `
 {
   "alpha2Code": "DK",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 208,
   "features": {
     "education": false,
@@ -165,6 +185,10 @@ exports[`country helpers getConfigByISOName country configs DK 1`] = `
 exports[`country helpers getConfigByISOName country configs DZ 1`] = `
 {
   "alpha2Code": "DZ",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 12,
   "features": {
     "education": false,
@@ -219,6 +243,10 @@ exports[`country helpers getConfigByISOName country configs EG 1`] = `
 exports[`country helpers getConfigByISOName country configs Egypt 1`] = `
 {
   "alpha2Code": "EG",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "Egyptian",
+  },
   "code": 818,
   "features": {
     "education": false,
@@ -246,6 +274,10 @@ exports[`country helpers getConfigByISOName country configs Egypt 1`] = `
 exports[`country helpers getConfigByISOName country configs France 1`] = `
 {
   "alpha2Code": "FR",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "France",
+  },
   "code": 250,
   "features": {
     "education": false,
@@ -273,6 +305,10 @@ exports[`country helpers getConfigByISOName country configs France 1`] = `
 exports[`country helpers getConfigByISOName country configs Germany 1`] = `
 {
   "alpha2Code": "DE",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 276,
   "features": {
     "education": false,
@@ -300,6 +336,10 @@ exports[`country helpers getConfigByISOName country configs Germany 1`] = `
 exports[`country helpers getConfigByISOName country configs India 1`] = `
 {
   "alpha2Code": "IN",
+  "calculationSettings": {
+    "asrCalculation": "Hanafi",
+    "calculationMethod": "Karachi",
+  },
   "code": 356,
   "features": {
     "education": false,
@@ -327,6 +367,10 @@ exports[`country helpers getConfigByISOName country configs India 1`] = `
 exports[`country helpers getConfigByISOName country configs Ireland 1`] = `
 {
   "alpha2Code": "IE",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 372,
   "features": {
     "education": false,
@@ -354,6 +398,10 @@ exports[`country helpers getConfigByISOName country configs Ireland 1`] = `
 exports[`country helpers getConfigByISOName country configs Italy 1`] = `
 {
   "alpha2Code": "IT",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 380,
   "features": {
     "education": false,
@@ -381,6 +429,10 @@ exports[`country helpers getConfigByISOName country configs Italy 1`] = `
 exports[`country helpers getConfigByISOName country configs Malaysia 1`] = `
 {
   "alpha2Code": "MY",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 458,
   "features": {
     "education": false,
@@ -408,6 +460,10 @@ exports[`country helpers getConfigByISOName country configs Malaysia 1`] = `
 exports[`country helpers getConfigByISOName country configs Mexico 1`] = `
 {
   "alpha2Code": "MX",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 484,
   "features": {
     "education": false,
@@ -435,6 +491,10 @@ exports[`country helpers getConfigByISOName country configs Mexico 1`] = `
 exports[`country helpers getConfigByISOName country configs Netherlands 1`] = `
 {
   "alpha2Code": "NL",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 528,
   "features": {
     "education": false,
@@ -462,6 +522,10 @@ exports[`country helpers getConfigByISOName country configs Netherlands 1`] = `
 exports[`country helpers getConfigByISOName country configs New Zealand 1`] = `
 {
   "alpha2Code": "NZ",
+  "calculationSettings": {
+    "asrCalculation": "Hanafi",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 554,
   "features": {
     "education": false,
@@ -489,6 +553,10 @@ exports[`country helpers getConfigByISOName country configs New Zealand 1`] = `
 exports[`country helpers getConfigByISOName country configs Nigeria 1`] = `
 {
   "alpha2Code": "NG",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 566,
   "features": {
     "education": false,
@@ -516,6 +584,10 @@ exports[`country helpers getConfigByISOName country configs Nigeria 1`] = `
 exports[`country helpers getConfigByISOName country configs Pakistan 1`] = `
 {
   "alpha2Code": "PK",
+  "calculationSettings": {
+    "asrCalculation": "Hanafi",
+    "calculationMethod": "Karachi",
+  },
   "code": 586,
   "features": {
     "education": false,
@@ -543,6 +615,10 @@ exports[`country helpers getConfigByISOName country configs Pakistan 1`] = `
 exports[`country helpers getConfigByISOName country configs Russia 1`] = `
 {
   "alpha2Code": "RU",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "Russia",
+  },
   "code": 643,
   "features": {
     "education": false,
@@ -570,6 +646,10 @@ exports[`country helpers getConfigByISOName country configs Russia 1`] = `
 exports[`country helpers getConfigByISOName country configs Saudi Arabia 1`] = `
 {
   "alpha2Code": "SA",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "UmmAlQura",
+  },
   "code": 682,
   "features": {
     "education": false,
@@ -597,6 +677,10 @@ exports[`country helpers getConfigByISOName country configs Saudi Arabia 1`] = `
 exports[`country helpers getConfigByISOName country configs Singapore 1`] = `
 {
   "alpha2Code": "SG",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "Singapore",
+  },
   "code": 702,
   "features": {
     "education": false,
@@ -624,6 +708,10 @@ exports[`country helpers getConfigByISOName country configs Singapore 1`] = `
 exports[`country helpers getConfigByISOName country configs Spain 1`] = `
 {
   "alpha2Code": "ES",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 724,
   "features": {
     "education": false,
@@ -651,6 +739,10 @@ exports[`country helpers getConfigByISOName country configs Spain 1`] = `
 exports[`country helpers getConfigByISOName country configs Sudan 1`] = `
 {
   "alpha2Code": "SD",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 729,
   "features": {
     "education": false,
@@ -678,6 +770,10 @@ exports[`country helpers getConfigByISOName country configs Sudan 1`] = `
 exports[`country helpers getConfigByISOName country configs Switzerland 1`] = `
 {
   "alpha2Code": "CH",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 756,
   "features": {
     "education": false,
@@ -705,6 +801,10 @@ exports[`country helpers getConfigByISOName country configs Switzerland 1`] = `
 exports[`country helpers getConfigByISOName country configs Turkey 1`] = `
 {
   "alpha2Code": "TR",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "Turkey",
+  },
   "code": 792,
   "features": {
     "education": false,
@@ -732,6 +832,10 @@ exports[`country helpers getConfigByISOName country configs Turkey 1`] = `
 exports[`country helpers getConfigByISOName country configs Turkiye 1`] = `
 {
   "alpha2Code": "TR",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "Turkey",
+  },
   "code": 792,
   "features": {
     "education": false,
@@ -759,6 +863,10 @@ exports[`country helpers getConfigByISOName country configs Turkiye 1`] = `
 exports[`country helpers getConfigByISOName country configs United Arab Emirates 1`] = `
 {
   "alpha2Code": undefined,
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "Gulf",
+  },
   "code": 784,
   "features": {
     "education": false,
@@ -786,6 +894,10 @@ exports[`country helpers getConfigByISOName country configs United Arab Emirates
 exports[`country helpers getConfigByISOName country configs United Kingdom 1`] = `
 {
   "alpha2Code": "GB",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MoonsightingCommittee",
+  },
   "code": 826,
   "features": {
     "education": false,
@@ -813,6 +925,10 @@ exports[`country helpers getConfigByISOName country configs United Kingdom 1`] =
 exports[`country helpers getConfigByISOName country configs United States 1`] = `
 {
   "alpha2Code": "US",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "IslamicSocietyOfNorthAmerica",
+  },
   "code": 840,
   "features": {
     "education": true,
@@ -840,6 +956,10 @@ exports[`country helpers getConfigByISOName country configs United States 1`] = 
 exports[`country helpers getConfigByISOName country configs Venezuela 1`] = `
 {
   "alpha2Code": "VE",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 862,
   "features": {
     "education": false,
@@ -867,6 +987,10 @@ exports[`country helpers getConfigByISOName country configs Venezuela 1`] = `
 exports[`country helpers getConfigByISOName returns default config if country not found 1`] = `
 {
   "alpha2Code": undefined,
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": null,
   "features": {
     "education": false,

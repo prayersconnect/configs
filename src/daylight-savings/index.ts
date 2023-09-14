@@ -1,15 +1,14 @@
 import list from './list';
 
 function getRange(country: string, year: number) {
+  // Check if the country exists in the list
   const countryList = list[country];
-  let yearList;
-
   if (!countryList) {
     return null;
   }
 
-  yearList = countryList[year];
-
+  // Check if the year exists for the country
+  const yearList = countryList[year];
   if (!yearList) {
     return null;
   }
