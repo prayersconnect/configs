@@ -41,7 +41,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "adhan-extended": "^5.0.2",
+    "adhan-extended": "^6.1.0",
     "luxon": "^3.3.0"
   }
 }
