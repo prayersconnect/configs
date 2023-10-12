@@ -346,6 +346,20 @@ const prayersConfigs: allConfigs = {
       calculation_method: 'muis',
     },
   },
+  BA: {
+    code: 70,
+    alpha2Code: 'BA',
+    features: {
+      mosques: true,
+    },
+  },
+  EG: {
+    code: 818,
+    alpha2Code: 'EG',
+    features: {
+      mosques: true,
+    },
+  },
 };
 
 export default prayersConfigs;
