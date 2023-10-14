@@ -1,11 +1,12 @@
 {
   "name": "@prayersconnect/configs",
-  "version": "3.7.0",
+  "version": "3.8.0",
   "description": "Country specific configuration for Prayers Connect",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "src/**/*"
   ],
   "repository": {
     "type": "git",
@@ -15,8 +16,8 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "build": "tsc --build tsconfig.json",
-    "prepare": "husky install",
-    "test": "jest",
+    "prepare": "tsc && husky install",
+    "test": "jest --coverage",
     "test:update": "jest --updateSnapshot",
     "test:watch": "jest --watch"
   },
