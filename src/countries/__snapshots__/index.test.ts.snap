@@ -34,6 +34,10 @@ exports[`country helpers getConfigByISOName country configs Australia 1`] = `
 exports[`country helpers getConfigByISOName country configs BA 1`] = `
 {
   "alpha2Code": "BA",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 70,
   "features": {
     "education": false,
@@ -216,6 +220,10 @@ exports[`country helpers getConfigByISOName country configs DZ 1`] = `
 exports[`country helpers getConfigByISOName country configs EG 1`] = `
 {
   "alpha2Code": "EG",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
   "code": 818,
   "features": {
     "education": false,

@@ -26,7 +26,7 @@ export const CalculationMethods: Record<
   Custom: {
     calculationKey: 'Custom',
     label: 'Custom',
-    info: 'Sets a Fajr angle of 0 and an Isha angle of 0.' as const,
+    info: 'Fajr: 0°, Isha: 0°' as const,
     get: CalculationMethod.Other,
   },
 
@@ -34,7 +34,7 @@ export const CalculationMethods: Record<
     calculationKey: 'Algeria',
     label: 'Ministry of Religious Affairs and Wakfs, Algeria',
     otherLabel: 'Ministry of Religious Affairs and Wakfs',
-    info: 'Uses Fajr angle of 18, Isha angle of 17, + 3min maghrib',
+    info: 'Fajr: 18°, Magrib: +3 min, Isha: 17°',
     get: () => {
       const params = new CalculationParameters('Other', 18.0, 17.0);
       params.methodAdjustments = {
@@ -50,14 +50,14 @@ export const CalculationMethods: Record<
     calculationKey: 'Brunei',
     label: 'Kementrian Hal Ehwal Ugama (Brunei Darussalam)',
     otherLabel: 'Brunei Darussalam',
-    info: 'Uses Fajr angle of 20 and Isha angle of 18',
+    info: 'Fajr: 20°, Isha: 18°',
     get: () => new CalculationParameters('Other', 20.0, 18.0),
   },
 
   Dubai: {
     calculationKey: 'Dubai',
     label: 'The Gulf Region (Dubai)',
-    info: 'Uses Fajr and Isha angles of 18.2 degrees.',
+    info: 'Fajr: 18.2°, Isha: 18.2°',
     url: 'https://www.awqaf.gov.ae/en/Pages/PrayerTimes.aspx',
     get: CalculationMethod.Dubai,
   },
@@ -65,29 +65,42 @@ export const CalculationMethods: Record<
   Egyptian: {
     calculationKey: 'Egyptian',
     label: 'Egyptian General Survey Authority',
-    info: 'Uses Fajr angle of 19.5 and an Isha angle of 17.5' as const,
+    info: 'Fajr: 19.5°, Isha: 17.5°' as const,
     get: CalculationMethod.Egyptian,
     region: 'Africa, Syria, Iraq, Lebanon, Malaysia, Parts of the USA' as const,
   },
 
   France: {
     calculationKey: 'France',
-    label: 'Union Organization Islamic de France',
-    info: 'Uses a Fajr angle of 12 and an Isha angle of 12 by default but by setting alternativeCalculation to 15 or 18 it will updated accordingly.',
+    label: 'Union Organization Islamic de France - 12',
+    info: 'Fajr: 12.0°, Isha: 12.0°',
     region: 'France region' as const,
-    availableMethods: ['12', '15', '18'],
     get: (settings?: CalculationSettings) => {
       const calculation = new CalculationParameters('Other', 12.0, 12.0);
 
-      if (settings?.alternativeCalculation === '15') {
-        calculation.fajrAngle = 15.0;
-        calculation.ishaAngle = 15.0;
-      }
+      return calculation;
+    },
+  },
 
-      if (settings?.alternativeCalculation === '18') {
-        calculation.fajrAngle = 18.0;
-        calculation.ishaAngle = 18.0;
-      }
+  France15: {
+    calculationKey: 'France15',
+    label: 'Union Organization Islamic de France - 15',
+    info: 'Fajr: 15.0°, Isha: 15.0°',
+    region: 'France region' as const,
+    get: (settings?: CalculationSettings) => {
+      const calculation = new CalculationParameters('Other', 15.0, 15.0);
+
+      return calculation;
+    },
+  },
+
+  France18: {
+    calculationKey: 'France18',
+    label: 'Union Organization Islamic de France - 18',
+    info: 'Fajr: 18.0°, Isha: 18.0°',
+    region: 'France region' as const,
+    get: (settings?: CalculationSettings) => {
+      const calculation = new CalculationParameters('Other', 18.0, 18.0);
 
       return calculation;
     },
@@ -96,7 +109,7 @@ export const CalculationMethods: Record<
   Gulf: {
     calculationKey: 'Gulf',
     label: 'Gulf region',
-    info: 'Modified version of Umm al-Qura that uses a Fajr angle of 19.5.',
+    info: 'Fajr: 19.5°, Isha: +90 min',
     get: () => new CalculationParameters('Other', 19.5, undefined, 90),
   },
 
@@ -104,7 +117,7 @@ export const CalculationMethods: Record<
     calculationKey: 'Jafari',
     label: 'Shia Ithna Ashari, Leva Institute, Qum',
     otherLabel: 'Leva Institute, Qum',
-    info: 'Uses Fajr angle of 16, Maghrib angle of 4 and Isha angle of 14',
+    info: 'Fajr: 16.0°, Magrib: 4.0°, Isha: 14.0°',
     get: () => new CalculationParameters('Other', 16.0, 14.0, 0, 4.0),
   },
 
@@ -112,7 +125,7 @@ export const CalculationMethods: Record<
     calculationKey: 'Karachi',
     label: 'University of Islamic Sciences, Karachi',
     otherLabel: 'University of Islamic Sciences',
-    info: 'Uses Fajr angle of 18 and an Isha angle of 18' as const,
+    info: 'Fajr: 18.0°, Isha: 18.0°',
     get: CalculationMethod.Karachi,
     region:
       'Pakistan, Bangladesh, India, Afghanistan, Parts of Europe' as const,
@@ -122,21 +135,21 @@ export const CalculationMethods: Record<
     calculationKey: 'Indonesia',
     label: 'Kementrian Agama Republik Indonesia (KEMENAG)',
     otherLabel: 'Kementrian Agama Republik Indonesia',
-    info: 'Uses Fajr angle of 20.0 and Isha angle of 18',
+    info: 'Fajr: 20.0°, Isha: 18.0°',
     get: () => new CalculationParameters('Other', 20.0, 18.0),
   },
 
   Kuwait: {
     calculationKey: 'Kuwait',
     label: 'Kuwait',
-    info: 'Uses a Fajr angle of 18 and an Isha angle of 17.5',
+    info: 'Fajr: 18.0°, Isha: 17.5°' as const,
     get: CalculationMethod.Kuwait,
   },
 
   MoonsightingCommittee: {
     calculationKey: 'MoonsightingCommittee',
     label: 'Moonsighting Committee',
-    info: 'Uses a Fajr angle of 18 and an Isha angle of 18. Also uses seasonal adjustment values.' as const,
+    info: 'Fajr: 18.0°, Isha: 18.0°, Note: seasonal adjustment values.' as const,
     get: CalculationMethod.MoonsightingCommittee,
     region: 'UK',
   },
@@ -144,7 +157,7 @@ export const CalculationMethods: Record<
   MuslimWorldLeague: {
     calculationKey: 'MuslimWorldLeague',
     label: 'Muslim World League',
-    info: 'Uses Fajr angle of 18 and an Isha angle of 17' as const,
+    info: 'Fajr: 18.0°, Isha: 17.0°' as const,
     get: CalculationMethod.MuslimWorldLeague,
     region: 'Europe, The Far East, Parts of the USA',
   },
@@ -152,7 +165,7 @@ export const CalculationMethods: Record<
   IslamicSocietyOfNorthAmerica: {
     calculationKey: 'IslamicSocietyOfNorthAmerica',
     label: 'Islamic Society of North America - ISNA',
-    info: 'Uses a Fajr angle of 15 and an Isha angle of 15.' as const,
+    info: 'Fajr: 15.0°, Isha: 15.0°' as const,
     region: 'Parts of the USA, Canada, Parts of the UK' as const,
     get: CalculationMethod.NorthAmerica,
   },
@@ -160,7 +173,7 @@ export const CalculationMethods: Record<
   Qatar: {
     calculationKey: 'Qatar',
     label: 'Qatar',
-    info: 'Modified version of Umm al-Qura that uses a Fajr angle of 18.',
+    info: 'Fajr: 18.5°, Isha: +90 min',
     url: 'https://www.qatarch.com/home',
     get: CalculationMethod.Qatar,
   },
@@ -168,14 +181,14 @@ export const CalculationMethods: Record<
   Russia: {
     calculationKey: 'Russia',
     label: 'Spiritual Administration of Muslims of Russia',
-    info: 'Uses a Fajr angle of 16 and an Isha angle of 15.',
+    info: 'Fajr: 16.0°, Isha: 15.0°',
     get: () => new CalculationParameters('Other', 16.0, 15.0),
   },
 
   Singapore: {
     calculationKey: 'Singapore',
     label: 'Singapore',
-    info: 'Uses a Fajr angle of 20 and an Isha angle of 18' as const,
+    info: 'Fajr: 20.0°, Isha: 18.0°' as const,
     get: CalculationMethod.Singapore,
     url: 'https://www.muis.gov.sg/',
     region: 'Singapore region' as const,
@@ -184,21 +197,21 @@ export const CalculationMethods: Record<
   Tehran: {
     calculationKey: 'Tehran',
     label: 'Shia, Institute of Geophysics, University of Tehran',
-    info: 'Uses Fajr angle of 17.7, Maghrib angle of 4.5 and Isha angle of 14',
+    info: 'Fajr: 17.7°, Magrib: 4.5°, Isha: 14.0°',
     get: CalculationMethod.Tehran,
   },
 
   Tunisia: {
     calculationKey: 'Tunisia',
     label: 'Ministry of Religious Affairs of Tunisia',
-    info: 'Uses Fajr angle of 18 and Isha angle of 18',
+    info: 'Fajr: 18.0°, Isha: 18.0°',
     get: () => new CalculationParameters('Other', 18.0, 18.0),
   },
 
   Turkey: {
     calculationKey: 'Turkey',
     label: 'Presidency of Religious Affairs, Turkey',
-    info: 'Uses a Fajr angle of 18 and an Isha angle of 17.',
+    info: 'Fajr: 18.0°, Isha: 17.0°',
     url: 'https://kurul.diyanet.gov.tr/Karar-Mutalaa-Cevap/4093/45-enlemin-otesinde-namaz-vakitleri',
     get: CalculationMethod.Turkey,
     preAdjustments: (date: DateTime, options: PrayerTimesOptions) => {
@@ -255,7 +268,7 @@ export const CalculationMethods: Record<
   UmmAlQura: {
     calculationKey: 'UmmAlQura',
     label: 'Umm al-Qura University, Makkah',
-    info: 'Uses a Fajr angle of 18.5 and an Isha interval of 90 minutes.\nNote: You should add a +30 minute custom adjustment of Isha during Ramadan.' as const,
+    info: 'Fajr: 18.5°, Isha: +90 min, Ramadan - Isha: +120 min' as const,
     url: 'https://www.ummulqura.org.sa/Index.aspx' as const,
     region: 'The Arabian Peninsula' as const,
     get: CalculationMethod.UmmAlQura,
@@ -265,7 +278,22 @@ export const CalculationMethods: Record<
       }
     },
   },
-};
+} as const;
+
+export const HighLatitudeLabels = [
+  {
+    label: 'Middle of the Night',
+    key: 'middleofthenight',
+  },
+  {
+    label: 'Seventh of the Night',
+    key: 'seventhofthenight',
+  },
+  {
+    label: 'Twilight Angle Based',
+    key: 'twilightangle',
+  },
+];
 
 export function calculatePrayerTimes(
   date: DateTime,
@@ -311,10 +339,18 @@ function getPrayerTimesOptionsFromSettings(
     throw new Error('Required properties are missing from the settings.');
   }
 
+  const calculationMethodEntry = CalculationMethods[calculationMethod];
+
+  if (!calculationMethodEntry) {
+    throw new Error(
+      `Could not find '${calculationMethodEntry}' in CalculationMethods`
+    );
+  }
+
   const prayerTimeOptions: PrayerTimesOptions = {
-    calculationParameters: CalculationMethods[calculationMethod].get(settings),
+    calculationParameters: calculationMethodEntry.get(settings),
     coordinates: new Coordinates(location.latitude, location.longitude),
-    calculationMethod: CalculationMethods[calculationMethod],
+    calculationMethod: calculationMethodEntry,
     midnightMethod: midnightMethod,
     midnightAdjustment: midnightAdjustment ?? 0,
   };
@@ -335,7 +371,7 @@ function setRounding(
   roundingMethod?: typeof Rounding[keyof typeof Rounding]
 ) {
   prayerTimeOptions.calculationParameters.rounding =
-    roundingMethod || prayerTimeOptions.calculationParameters.rounding;
+    roundingMethod || 'nearest';
 }
 
 function setAdjustments(
@@ -396,12 +432,8 @@ function setShafaq(
   prayerTimeOptions: PrayerTimesOptions,
   shafaqCalcSetting?: typeof Shafaq[keyof typeof Shafaq]
 ) {
-  if (
-    prayerTimeOptions.calculationParameters.method === 'MoonsightingCommittee'
-  ) {
-    prayerTimeOptions.calculationParameters.shafaq =
-      shafaqCalcSetting || Shafaq.General;
-  }
+  prayerTimeOptions.calculationParameters.shafaq =
+    shafaqCalcSetting || Shafaq.General;
 }
 
 function setPolarCircleResolution(

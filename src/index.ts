@@ -37,6 +37,13 @@ export {
   JamaatPrayer,
   ICoords,
   AsrCalculationType,
+  HighLatitudeRule,
 } from './adhan/types';
 
-export { isFriday, isRamadan, getHijriMonth, MonthFormat } from './utils/date';
+export {
+  isFriday,
+  isRamadan,
+  isEidInDay,
+  getHijriMonth,
+  MonthFormat,
+} from './utils/date';

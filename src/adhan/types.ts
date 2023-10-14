@@ -41,6 +41,8 @@ export type CalculationMethodKey =
   | 'Dubai'
   | 'Egyptian'
   | 'France'
+  | 'France15'
+  | 'France18'
   | 'Gulf'
   | 'IslamicSocietyOfNorthAmerica'
   | 'Jafari'
@@ -151,23 +153,21 @@ export type FormatOptions = {
 
 export type AsrCalculationType = 'Standard' | 'Hanafi';
 
+export type HighLatitudeRule =
+  | 'middleofthenight'
+  | 'seventhofthenight'
+  | 'twilightangle';
+
 export type CalculationSettings = {
   location: ICoords | undefined;
   calculationMethod: CalculationMethodKey;
   asrCalculation: AsrCalculationType;
 
-  // Used alternative calculation methods i.e france 12, 15, 18 degrees
-  alternativeCalculation?: string;
   timezone?: string;
 
   midnightMethod?: keyof typeof MidnightMethod;
 
-  highLatitudeRule?:
-    | typeof HighLatitudeRule[keyof Omit<
-        typeof HighLatitudeRule,
-        'recommended'
-      >]
-    | undefined;
+  highLatitudeRule?: HighLatitudeRule;
   shafaq?: typeof Shafaq[keyof typeof Shafaq];
   polarResolution?: string;
 
