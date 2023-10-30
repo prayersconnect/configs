@@ -2,252 +2,225 @@
 
 exports[`calc-methods getCalcMethodByName returns method if found 1`] = `
 {
-  "label": "Egyptian General Authority of Survey",
-  "name": "Egypt",
-  "values": {
-    "fajr": 19.5,
-    "isha": 17.5,
-  },
+  "calculationKey": "Egyptian",
+  "get": [Function],
+  "info": "Fajr: 19.5°, Isha: 17.5°",
+  "label": "Egyptian General Survey Authority",
+  "region": "Africa, Syria, Iraq, Lebanon, Malaysia, Parts of the USA",
 }
 `;
 
-exports[`calc-methods getCalcMethods returns all methods 1`] = `
+exports[`calc-methods getCalculationMethods returns all methods 1`] = `
 [
   {
-    "label": "Islamic Society of North America (ISNA)",
-    "name": "ISNA",
-    "values": {
-      "fajr": 15,
-      "isha": 15,
-    },
+    "calculationKey": "Custom",
+    "get": [Function],
+    "info": "Fajr: 0°, Isha: 0°",
+    "label": "Custom",
   },
   {
-    "label": "Muslim World League",
-    "name": "MWL",
-    "values": {
-      "fajr": 18,
-      "isha": 17,
-    },
-  },
-  {
-    "label": "Presidency of Religious Affairs, Türkiye",
-    "name": "turkey-presidency-of-religious-affairs",
-    "values": {
-      "fajr": 18,
-      "isha": 17,
-    },
-  },
-  {
-    "label": "University of Islamic Sciences, Karachi",
-    "name": "Karachi",
-    "values": {
-      "fajr": 18,
-      "isha": 18,
-    },
-  },
-  {
-    "label": "Umm Al-Qura University, Makkah",
-    "name": "Makkah",
-    "values": {
-      "fajr": 18.5,
-      "isha": "90min",
-    },
-  },
-  {
-    "label": "Egyptian General Authority of Survey",
-    "name": "Egypt",
-    "values": {
-      "fajr": 19.5,
-      "isha": 17.5,
-    },
-  },
-  {
-    "label": "Institute of Geophysics, University of Tehran",
-    "name": "Tehran",
-    "values": {
-      "fajr": 17.7,
-      "isha": 14,
-      "maghrib": 4.5,
-      "midnight": "Jafari",
-    },
-  },
-  {
-    "label": "Shia Ithna-Ashari, Leva Institute, Qum",
-    "name": "Jafari",
-    "values": {
-      "fajr": 16,
-      "isha": 14,
-      "maghrib": 4,
-      "midnight": "Jafari",
-    },
-  },
-  {
-    "label": "Union des Organisations Islamiques de France",
-    "name": "union-des-organisations-islamiques-de-france",
-    "values": {
-      "fajr": 12,
-      "isha": 12,
-    },
-  },
-  {
-    "label": "France 15 degree",
-    "name": "france-15-degree",
-    "values": {
-      "fajr": 15,
-      "isha": 15,
-    },
-  },
-  {
-    "label": "France 18 degree",
-    "name": "france-18-degree",
-    "values": {
-      "fajr": 18,
-      "isha": 18,
-    },
-  },
-  {
-    "label": "The Central Spiritual Administration of Muslims of Russia",
-    "name": "russia",
-    "values": {
-      "fajr": 16,
-      "isha": 15,
-    },
-  },
-  {
-    "label": "General Authority of Islamic Affairs and Endowments (GAIAE) of UAE",
-    "name": "gaiae",
-    "values": {
-      "fajr": 18,
-      "isha": 17.5,
-    },
-  },
-  {
-    "label": "Islamic Religious Council of Singapore (MUIS)",
-    "name": "muis",
-    "values": {
-      "fajr": 20,
-      "isha": 18,
-    },
-  },
-  {
+    "calculationKey": "Algeria",
+    "get": [Function],
+    "info": "Fajr: 18°, Magrib: +3 min, Isha: 17°",
     "label": "Ministry of Religious Affairs and Wakfs, Algeria",
-    "name": "algeria",
-    "values": {
-      "fajr": 18,
-      "isha": 17,
-    },
+    "otherLabel": "Ministry of Religious Affairs and Wakfs",
+  },
+  {
+    "calculationKey": "Brunei",
+    "get": [Function],
+    "info": "Fajr: 20°, Isha: 18°",
+    "label": "Kementrian Hal Ehwal Ugama (Brunei Darussalam)",
+    "otherLabel": "Brunei Darussalam",
+  },
+  {
+    "calculationKey": "Dubai",
+    "get": [Function],
+    "info": "Fajr: 18.2°, Isha: 18.2°",
+    "label": "The Gulf Region (Dubai)",
+    "url": "https://www.awqaf.gov.ae/en/Pages/PrayerTimes.aspx",
+  },
+  {
+    "calculationKey": "Egyptian",
+    "get": [Function],
+    "info": "Fajr: 19.5°, Isha: 17.5°",
+    "label": "Egyptian General Survey Authority",
+    "region": "Africa, Syria, Iraq, Lebanon, Malaysia, Parts of the USA",
+  },
+  {
+    "calculationKey": "France",
+    "get": [Function],
+    "info": "Fajr: 12.0°, Isha: 12.0°",
+    "label": "Union Organization Islamic de France - 12",
+    "region": "France region",
+  },
+  {
+    "calculationKey": "France15",
+    "get": [Function],
+    "info": "Fajr: 15.0°, Isha: 15.0°",
+    "label": "Union Organization Islamic de France - 15",
+    "region": "France region",
+  },
+  {
+    "calculationKey": "France18",
+    "get": [Function],
+    "info": "Fajr: 18.0°, Isha: 18.0°",
+    "label": "Union Organization Islamic de France - 18",
+    "region": "France region",
+  },
+  {
+    "calculationKey": "Gulf",
+    "get": [Function],
+    "info": "Fajr: 19.5°, Isha: +90 min",
+    "label": "Gulf region",
+  },
+  {
+    "calculationKey": "Jafari",
+    "get": [Function],
+    "info": "Fajr: 16.0°, Magrib: 4.0°, Isha: 14.0°",
+    "label": "Shia Ithna Ashari, Leva Institute, Qum",
+    "otherLabel": "Leva Institute, Qum",
+  },
+  {
+    "calculationKey": "Karachi",
+    "get": [Function],
+    "info": "Fajr: 18.0°, Isha: 18.0°",
+    "label": "University of Islamic Sciences, Karachi",
+    "otherLabel": "University of Islamic Sciences",
+    "region": "Pakistan, Bangladesh, India, Afghanistan, Parts of Europe",
+  },
+  {
+    "calculationKey": "Indonesia",
+    "get": [Function],
+    "info": "Fajr: 20.0°, Isha: 18.0°",
+    "label": "Kementrian Agama Republik Indonesia (KEMENAG)",
+    "otherLabel": "Kementrian Agama Republik Indonesia",
+  },
+  {
+    "calculationKey": "Kuwait",
+    "get": [Function],
+    "info": "Fajr: 18.0°, Isha: 17.5°",
+    "label": "Kuwait",
+  },
+  {
+    "calculationKey": "MoonsightingCommittee",
+    "get": [Function],
+    "info": "Fajr: 18.0°, Isha: 18.0°, Note: seasonal adjustment values.",
+    "label": "Moonsighting Committee",
+    "region": "UK",
+  },
+  {
+    "calculationKey": "MuslimWorldLeague",
+    "get": [Function],
+    "info": "Fajr: 18.0°, Isha: 17.0°",
+    "label": "Muslim World League",
+    "region": "Europe, The Far East, Parts of the USA",
+  },
+  {
+    "calculationKey": "IslamicSocietyOfNorthAmerica",
+    "get": [Function],
+    "info": "Fajr: 15.0°, Isha: 15.0°",
+    "label": "Islamic Society of North America - ISNA",
+    "region": "Parts of the USA, Canada, Parts of the UK",
+  },
+  {
+    "calculationKey": "Qatar",
+    "get": [Function],
+    "info": "Fajr: 18.5°, Isha: +90 min",
+    "label": "Qatar",
+    "url": "https://www.qatarch.com/home",
+  },
+  {
+    "calculationKey": "Russia",
+    "get": [Function],
+    "info": "Fajr: 16.0°, Isha: 15.0°",
+    "label": "Spiritual Administration of Muslims of Russia",
+  },
+  {
+    "calculationKey": "Singapore",
+    "get": [Function],
+    "info": "Fajr: 20.0°, Isha: 18.0°",
+    "label": "Singapore",
+    "region": "Singapore region",
+    "url": "https://www.muis.gov.sg/",
+  },
+  {
+    "calculationKey": "Tehran",
+    "get": [Function],
+    "info": "Fajr: 17.7°, Magrib: 4.5°, Isha: 14.0°",
+    "label": "Shia, Institute of Geophysics, University of Tehran",
+  },
+  {
+    "calculationKey": "Tunisia",
+    "get": [Function],
+    "info": "Fajr: 18.0°, Isha: 18.0°",
+    "label": "Ministry of Religious Affairs of Tunisia",
+  },
+  {
+    "calculationKey": "Turkey",
+    "get": [Function],
+    "info": "Fajr: 18.0°, Isha: 17.0°",
+    "label": "Presidency of Religious Affairs, Turkey",
+    "postAdjustments": [Function],
+    "preAdjustments": [Function],
+    "url": "https://kurul.diyanet.gov.tr/Karar-Mutalaa-Cevap/4093/45-enlemin-otesinde-namaz-vakitleri",
+  },
+  {
+    "calculationKey": "UmmAlQura",
+    "get": [Function],
+    "info": "Fajr: 18.5°, Isha: +90 min, Ramadan - Isha: +120 min",
+    "label": "Umm al-Qura University, Makkah",
+    "preAdjustments": [Function],
+    "region": "The Arabian Peninsula",
+    "url": "https://www.ummulqura.org.sa/Index.aspx",
   },
 ]
 `;
 
-exports[`calc-methods getCalcMethods returns all methods: values for Egypt 1`] = `
-{
-  "fajr": 19.5,
-  "isha": 17.5,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Algeria 1`] = `"Algeria"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for ISNA 1`] = `
-{
-  "fajr": 15,
-  "isha": 15,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Brunei 1`] = `"Brunei"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for Jafari 1`] = `
-{
-  "fajr": 16,
-  "isha": 14,
-  "maghrib": 4,
-  "midnight": "Jafari",
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Custom 1`] = `"Custom"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for Karachi 1`] = `
-{
-  "fajr": 18,
-  "isha": 18,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Dubai 1`] = `"Dubai"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for MWL 1`] = `
-{
-  "fajr": 18,
-  "isha": 17,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Egyptian 1`] = `"Egyptian"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for Makkah 1`] = `
-{
-  "fajr": 18.5,
-  "isha": "90min",
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for France 1`] = `"France"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for Tehran 1`] = `
-{
-  "fajr": 17.7,
-  "isha": 14,
-  "maghrib": 4.5,
-  "midnight": "Jafari",
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for France15 1`] = `"France15"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for algeria 1`] = `
-{
-  "fajr": 18,
-  "isha": 17,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for France18 1`] = `"France18"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for france-15-degree 1`] = `
-{
-  "fajr": 15,
-  "isha": 15,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Gulf 1`] = `"Gulf"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for france-18-degree 1`] = `
-{
-  "fajr": 18,
-  "isha": 18,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Indonesia 1`] = `"Indonesia"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for gaiae 1`] = `
-{
-  "fajr": 18,
-  "isha": 17.5,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for IslamicSocietyOfNorthAmerica 1`] = `"IslamicSocietyOfNorthAmerica"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for muis 1`] = `
-{
-  "fajr": 20,
-  "isha": 18,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Jafari 1`] = `"Jafari"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for russia 1`] = `
-{
-  "fajr": 16,
-  "isha": 15,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Karachi 1`] = `"Karachi"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for turkey-presidency-of-religious-affairs 1`] = `
-{
-  "fajr": 18,
-  "isha": 17,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for Kuwait 1`] = `"Kuwait"`;
 
-exports[`calc-methods getCalcMethods returns all methods: values for union-des-organisations-islamiques-de-france 1`] = `
-{
-  "fajr": 12,
-  "isha": 12,
-}
-`;
+exports[`calc-methods getCalculationMethods returns all methods: values for MoonsightingCommittee 1`] = `"MoonsightingCommittee"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for MuslimWorldLeague 1`] = `"MuslimWorldLeague"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for Qatar 1`] = `"Qatar"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for Russia 1`] = `"Russia"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for Singapore 1`] = `"Singapore"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for Tehran 1`] = `"Tehran"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for Tunisia 1`] = `"Tunisia"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for Turkey 1`] = `"Turkey"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for UmmAlQura 1`] = `"UmmAlQura"`;
 
 exports[`calc-methods getJuristicMethods returns all asr methods 1`] = `
 [

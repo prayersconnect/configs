@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "adhan-extended": "^6.1.0",
-    "luxon": "^3.3.0"
+    "luxon": "^3.3.0",
+    "@photostructure/tz-lookup": "^8.0.0"
   }
 }

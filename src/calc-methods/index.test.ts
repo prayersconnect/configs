@@ -1,101 +1,104 @@
 import {
   getCalcMethodByName,
-  getCalcMethods,
-  getCalcMethodsByCountry,
+  getCalculationMethods,
+  getCalculationMethodByCountry,
   getJuristicMethods,
 } from './index';
 
 describe('calc-methods', () => {
   describe('getCalcMethodByName', () => {
     it('returns undefined if no method found', () => {
+      // @ts-expect-error invalid type
       const method = getCalcMethodByName('foo');
       expect(method).toBeUndefined();
     });
 
     it('returns method if found', () => {
-      const method = getCalcMethodByName('Egypt');
+      const method = getCalcMethodByName('Egyptian');
       expect(method).toMatchSnapshot();
     });
   });
 
-  describe('getCalcMethods', () => {
+  describe('getCalculationMethods', () => {
     it('returns all methods', () => {
-      const methods = getCalcMethods();
+      const methods = getCalculationMethods();
       expect(methods).toMatchSnapshot();
       methods.forEach((method) => {
-        expect(method).toHaveProperty('values');
-        expect(method.values).toMatchSnapshot(`values for ${method.name}`);
+        expect(method).toHaveProperty('calculationKey');
+        expect(method.calculationKey).toMatchSnapshot(
+          `values for ${method.calculationKey}`
+        );
       });
     });
   });
 
   describe('getCalcMethodsByCountry', () => {
     it('returns method and asr method for USA', () => {
-      const methods = getCalcMethodsByCountry('United States');
+      const methods = getCalculationMethodByCountry('United States');
       expect(methods).toMatchInlineSnapshot(`
         {
-          "asrMethod": "Standard",
-          "method": "ISNA",
+          "asrCalculation": "Standard",
+          "calculationMethod": "IslamicSocietyOfNorthAmerica",
         }
       `);
     });
     it('returns method and asr method for Turkey', () => {
-      const methods = getCalcMethodsByCountry('Turkey');
+      const methods = getCalculationMethodByCountry('Turkey');
       expect(methods).toMatchInlineSnapshot(`
         {
-          "asrMethod": "Standard",
-          "method": "turkey-presidency-of-religious-affairs",
+          "asrCalculation": "Standard",
+          "calculationMethod": "Turkey",
         }
       `);
     });
     it('returns method and asr method for UK', () => {
-      const methods = getCalcMethodsByCountry('United Kingdom');
+      const methods = getCalculationMethodByCountry('United Kingdom');
       expect(methods).toMatchInlineSnapshot(`
         {
-          "asrMethod": "Standard",
-          "method": "MWL",
+          "asrCalculation": "Standard",
+          "calculationMethod": "MoonsightingCommittee",
         }
       `);
     });
     it('returns method and asr method for AU', () => {
-      const methods = getCalcMethodsByCountry('Australia');
+      const methods = getCalculationMethodByCountry('Australia');
       expect(methods).toMatchInlineSnapshot(`
         {
-          "asrMethod": "Hanafi",
-          "method": "MWL",
+          "asrCalculation": "Hanafi",
+          "calculationMethod": "MuslimWorldLeague",
         }
       `);
     });
     it('returns method and asr method for BD', () => {
-      const methods = getCalcMethodsByCountry('Bangladesh');
+      const methods = getCalculationMethodByCountry('Bangladesh');
       expect(methods).toMatchInlineSnapshot(`
         {
-          "asrMethod": "Hanafi",
-          "method": "Karachi",
+          "asrCalculation": "Hanafi",
+          "calculationMethod": "Karachi",
         }
       `);
     });
     it('returns method and asr method for Russia', () => {
-      const methods = getCalcMethodsByCountry('Russia');
+      const methods = getCalculationMethodByCountry('Russia');
 
       expect(methods).toMatchInlineSnapshot(`
         {
-          "asrMethod": "Standard",
-          "method": "russia",
+          "asrCalculation": "Standard",
+          "calculationMethod": "Russia",
         }
       `);
     });
     it('returns default config if country not found', () => {
-      const methods = getCalcMethodsByCountry('foo');
+      const methods = getCalculationMethodByCountry('foo');
       expect(methods).toMatchInlineSnapshot(`
         {
-          "asrMethod": "Standard",
-          "method": "MWL",
+          "asrCalculation": "Standard",
+          "calculationMethod": "MuslimWorldLeague",
         }
       `);
     });
     it('returns null if country not provided', () => {
-      const methods = getCalcMethodsByCountry(null as any);
+      const methods = getCalculationMethodByCountry(null as any);
       expect(methods).toBeNull();
     });
   });

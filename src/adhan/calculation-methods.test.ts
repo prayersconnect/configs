@@ -74,7 +74,6 @@ describe('calculatePrayerTimes', () => {
     const result = calculatePrayerTimes(date, settings);
     const formated = result?.format({
       use24HourFormat: false,
-      timezone: city.timezone,
     });
 
     expect(result?.dateTime.zoneName).toEqual(city.timezone);
