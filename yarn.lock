@@ -589,6 +589,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@photostructure/tz-lookup@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@photostructure/tz-lookup/-/tz-lookup-8.0.0.tgz#9742eedc61e6cf75539f5adbb3d0d90dab7294ee"
+  integrity sha512-D5ggPEWSNGEKzKTx6+Gn0NZXHQ4ywgRd2p2h7i/tjEmkv/uJ9SzQd0o7v7FzEAt4bP3dxDoWm43aPfUs9qMOGg==
+
 "@sinclair/typebox@^0.24.1":
   version "0.24.41"
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.24.41.tgz"

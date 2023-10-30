@@ -1,6 +1,9 @@
-import methodsData, { CalculationMethod } from './methods';
 import { getConfigByISOName } from '../countries';
-import { CalculationMethodEntry, CalculationSettings } from '../adhan/types';
+import {
+  CalculationMethodEntry,
+  CalculationMethodKey,
+  CalculationSettings,
+} from '../adhan/types';
 import { CalculationMethods } from '../adhan/calculation-methods';
 
 export interface IMethodResponse {
@@ -13,13 +16,9 @@ export interface IJuristicMethod {
 }
 
 export const getCalcMethodByName = (
-  name: string
-): CalculationMethod | undefined => {
-  return methodsData.find((method) => method.name === name);
-};
-
-export const getCalcMethods = (): CalculationMethod[] => {
-  return methodsData;
+  name: CalculationMethodKey
+): CalculationMethodEntry | undefined => {
+  return CalculationMethods[name];
 };
 
 export const getCalculationMethods = (): CalculationMethodEntry[] => {
@@ -27,25 +26,10 @@ export const getCalculationMethods = (): CalculationMethodEntry[] => {
 };
 
 /**
- * @deprecated This method is deprecated. Use getCalculationMethodByCountry instead.
  *
  * Returns the calculation method and asr method for a given country's ISO name
  * @param country ISO Country Name
  */
-export const getCalcMethodsByCountry = (
-  country: string | undefined
-): IMethodResponse | null => {
-  if (!country) {
-    return null;
-  }
-  const countryConf = getConfigByISOName(country);
-
-  return {
-    method: countryConf.prayerSettings.calculation_method as string,
-    asrMethod: countryConf.prayerSettings.asr_method || 'Standard',
-  };
-};
-
 export const getCalculationMethodByCountry = (
   country: string | undefined
 ): CalculationSettings | null => {

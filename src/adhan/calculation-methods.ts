@@ -15,9 +15,11 @@ import {
   PrayerTimesOptions,
   CalculationMethodKey,
   AsrCalculationType,
+  ICoords,
 } from './types';
 import { DateTime } from 'luxon';
 import { PrayerAndSunnahTimes } from './prayer-and-sunnah-times';
+import { timeZoneLookup } from '../utils/timezone';
 
 export const CalculationMethods: Record<
   CalculationMethodKey,
@@ -355,6 +357,7 @@ function getPrayerTimesOptionsFromSettings(
     midnightAdjustment: midnightAdjustment ?? 0,
   };
 
+  setTimeZone(prayerTimeOptions, location);
   setRounding(prayerTimeOptions, roundingMethod);
   setAdjustments(prayerTimeOptions, settings);
   setOverrides(prayerTimeOptions, settings);
@@ -364,6 +367,12 @@ function getPrayerTimesOptionsFromSettings(
   setPolarCircleResolution(prayerTimeOptions, polarResolution);
 
   return prayerTimeOptions;
+}
+
+function setTimeZone(prayerTimeOptions: PrayerTimesOptions, location: ICoords) {
+  if (!prayerTimeOptions.timezone) {
+    prayerTimeOptions.timezone = timeZoneLookup(location);
+  }
 }
 
 function setRounding(

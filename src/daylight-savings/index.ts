@@ -1,3 +1,4 @@
+import { DateTime } from 'luxon';
 import list from './list';
 
 function getRange(country: string, year: number) {
@@ -32,4 +33,14 @@ export function getDSTEnd(country: string, year: number) {
   }
 
   return range[1];
+}
+
+export function isWithinDSTRange(
+  date: DateTime,
+  start: string,
+  end: string
+): boolean {
+  const startDate = DateTime.fromISO(start);
+  const endDate = DateTime.fromISO(end);
+  return date >= startDate && date <= endDate;
 }

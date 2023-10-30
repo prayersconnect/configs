@@ -8,6 +8,7 @@ import {
 } from 'adhan-extended';
 import { DateTime } from 'luxon';
 import { PrayerAndSunnahTimes } from './prayer-and-sunnah-times';
+import { TimeZoneType } from '../utils/timezonetype';
 
 export { MidnightMethod } from 'adhan-extended';
 
@@ -99,6 +100,7 @@ export type PrayerTimesOptions = {
   midnightMethod?: keyof typeof MidnightMethod;
   /** Ajustments in minutes */
   midnightAdjustment: number;
+  timezone?: TimeZoneType;
 };
 
 export enum Prayer {
@@ -148,7 +150,7 @@ export const PrayersInOrder = [
 
 export type FormatOptions = {
   use24HourFormat: boolean;
-  timezone?: string;
+  timezone?: TimeZoneType;
 };
 
 export type AsrCalculationType = 'Standard' | 'Hanafi';
@@ -158,36 +160,73 @@ export type HighLatitudeRule =
   | 'seventhofthenight'
   | 'twilightangle';
 
+/**
+ * Represents settings for prayer time calculations.
+ */
 export type CalculationSettings = {
+  /** The geographical coordinates where the calculation is applied. */
   location: ICoords | undefined;
+
+  /** The method used for prayer time calculation. e.g., 'MuslimWorldLeague', 'IslamicSocietyOfNorthAmerica'. */
   calculationMethod: CalculationMethodKey;
+
+  /** Determines the method used to calculate Asr prayer time. e.g., 'Standard', 'Hanafi'. */
   asrCalculation: AsrCalculationType;
 
-  timezone?: string;
+  /** The timezone for which the prayer times will be calculated. */
+  timezone?: TimeZoneType;
 
+  /** Specifies the method to calculate midnight. e.g., 'SunsetToSunrise', 'SunsetToFajr'. */
   midnightMethod?: keyof typeof MidnightMethod;
 
+  /** The rule to be applied for high latitude areas. e.g., 'AngleBased', 'OneSeventh'. */
   highLatitudeRule?: HighLatitudeRule;
+
+  /** The twilight angle used for Fajr and Isha in high latitudes. e.g., 'general', 'ahmer', 'abyad'. */
   shafaq?: typeof Shafaq[keyof typeof Shafaq];
+
+  /** Specifies how times are determined at polar regions. e.g., 'AqrabBalad', 'AqrabYaum'. */
   polarResolution?: string;
 
-  // Parameters override
+  /** Override the default Fajr angle. */
   fajrAngleOverride?: number;
+
+  /** Override the default Isha angle. */
   ishaAngleOverride?: number;
+
+  /** Override the default Maghrib angle. */
   maghribAngleOverride?: number;
+
+  /** Override the default interval between Maghrib and Isha. */
   ishaIntervalOverride?: number;
 
-  // prayer adjustment settings
+  /** Time adjustment (in minutes) for Fajr prayer. */
   fajrAdjustment?: number;
+
+  /** Time adjustment (in minutes) for Sunrise. */
   sunriseAdjustment?: number;
+
+  /** Time adjustment (in minutes) for Dhuhr prayer. */
   dhuhrAdjustment?: number;
+
+  /** Time adjustment (in minutes) for Asr prayer. */
   asrAdjustment?: number;
+
+  /** Time adjustment (in minutes) for Sunset. */
   sunsetAdjustment?: number;
+
+  /** Time adjustment (in minutes) for Maghrib prayer. */
   maghribAdjustment?: number;
+
+  /** Time adjustment (in minutes) for Isha prayer. */
   ishaAdjustment?: number;
+
+  /** Time adjustment (in minutes) for Midnight. */
   midnightAdjustment?: number;
+
+  /** The method used for rounding seconds. e.g., 'nearest', 'up', 'none'. */
   roundingMethod?: typeof Rounding[keyof typeof Rounding];
 
-  // calendar
+  /** Adjust the Hijri date by a certain number of days. */
   hijriDateAdjustment?: number;
 };

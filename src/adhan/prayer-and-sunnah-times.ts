@@ -13,6 +13,8 @@ import {
   FormatOptions,
 } from './types';
 import { ValueOf } from 'adhan-extended/lib/types/TypeUtils';
+import { getDSTStart, getDSTEnd, isWithinDSTRange } from '../daylight-savings';
+import { TimeZoneType } from '../utils/timezonetype';
 
 export class PrayerAndSunnahTimes {
   public prayerTimes: PrayerTimes;
@@ -149,7 +151,7 @@ export class PrayerAndSunnahTimes {
   }
 
   format(options: FormatOptions): IAdhanCalculatedType {
-    const timezone = options.timezone || 'UTC';
+    let timezone = this.options.timezone || options.timezone || 'UTC';
     const formatString = options.use24HourFormat ? 'HH:mm' : 'h:mm a';
 
     const formatTime = (time: DateTime) => {

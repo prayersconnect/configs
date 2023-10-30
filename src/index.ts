@@ -10,18 +10,17 @@ export { ICountryOutput } from './countries/types';
 
 export {
   getCalcMethodByName,
-  getCalcMethods,
   getCalculationMethods,
-  getCalcMethodsByCountry,
   getCalculationMethodByCountry,
   getJuristicMethods,
 } from './calc-methods';
 
-export { CalculationMethod } from './calc-methods/methods';
-export { getDSTStart, getDSTEnd } from './daylight-savings/index';
+export {
+  getDSTStart,
+  getDSTEnd,
+  isWithinDSTRange,
+} from './daylight-savings/index';
 export { getRangesForYear } from './daylight-savings/range-helpers';
-export { calculateAdhan } from './adhan/calculate';
-export { formatAdhanTimes } from './adhan/formatter';
 
 export { calculatePrayerTimes } from './adhan/calculation-methods';
 export {
@@ -47,3 +46,6 @@ export {
   getHijriMonth,
   MonthFormat,
 } from './utils/date';
+
+export { TimeZoneType } from './utils/timezonetype';
+export { timeZoneLookup } from './utils/timezone';
