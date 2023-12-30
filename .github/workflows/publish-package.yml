@@ -18,9 +18,8 @@ jobs:
 
       - name: Enable Corepack
         run: corepack enable
-        with:
-          package: corepack
-          version: 3.2.3
+        env:
+          COREPACK_VERSION: 3.2.3
 
       - name: Cache node_modules
         id: cache-modules
@@ -50,9 +49,8 @@ jobs:
 
       - name: Enable Corepack
         run: corepack enable
-        with:
-          package: corepack
-          version: 3.2.3
+        env:
+          COREPACK_VERSION: 3.2.3
 
       - name: Cache node_modules
         id: cache-modules
