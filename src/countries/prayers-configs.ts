@@ -413,6 +413,55 @@ const prayersConfigs: allConfigs = {
       mosques: true,
     },
   },
+  AL: {
+    code: 8,
+    alpha2Code: 'AL',
+    features: {
+      mosques: true,
+    },
+  },
+  NO: {
+    code: 578,
+    alpha2Code: 'NO',
+    features: {
+      mosques: true,
+    },
+  },
+  JP: {
+    code: 392,
+    alpha2Code: 'JP',
+    features: {
+      mosques: true,
+    },
+  },
+  MY: {
+    code: 458,
+    alpha2Code: 'MY',
+    features: {
+      mosques: true,
+    },
+  },
+  SE: {
+    code: 752,
+    alpha2Code: 'SE',
+    features: {
+      mosques: true,
+    },
+  },
+  AT: {
+    code: 40,
+    alpha2Code: 'AT',
+    features: {
+      mosques: true,
+    },
+  },
+  FJ: {
+    code: 242,
+    alpha2Code: 'FJ',
+    features: {
+      mosques: true,
+    },
+  },
 };
 
 export default prayersConfigs;

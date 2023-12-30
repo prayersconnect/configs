@@ -1,5 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`country helpers getConfigByISOName country configs AL 1`] = `
+{
+  "alpha2Code": "AL",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
+  "code": 8,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs AT 1`] = `
+{
+  "alpha2Code": "AT",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
+  "code": 40,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs Australia 1`] = `
 {
   "alpha2Code": "AU",
@@ -279,6 +341,37 @@ exports[`country helpers getConfigByISOName country configs Egypt 1`] = `
 }
 `;
 
+exports[`country helpers getConfigByISOName country configs FJ 1`] = `
+{
+  "alpha2Code": "FJ",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
+  "code": 242,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs France 1`] = `
 {
   "alpha2Code": "FR",
@@ -434,6 +527,68 @@ exports[`country helpers getConfigByISOName country configs Italy 1`] = `
 }
 `;
 
+exports[`country helpers getConfigByISOName country configs JP 1`] = `
+{
+  "alpha2Code": "JP",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
+  "code": 392,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs MY 1`] = `
+{
+  "alpha2Code": "MY",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
+  "code": 458,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
 exports[`country helpers getConfigByISOName country configs Malaysia 1`] = `
 {
   "alpha2Code": "MY",
@@ -483,6 +638,37 @@ exports[`country helpers getConfigByISOName country configs Mexico 1`] = `
   "intl": {
     "distanceUnit": "km",
     "labelForProvince": "State",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs NO 1`] = `
+{
+  "alpha2Code": "NO",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
+  "code": 578,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
     "postalCodeName": "Postal Code",
   },
   "mosque": {
@@ -647,6 +833,37 @@ exports[`country helpers getConfigByISOName country configs Russia 1`] = `
   "prayerSettings": {
     "asr_method": "Standard",
     "calculation_method": "russia",
+  },
+}
+`;
+
+exports[`country helpers getConfigByISOName country configs SE 1`] = `
+{
+  "alpha2Code": "SE",
+  "calculationSettings": {
+    "asrCalculation": "Standard",
+    "calculationMethod": "MuslimWorldLeague",
+  },
+  "code": 752,
+  "features": {
+    "education": false,
+    "events": false,
+    "iqamahTimes": false,
+    "mosques": true,
+    "prayerTimes": true,
+  },
+  "intl": {
+    "distanceUnit": "km",
+    "labelForProvince": "Province",
+    "postalCodeName": "Postal Code",
+  },
+  "mosque": {
+    "denomination": "sunni",
+    "language_services": "english",
+  },
+  "prayerSettings": {
+    "asr_method": "Standard",
+    "calculation_method": "MWL",
   },
 }
 `;
@@ -1069,6 +1286,13 @@ exports[`country helpers getCountryAlpha2CodesByFeature returns correct countrie
   "SG",
   "BA",
   "EG",
+  "AL",
+  "NO",
+  "JP",
+  "MY",
+  "SE",
+  "AT",
+  "FJ",
 ]
 `;
 
