@@ -171,9 +171,9 @@ exports[`quick range helpers getRangesForYear Canada 2024 (America/Toronto) 1`] 
     "2024-03-09",
   ],
   [
-    "Non-DST Period Nov, 2024 - null, NaN",
+    "Non-DST Period Nov, 2024 - Mar, 2025",
     "2024-11-03",
-    "Invalid DateTime",
+    "2025-03-07",
   ],
 ]
 `;
@@ -253,6 +253,46 @@ exports[`quick range helpers getRangesForYear New Zealand 2024 (Pacific/Auckland
 ]
 `;
 
+exports[`quick range helpers getRangesForYear New Zealand 2025 (Pacific/Auckland) 1`] = `
+[
+  [
+    "Year 2025",
+    "2025-01-01",
+    "2025-12-31",
+  ],
+  [
+    "DST Period Sep, 2024 - Apr, 2025",
+    "2024-09-29",
+    "2025-04-06",
+  ],
+  [
+    "DST Period Sep, 2025 - Apr, 2026",
+    "2025-09-28",
+    "2026-04-05",
+  ],
+  [
+    "Non-DST Period Apr, 2025 - Sep, 2025",
+    "2025-04-06",
+    "2025-09-28",
+  ],
+]
+`;
+
+exports[`quick range helpers getRangesForYear New Zealand 2030 (Pacific/Auckland) 1`] = `
+[
+  [
+    "Year NaN",
+    "Invalid DateTime",
+    "Invalid DateTime",
+  ],
+  [
+    "DST Period null, NaN - null, NaN",
+    "Invalid DateTime",
+    "Invalid DateTime",
+  ],
+]
+`;
+
 exports[`quick range helpers getRangesForYear United Kingdom 2022 (Europe/London) 1`] = `
 [
   [
@@ -324,9 +364,9 @@ exports[`quick range helpers getRangesForYear United Kingdom 2024 (Europe/London
     "2024-03-30",
   ],
   [
-    "Non-DST Period Oct, 2024 - null, NaN",
+    "Non-DST Period Oct, 2024 - Mar, 2025",
     "2024-10-27",
-    "Invalid DateTime",
+    "2025-03-29",
   ],
 ]
 `;
@@ -402,9 +442,9 @@ exports[`quick range helpers getRangesForYear United States 2024 (America/New_Yo
     "2024-03-09",
   ],
   [
-    "Non-DST Period Nov, 2024 - null, NaN",
+    "Non-DST Period Nov, 2024 - Mar, 2025",
     "2024-11-03",
-    "Invalid DateTime",
+    "2025-03-08",
   ],
 ]
 `;

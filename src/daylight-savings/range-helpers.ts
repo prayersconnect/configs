@@ -13,28 +13,33 @@ function parseDateInZone(date: string, timezone: string | null): DateTime {
 
 function getDSTRanges(dstStart: DateTime, dstEnd: DateTime, country: string) {
   const ranges = [];
+
   if (dstStart.year === dstEnd.year) {
     ranges.push([
       `DST Period ${dstStart.year}`,
-      `${dstStart.toFormat(formatString)}`,
-      `${dstEnd.toFormat(formatString)}`,
+      dstStart.toFormat(formatString),
+      dstEnd.toFormat(formatString),
     ]);
   } else {
-    const prevYearDstEnd = parseDateInZone(
-      getDSTEnd(country, dstStart.year - 1) as string,
-      dstEnd.zoneName
-    ); //@todo fix when getDSTEnd returns null
+    const prevYearDstEndString = getDSTEnd(country, dstStart.year - 1);
+    const prevYearDstStartString = getDSTStart(country, dstStart.year - 1);
 
-    const prevYearDstStart = parseDateInZone(
-      getDSTStart(country, dstStart.year - 1) as string,
-      dstStart.zoneName
-    ); //@todo fix when getDSTEnd returns null
+    if (prevYearDstEndString && prevYearDstStartString) {
+      const prevYearDstEnd = parseDateInZone(
+        prevYearDstEndString,
+        dstEnd.zoneName
+      );
+      const prevYearDstStart = parseDateInZone(
+        prevYearDstStartString,
+        dstStart.zoneName
+      );
 
-    ranges.push([
-      `DST Period ${prevYearDstStart.monthShort}, ${prevYearDstStart.year} - ${prevYearDstEnd.monthShort}, ${prevYearDstEnd.year}`,
-      prevYearDstStart.toFormat(formatString),
-      prevYearDstEnd.toFormat(formatString),
-    ]);
+      ranges.push([
+        `DST Period ${prevYearDstStart.monthShort}, ${prevYearDstStart.year} - ${prevYearDstEnd.monthShort}, ${prevYearDstEnd.year}`,
+        prevYearDstStart.toFormat(formatString),
+        prevYearDstEnd.toFormat(formatString),
+      ]);
+    }
 
     ranges.push([
       `DST Period ${dstStart.monthShort}, ${dstStart.year} - ${dstEnd.monthShort}, ${dstEnd.year}`,
