@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20.x, 19.x, 18.x, 16.x]
+        node-version: [20.x, 18.x, 16.10.x]
     steps:
       - uses: actions/checkout@v3
 
@@ -18,9 +18,6 @@ jobs:
 
       - name: Enable Corepack
         run: corepack enable
-        with:
-          package: corepack
-          version: 3.2.3
 
       - name: Cache node_modules
         id: cache-modules
@@ -29,9 +26,10 @@ jobs:
           path: node_modules
           key: ${{ matrix.node-version }}-${{ runner.OS }}-build-${{ hashFiles('package.json') }}
 
-      - name: Build
+      - name: Install dependencies
         if: steps.cache-modules.outputs.cache-hit != 'true'
         run: yarn install
+
       - name: Test
         run: yarn test
 
@@ -50,9 +48,6 @@ jobs:
 
       - name: Enable Corepack
         run: corepack enable
-        with:
-          package: corepack
-          version: 3.2.3
 
       - name: Cache node_modules
         id: cache-modules
@@ -61,14 +56,14 @@ jobs:
           path: node_modules
           key: 16.x-${{ runner.OS }}-build-${{ hashFiles('package.json') }}
 
-      - name: Install
+      - name: Install dependencies
         if: steps.cache-modules.outputs.cache-hit != 'true'
         run: yarn install
 
       - name: Build
         run: yarn build
 
-      - name: publish
+      - name: Publish
         uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
