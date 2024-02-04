@@ -16,6 +16,8 @@ import {
   CalculationMethodKey,
   AsrCalculationType,
   ICoords,
+  CalculationMethodLegacyKey,
+  legacyToNewKeyMap,
 } from './types';
 import { DateTime } from 'luxon';
 import { PrayerAndSunnahTimes } from './prayer-and-sunnah-times';
@@ -297,10 +299,24 @@ export const HighLatitudeLabels = [
   },
 ];
 
+// Function to replace a legacy key with the new key
+function replaceLegacyCalculationMethodKey(
+  key: CalculationMethodKey | CalculationMethodLegacyKey
+): CalculationMethodKey {
+  return (
+    legacyToNewKeyMap[key as CalculationMethodLegacyKey] ||
+    (key as CalculationMethodKey)
+  );
+}
+
 export function calculatePrayerTimes(
   date: DateTime,
   setting: CalculationSettings
 ) {
+  setting.calculationMethod = replaceLegacyCalculationMethodKey(
+    setting.calculationMethod
+  );
+
   const options = getPrayerTimesOptionsFromSettings(setting);
   if (!options) return;
 
@@ -341,7 +357,9 @@ function getPrayerTimesOptionsFromSettings(
     throw new Error('Required properties are missing from the settings.');
   }
 
-  const calculationMethodEntry = CalculationMethods[calculationMethod];
+  const calculationMethodEntryKey =
+    replaceLegacyCalculationMethodKey(calculationMethod);
+  const calculationMethodEntry = CalculationMethods[calculationMethodEntryKey];
 
   if (!calculationMethodEntry) {
     throw new Error(
@@ -377,7 +395,7 @@ function setTimeZone(prayerTimeOptions: PrayerTimesOptions, location: ICoords) {
 
 function setRounding(
   prayerTimeOptions: PrayerTimesOptions,
-  roundingMethod?: typeof Rounding[keyof typeof Rounding]
+  roundingMethod?: (typeof Rounding)[keyof typeof Rounding]
 ) {
   prayerTimeOptions.calculationParameters.rounding =
     roundingMethod || 'nearest';
@@ -411,7 +429,7 @@ function setOverrides(
 
 function setHighLatitudeRule(
   prayerTimeOptions: PrayerTimesOptions,
-  highLatRuleSetting?: typeof HighLatitudeRule[keyof typeof HighLatitudeRule]
+  highLatRuleSetting?: (typeof HighLatitudeRule)[keyof typeof HighLatitudeRule]
 ) {
   const rule =
     highLatRuleSetting ??
@@ -439,7 +457,7 @@ function setMadhab(
 
 function setShafaq(
   prayerTimeOptions: PrayerTimesOptions,
-  shafaqCalcSetting?: typeof Shafaq[keyof typeof Shafaq]
+  shafaqCalcSetting?: (typeof Shafaq)[keyof typeof Shafaq]
 ) {
   prayerTimeOptions.calculationParameters.shafaq =
     shafaqCalcSetting || Shafaq.General;

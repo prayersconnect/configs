@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
 import { calculatePrayerTimes } from './calculation-methods';
-import { CalculationSettings } from './types';
+import { CalculationSettings, legacyToNewKeyMap } from './types';
 
 type KnownKeys = 'manchester' | 'makkah' | 'dubai' | 'turkey';
 type testPrams = {
@@ -162,4 +162,88 @@ describe('calculatePrayerTimes', () => {
 
     expect(formated).toMatchSnapshot();
   });
+
+  it('should calculate Turkey prayer times using legacy key', () => {
+    const city = preset.turkey;
+    const date = DateTime.fromObject({
+      day: 10,
+      month: 8,
+      year: 2023,
+    }).setZone(city.timezone);
+
+    const settings: CalculationSettings = {
+      location: city.location,
+      calculationMethod: city.calculationMethod,
+      asrCalculation: city.asrCalculation,
+      midnightMethod: city.midnightMethod,
+    };
+
+    const legacySettings: CalculationSettings = {
+      location: city.location,
+      calculationMethod: 'turkey-presidency-of-religious-affairs',
+      asrCalculation: city.asrCalculation,
+      midnightMethod: city.midnightMethod,
+    };
+
+    const result1 = calculatePrayerTimes(date, settings);
+    const formated = result1?.format({
+      use24HourFormat: false,
+      timezone: city.timezone,
+    });
+    const result2 = calculatePrayerTimes(date, legacySettings);
+    const formated2 = result2?.format({
+      use24HourFormat: false,
+      timezone: city.timezone,
+    });
+
+    expect(formated).toEqual(formated2);
+  });
+});
+
+describe('legacyToNewKeyMap', () => {
+  it('correctly maps ISNA to IslamicSocietyOfNorthAmerica', () => {
+    expect(legacyToNewKeyMap['ISNA']).toBe('IslamicSocietyOfNorthAmerica');
+  });
+
+  it('correctly maps MWL to MuslimWorldLeague', () => {
+    expect(legacyToNewKeyMap['MWL']).toBe('MuslimWorldLeague');
+  });
+
+  it('correctly maps Makkah to UmmAlQura', () => {
+    expect(legacyToNewKeyMap['Makkah']).toBe('UmmAlQura');
+  });
+
+  it('correctly maps turkey-presidency-of-religious-affairs to Turkey', () => {
+    expect(legacyToNewKeyMap['turkey-presidency-of-religious-affairs']).toBe(
+      'Turkey'
+    );
+  });
+
+  it('correctly maps union-des-organisations-islamiques-de-france to France', () => {
+    expect(
+      legacyToNewKeyMap['union-des-organisations-islamiques-de-france']
+    ).toBe('France');
+  });
+
+  it('correctly maps france-15-degree to France15', () => {
+    expect(legacyToNewKeyMap['france-15-degree']).toBe('France15');
+  });
+
+  it('correctly maps france-18-degree to France18', () => {
+    expect(legacyToNewKeyMap['france-18-degree']).toBe('France18');
+  });
+
+  it('correctly maps russia to Russia', () => {
+    expect(legacyToNewKeyMap['russia']).toBe('Russia');
+  });
+
+  it('correctly maps gaiae to Gulf', () => {
+    expect(legacyToNewKeyMap['gaiae']).toBe('Gulf');
+  });
+
+  it('correctly maps muis to Singapore', () => {
+    expect(legacyToNewKeyMap['muis']).toBe('Singapore');
+  });
+
+  // Add more tests for each key as necessary
 });

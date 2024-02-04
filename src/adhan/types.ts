@@ -60,6 +60,39 @@ export type CalculationMethodKey =
   | 'Turkey'
   | 'UmmAlQura';
 
+// TOOD: Remove this type after all references are removed in DB
+export type CalculationMethodLegacyKey =
+  | 'ISNA'
+  | 'MWL'
+  | 'Karachi'
+  | 'Makkah'
+  | 'Egypt'
+  | 'Tehran'
+  | 'Jafari'
+  | 'turkey-presidency-of-religious-affairs'
+  | 'union-des-organisations-islamiques-de-france'
+  | 'france-15-degree'
+  | 'france-18-degree'
+  | 'russia'
+  | 'gaiae'
+  | 'muis';
+
+// Create a mapping from CalculationMethodLegacyKey to CalculationMethodKey
+export const legacyToNewKeyMap: {
+  [key in CalculationMethodLegacyKey]?: CalculationMethodKey;
+} = {
+  ISNA: 'IslamicSocietyOfNorthAmerica',
+  MWL: 'MuslimWorldLeague',
+  Makkah: 'UmmAlQura',
+  'turkey-presidency-of-religious-affairs': 'Turkey',
+  'union-des-organisations-islamiques-de-france': 'France',
+  'france-15-degree': 'France15',
+  'france-18-degree': 'France18',
+  russia: 'Russia',
+  gaiae: 'Gulf',
+  muis: 'Singapore',
+};
+
 export type CalculationMethodEntry = {
   calculationKey: CalculationMethodKey;
   label: string;
@@ -168,7 +201,7 @@ export type CalculationSettings = {
   location: ICoords | undefined;
 
   /** The method used for prayer time calculation. e.g., 'MuslimWorldLeague', 'IslamicSocietyOfNorthAmerica'. */
-  calculationMethod: CalculationMethodKey;
+  calculationMethod: CalculationMethodKey | CalculationMethodLegacyKey;
 
   /** Determines the method used to calculate Asr prayer time. e.g., 'Standard', 'Hanafi'. */
   asrCalculation: AsrCalculationType;
@@ -183,7 +216,7 @@ export type CalculationSettings = {
   highLatitudeRule?: HighLatitudeRule;
 
   /** The twilight angle used for Fajr and Isha in high latitudes. e.g., 'general', 'ahmer', 'abyad'. */
-  shafaq?: typeof Shafaq[keyof typeof Shafaq];
+  shafaq?: (typeof Shafaq)[keyof typeof Shafaq];
 
   /** Specifies how times are determined at polar regions. e.g., 'AqrabBalad', 'AqrabYaum'. */
   polarResolution?: string;
@@ -225,7 +258,7 @@ export type CalculationSettings = {
   midnightAdjustment?: number;
 
   /** The method used for rounding seconds. e.g., 'nearest', 'up', 'none'. */
-  roundingMethod?: typeof Rounding[keyof typeof Rounding];
+  roundingMethod?: (typeof Rounding)[keyof typeof Rounding];
 
   /** Adjust the Hijri date by a certain number of days. */
   hijriDateAdjustment?: number;
