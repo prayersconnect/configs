@@ -152,7 +152,7 @@ export class PrayerAndSunnahTimes {
 
   format(options: FormatOptions): IAdhanCalculatedType {
     let timezone = this.options.timezone || options.timezone || 'UTC';
-    const formatString = options.use24HourFormat ? 'HH:mm' : 'h:mm a';
+    const formatString = options.use24HourFormat ? 'HH:mm' : 'hh:mm a';
 
     const formatTime = (time: DateTime) => {
       return time.setZone(timezone).toFormat(formatString);
