@@ -1,3 +1,4 @@
+import { Settings } from 'luxon';
 import { getRangesForYear } from './range-helpers';
 import cases from 'jest-in-case';
 
@@ -11,6 +12,8 @@ function getRangeTestObject(year: number, country: string, timezone: string) {
 }
 
 describe('quick range helpers', () => {
+  Settings.defaultLocale = 'en-US';
+
   cases(
     'getRangesForYear',
     (opts: {
