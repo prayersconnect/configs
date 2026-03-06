@@ -40,7 +40,10 @@ export function isWithinDSTRange(
   start: string,
   end: string
 ): boolean {
-  const startDate = DateTime.fromISO(start);
-  const endDate = DateTime.fromISO(end);
-  return date >= startDate && date <= endDate;
+  // Compare date strings to avoid timezone-mismatch issues.
+  // start/end are plain date strings (e.g. '2026-11-01') and the stored
+  // data intentionally ignores time (see list.ts comment), so a
+  // lexicographic date-string comparison is both correct and timezone-safe.
+  const dateStr = date.toFormat('yyyy-MM-dd');
+  return dateStr >= start && dateStr <= end;
 }
