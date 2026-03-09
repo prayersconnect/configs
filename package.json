@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/prayersconnect/configs.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "team@prayersconnect.com",
   "license": "GPL-3.0-or-later",
   "scripts": {
