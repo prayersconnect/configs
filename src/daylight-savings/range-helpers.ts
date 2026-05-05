@@ -58,27 +58,34 @@ function getNonDSTRanges(
 ) {
   const ranges = [];
   if (dstStart.year === dstEnd.year) {
-    const prevYearDSTEndDate = parseDateInZone(
-      getDSTEnd(country, dstStart.year - 1) as string,
-      dstEnd.zoneName
-    );
-    const nextYearDSTStartDate = parseDateInZone(
-      getDSTStart(country, dstStart.year + 1) as string,
-      dstEnd.zoneName
-    );
+    const prevYearDSTEndString = getDSTEnd(country, dstStart.year - 1);
+    const nextYearDSTStartString = getDSTStart(country, dstStart.year + 1);
 
-    ranges.push([
-      `Non-DST Period ${prevYearDSTEndDate.monthShort}, 
-      ${prevYearDSTEndDate.year} - ${dstStart.monthShort}, ${dstStart.year}`,
-      prevYearDSTEndDate.plus({ day: 1 }).toFormat(formatString),
-      dstStart.minus({ day: 1 }).toFormat(formatString),
-    ]);
+    if (prevYearDSTEndString) {
+      const prevYearDSTEndDate = parseDateInZone(
+        prevYearDSTEndString,
+        dstEnd.zoneName
+      );
 
-    ranges.push([
-      `Non-DST Period ${dstEnd.monthShort}, ${dstStart.year} - ${nextYearDSTStartDate.monthShort}, ${nextYearDSTStartDate.year}`,
-      dstEnd.plus({ day: 1 }).toFormat(formatString),
-      nextYearDSTStartDate.minus({ day: 1 }).toFormat(formatString),
-    ]);
+      ranges.push([
+        `Non-DST Period ${prevYearDSTEndDate.monthShort}, ${prevYearDSTEndDate.year} - ${dstStart.monthShort}, ${dstStart.year}`,
+        prevYearDSTEndDate.plus({ day: 1 }).toFormat(formatString),
+        dstStart.minus({ day: 1 }).toFormat(formatString),
+      ]);
+    }
+
+    if (nextYearDSTStartString) {
+      const nextYearDSTStartDate = parseDateInZone(
+        nextYearDSTStartString,
+        dstEnd.zoneName
+      );
+
+      ranges.push([
+        `Non-DST Period ${dstEnd.monthShort}, ${dstStart.year} - ${nextYearDSTStartDate.monthShort}, ${nextYearDSTStartDate.year}`,
+        dstEnd.plus({ day: 1 }).toFormat(formatString),
+        nextYearDSTStartDate.minus({ day: 1 }).toFormat(formatString),
+      ]);
+    }
   } else {
     const prevYearDSTEndDate = getDSTEnd(country, dstStart.year - 1) as string;
     if (prevYearDSTEndDate) {
@@ -107,15 +114,15 @@ export function getRangesForYear(
   const today = parseDateInZone(isoDate, timezone).set({
     year,
   });
-  const dstStart = parseDateInZone(
-    getDSTStart(country, today.year) as string,
-    timezone
-  );
+  const dstStartString = getDSTStart(country, today.year);
+  const dstEndString = getDSTEnd(country, today.year);
 
-  const dstEnd = parseDateInZone(
-    getDSTEnd(country, today.year) as string,
-    timezone
-  );
+  if (!dstStartString || !dstEndString) {
+    return [];
+  }
+
+  const dstStart = parseDateInZone(dstStartString, timezone);
+  const dstEnd = parseDateInZone(dstEndString, timezone);
 
   const ranges = [
     [
