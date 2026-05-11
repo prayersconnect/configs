@@ -42,6 +42,7 @@ export type CalculationMethodKey =
   | 'Dubai'
   | 'Egyptian'
   | 'France'
+  | 'France13'
   | 'France15'
   | 'France18'
   | 'Gulf'

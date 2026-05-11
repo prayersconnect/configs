@@ -54,6 +54,13 @@ exports[`calc-methods getCalculationMethods returns all methods 1`] = `
     "region": "France region",
   },
   {
+    "calculationKey": "France13",
+    "get": [Function],
+    "info": "Fajr: 13.0°, Isha: 13.0°",
+    "label": "Union Organization Islamic de France - 13",
+    "region": "France region",
+  },
+  {
     "calculationKey": "France15",
     "get": [Function],
     "info": "Fajr: 15.0°, Isha: 15.0°",
@@ -187,6 +194,8 @@ exports[`calc-methods getCalculationMethods returns all methods: values for Duba
 exports[`calc-methods getCalculationMethods returns all methods: values for Egyptian 1`] = `"Egyptian"`;
 
 exports[`calc-methods getCalculationMethods returns all methods: values for France 1`] = `"France"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for France13 1`] = `"France13"`;
 
 exports[`calc-methods getCalculationMethods returns all methods: values for France15 1`] = `"France15"`;
 
