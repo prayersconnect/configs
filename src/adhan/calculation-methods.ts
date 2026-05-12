@@ -86,18 +86,6 @@ export const CalculationMethods: Record<
     },
   },
 
-  France13: {
-    calculationKey: 'France13',
-    label: 'Union Organization Islamic de France - 13',
-    info: 'Fajr: 13.0°, Isha: 13.0°',
-    region: 'France region' as const,
-    get: (settings?: CalculationSettings) => {
-      const calculation = new CalculationParameters('Other', 13.0, 13.0);
-
-      return calculation;
-    },
-  },
-
   France15: {
     calculationKey: 'France15',
     label: 'Union Organization Islamic de France - 15',
@@ -176,6 +164,18 @@ export const CalculationMethods: Record<
     info: 'Fajr: 18.0°, Isha: 17.0°' as const,
     get: CalculationMethod.MuslimWorldLeague,
     region: 'Europe, The Far East, Parts of the USA',
+  },
+
+  IslamicCenterOfBlaine: {
+    calculationKey: 'IslamicCenterOfBlaine',
+    label: 'Islamic Center of Blaine',
+    info: 'Fajr: 13.0°, Isha: 13.0°',
+    region: 'United States' as const,
+    get: (settings?: CalculationSettings) => {
+      const calculation = new CalculationParameters('Other', 13.0, 13.0);
+
+      return calculation;
+    },
   },
 
   IslamicSocietyOfNorthAmerica: {
