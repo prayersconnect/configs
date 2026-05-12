@@ -41,10 +41,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js 22.x
+      - name: Use Node.js 24.x
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '24.x'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Cache node_modules
@@ -52,7 +52,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: 22.x-${{ runner.OS }}-build-${{ hashFiles('package.json') }}
+          key: 24.x-${{ runner.OS }}-build-${{ hashFiles('package.json') }}
 
       - name: Install dependencies
         if: steps.cache-modules.outputs.cache-hit != 'true'
@@ -60,9 +60,6 @@ jobs:
 
       - name: Build
         run: yarn build
-
-      - name: Upgrade npm for OIDC trusted publishing
-        run: npm install -g npm@latest
 
       - name: Publish
         run: npm publish --provenance --access public
