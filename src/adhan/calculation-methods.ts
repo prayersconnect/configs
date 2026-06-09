@@ -166,6 +166,18 @@ export const CalculationMethods: Record<
     region: 'Europe, The Far East, Parts of the USA',
   },
 
+  IslamicCenterOfBlaine: {
+    calculationKey: 'IslamicCenterOfBlaine',
+    label: 'Islamic Center of Blaine',
+    info: 'Fajr: 13.0°, Isha: 13.0°',
+    region: 'United States' as const,
+    get: (settings?: CalculationSettings) => {
+      const calculation = new CalculationParameters('Other', 13.0, 13.0);
+
+      return calculation;
+    },
+  },
+
   IslamicSocietyOfNorthAmerica: {
     calculationKey: 'IslamicSocietyOfNorthAmerica',
     label: 'Islamic Society of North America - ISNA',

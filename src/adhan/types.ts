@@ -45,6 +45,7 @@ export type CalculationMethodKey =
   | 'France15'
   | 'France18'
   | 'Gulf'
+  | 'IslamicCenterOfBlaine'
   | 'IslamicSocietyOfNorthAmerica'
   | 'Jafari'
   | 'Karachi'

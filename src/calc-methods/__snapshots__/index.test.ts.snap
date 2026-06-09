@@ -116,6 +116,13 @@ exports[`calc-methods getCalculationMethods returns all methods 1`] = `
     "region": "Europe, The Far East, Parts of the USA",
   },
   {
+    "calculationKey": "IslamicCenterOfBlaine",
+    "get": [Function],
+    "info": "Fajr: 13.0°, Isha: 13.0°",
+    "label": "Islamic Center of Blaine",
+    "region": "United States",
+  },
+  {
     "calculationKey": "IslamicSocietyOfNorthAmerica",
     "get": [Function],
     "info": "Fajr: 15.0°, Isha: 15.0°",
@@ -195,6 +202,8 @@ exports[`calc-methods getCalculationMethods returns all methods: values for Fran
 exports[`calc-methods getCalculationMethods returns all methods: values for Gulf 1`] = `"Gulf"`;
 
 exports[`calc-methods getCalculationMethods returns all methods: values for Indonesia 1`] = `"Indonesia"`;
+
+exports[`calc-methods getCalculationMethods returns all methods: values for IslamicCenterOfBlaine 1`] = `"IslamicCenterOfBlaine"`;
 
 exports[`calc-methods getCalculationMethods returns all methods: values for IslamicSocietyOfNorthAmerica 1`] = `"IslamicSocietyOfNorthAmerica"`;
 
