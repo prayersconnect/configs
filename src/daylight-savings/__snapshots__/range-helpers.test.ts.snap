@@ -175,6 +175,31 @@ exports[`quick range helpers getRangesForYear Canada 2024 (America/Toronto) 1`] 
 ]
 `;
 
+exports[`quick range helpers getRangesForYear Canada 2026 (America/Toronto) 1`] = `
+[
+  [
+    "Year 2026",
+    "2026-01-01",
+    "2026-12-31",
+  ],
+  [
+    "DST Period 2026",
+    "2026-03-08",
+    "2026-10-31",
+  ],
+  [
+    "Non-DST Period Nov, 2025 - Mar, 2026",
+    "2025-11-02",
+    "2026-03-07",
+  ],
+  [
+    "Non-DST Period Nov, 2026 - Mar, 2027",
+    "2026-11-01",
+    "2027-03-13",
+  ],
+]
+`;
+
 exports[`quick range helpers getRangesForYear New Zealand 2022 (Pacific/Auckland) 1`] = `
 [
   [
@@ -352,6 +377,31 @@ exports[`quick range helpers getRangesForYear United Kingdom 2024 (Europe/London
 ]
 `;
 
+exports[`quick range helpers getRangesForYear United Kingdom 2026 (Europe/London) 1`] = `
+[
+  [
+    "Year 2026",
+    "2026-01-01",
+    "2026-12-31",
+  ],
+  [
+    "DST Period 2026",
+    "2026-03-29",
+    "2026-10-24",
+  ],
+  [
+    "Non-DST Period Oct, 2025 - Mar, 2026",
+    "2025-10-26",
+    "2026-03-28",
+  ],
+  [
+    "Non-DST Period Oct, 2026 - Mar, 2027",
+    "2026-10-25",
+    "2027-03-27",
+  ],
+]
+`;
+
 exports[`quick range helpers getRangesForYear United States 2022 (America/New_York) 1`] = `
 [
   [
@@ -423,6 +473,31 @@ exports[`quick range helpers getRangesForYear United States 2024 (America/New_Yo
     "Non-DST Period Nov, 2024 - Mar, 2025",
     "2024-11-03",
     "2025-03-08",
+  ],
+]
+`;
+
+exports[`quick range helpers getRangesForYear United States 2026 (America/New_York) 1`] = `
+[
+  [
+    "Year 2026",
+    "2026-01-01",
+    "2026-12-31",
+  ],
+  [
+    "DST Period 2026",
+    "2026-03-08",
+    "2026-10-31",
+  ],
+  [
+    "Non-DST Period Nov, 2025 - Mar, 2026",
+    "2025-11-02",
+    "2026-03-07",
+  ],
+  [
+    "Non-DST Period Nov, 2026 - Mar, 2027",
+    "2026-11-01",
+    "2027-03-13",
   ],
 ]
 `;

@@ -47,6 +47,10 @@ describe('quick range helpers', () => {
       getRangeTestObject(2024, 'New Zealand', 'Pacific/Auckland'),
       getRangeTestObject(2025, 'New Zealand', 'Pacific/Auckland'),
 
+      getRangeTestObject(2026, 'United Kingdom', 'Europe/London'),
+      getRangeTestObject(2026, 'United States', 'America/New_York'),
+      getRangeTestObject(2026, 'Canada', 'America/Toronto'),
+
       getRangeTestObject(2030, 'New Zealand', 'Pacific/Auckland'),
     ]
   );
