@@ -2,12 +2,16 @@ import { DateTime, Settings } from 'luxon';
 import { getDSTStart, getDSTEnd, isWithinDSTRange } from './index';
 
 /**
- * Tests for the Canada 2026 DST dates (updated in list.ts line 32):
- *   2026: ['2026-03-08', '2026-11-01']
+ * Tests for the Canada 2026 DST dates (see list.ts):
+ *   2026: ['2026-03-08', '2026-10-31']
  *
  * Canada (most provinces) follows the same schedule as the US:
- *   - Spring forward: second Sunday of March  → 2026-03-08
+ *   - Spring forward: second Sunday of March   → 2026-03-08
  *   - Fall back:      first Sunday of November → 2026-11-01
+ *
+ * Per the list.ts convention the stored DST end is one day EARLY (the last
+ * full DST day, 2026-10-31), so the Non-DST period starts on the fall-back
+ * day itself (2026-11-01).
  *
  * The timezone used is America/Toronto, a canonical Canadian timezone.
  * DST is active between the start date (inclusive) and end date (inclusive).
@@ -19,7 +23,7 @@ describe('Canada DST 2026 – list.ts validation', () => {
 
   // Pull the dates straight from the module under test
   const dstStart = getDSTStart(COUNTRY, YEAR) as string; // '2026-03-08'
-  const dstEnd = getDSTEnd(COUNTRY, YEAR) as string; // '2026-11-01'
+  const dstEnd = getDSTEnd(COUNTRY, YEAR) as string; // '2026-10-31' (last DST day)
 
   beforeAll(() => {
     Settings.defaultLocale = 'en-US';
@@ -31,7 +35,7 @@ describe('Canada DST 2026 – list.ts validation', () => {
   });
 
   it('has the correct DST end date for Canada 2026', () => {
-    expect(dstEnd).toBe('2026-11-01');
+    expect(dstEnd).toBe('2026-10-31');
   });
 
   // ── 2. Helper: build a DateTime in America/Toronto for a given date ───────
@@ -65,17 +69,22 @@ describe('Canada DST 2026 – list.ts validation', () => {
 
   // ── 5. Fall-back boundary (2026-11-01) ────────────────────────────────────
 
-  it('day before DST end (2026-10-31) IS within DST range', () => {
+  it('day before DST end (2026-10-30) IS within DST range', () => {
+    const date = torontoDate('2026-10-30');
+    expect(isWithinDSTRange(date, dstStart, dstEnd)).toBe(true);
+  });
+
+  it('last DST day (2026-10-31) IS within DST range (inclusive end)', () => {
     const date = torontoDate('2026-10-31');
     expect(isWithinDSTRange(date, dstStart, dstEnd)).toBe(true);
   });
 
-  it('DST end day (2026-11-01) IS within DST range (inclusive end)', () => {
+  it('Non-DST start / fall-back day (2026-11-01) is NOT within DST range', () => {
     const date = torontoDate('2026-11-01');
-    expect(isWithinDSTRange(date, dstStart, dstEnd)).toBe(true);
+    expect(isWithinDSTRange(date, dstStart, dstEnd)).toBe(false);
   });
 
-  it('day after DST end (2026-11-02) is NOT within DST range', () => {
+  it('day after Non-DST start (2026-11-02) is NOT within DST range', () => {
     const date = torontoDate('2026-11-02');
     expect(isWithinDSTRange(date, dstStart, dstEnd)).toBe(false);
   });

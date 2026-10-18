@@ -66,10 +66,14 @@ function getNonDSTRanges(
         prevYearDSTEndString,
         dstEnd.zoneName
       );
+      // The Non-DST period starts the day after DST ends. Derive the label
+      // from that start date so the month stays correct when the transition
+      // lands on the 1st of a month (e.g. Nov 1, 2026).
+      const nonDstStart = prevYearDSTEndDate.plus({ day: 1 });
 
       ranges.push([
-        `Non-DST Period ${prevYearDSTEndDate.monthShort}, ${prevYearDSTEndDate.year} - ${dstStart.monthShort}, ${dstStart.year}`,
-        prevYearDSTEndDate.plus({ day: 1 }).toFormat(formatString),
+        `Non-DST Period ${nonDstStart.monthShort}, ${nonDstStart.year} - ${dstStart.monthShort}, ${dstStart.year}`,
+        nonDstStart.toFormat(formatString),
         dstStart.minus({ day: 1 }).toFormat(formatString),
       ]);
     }
@@ -79,10 +83,11 @@ function getNonDSTRanges(
         nextYearDSTStartString,
         dstEnd.zoneName
       );
+      const nonDstStart = dstEnd.plus({ day: 1 });
 
       ranges.push([
-        `Non-DST Period ${dstEnd.monthShort}, ${dstStart.year} - ${nextYearDSTStartDate.monthShort}, ${nextYearDSTStartDate.year}`,
-        dstEnd.plus({ day: 1 }).toFormat(formatString),
+        `Non-DST Period ${nonDstStart.monthShort}, ${nonDstStart.year} - ${nextYearDSTStartDate.monthShort}, ${nextYearDSTStartDate.year}`,
+        nonDstStart.toFormat(formatString),
         nextYearDSTStartDate.minus({ day: 1 }).toFormat(formatString),
       ]);
     }
